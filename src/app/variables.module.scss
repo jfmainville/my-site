@@ -1,0 +1,16 @@
+// Colors
+$background-color: #222830;
+$primary-color: #313640;
+$secondary-color: #76acae;
+$text-color: #eeeeee;
+
+// Shadows
+
+// Media Queries
+
+:export {
+  backgroundColor: $background-color;
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+  textColor: $text-color;
+}
