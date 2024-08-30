@@ -1,0 +1,8 @@
+@import "./variables.module.scss";
+
+.Main {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  min-height: 100vh;
+}
