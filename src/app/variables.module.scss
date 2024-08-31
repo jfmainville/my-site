@@ -1,3 +1,6 @@
+// Fonts
+$font-family: "Source Sans Pro";
+
 // Colors
 $background-color: #222830;
 $primary-color: #313640;
@@ -9,6 +12,7 @@ $text-color: #eeeeee;
 // Media Queries
 
 :export {
+  fontFamily: $font-family;
   backgroundColor: $background-color;
   primaryColor: $primary-color;
   secondaryColor: $secondary-color;
