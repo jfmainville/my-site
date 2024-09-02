@@ -92,15 +92,15 @@
 }
 
 .ContactSection {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
+  justify-content: center;
 }
 
 .ContactSectionHeader {
   display: flex;
-  margin-right: 4rem;
+  flex-wrap: wrap;
 }
 
 .ContactSectionForm {
