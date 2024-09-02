@@ -33,8 +33,14 @@ const Contact = () => {
               required={true}
               type="email"
             />
-            <label htmlFor="last_name">Phone</label>
+            <label htmlFor="phone">Phone</label>
             <input className={styles.Input} id="phone" type="text" />
+            <label htmlFor="message">Message</label>
+            <textarea
+              className={styles.TextArea}
+              id="message"
+              required={true}
+            />
             <input
               className={styles.SubmitButton}
               name="Submit"

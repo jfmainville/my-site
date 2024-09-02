@@ -35,6 +35,18 @@
   background-color: $secondary-color;
 }
 
+.TextArea {
+  display: flex;
+  flex-direction: row;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid;
+  height: 10rem;
+  width: 30rem;
+  margin: 0.5rem 0 0.5rem 0;
+  background-color: $secondary-color;
+}
+
 .SubmitButton {
   display: flex;
   width: 15rem;
