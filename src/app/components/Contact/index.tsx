@@ -1,6 +1,11 @@
 import styles from "./index.module.scss";
+import { FormEvent } from "react";
 
-const Contact = () => {
+type Props = {
+  handleSendEmail: (event: FormEvent<HTMLFormElement>) => void;
+};
+
+const Contact = ({ handleSendEmail }: Props) => {
   return (
     <section id={"contact"} className={styles.Contact}>
       <h1 className={styles.TextHeading}>Contact</h1>
@@ -11,18 +16,20 @@ const Contact = () => {
           </h2>{" "}
         </div>
         <div className={styles.ContactSectionForm}>
-          <form action="">
-            <label htmlFor="first_name">First Name</label>
+          <form onSubmit={handleSendEmail}>
+            <label htmlFor="firstName">First Name</label>
             <input
               className={styles.Input}
-              id="first_name"
+              id="firstName"
+              name="firstName"
               required={true}
               type="text"
             />
-            <label htmlFor="last_name">Last Name</label>
+            <label htmlFor="lastName">Last Name</label>
             <input
               className={styles.Input}
-              id="last_name"
+              id="lastName"
+              name="lastName"
               required={true}
               type="text"
             />
@@ -30,22 +37,27 @@ const Contact = () => {
             <input
               className={styles.Input}
               id="email"
+              name="email"
               required={true}
               type="email"
             />
             <label htmlFor="phone">Phone</label>
-            <input className={styles.Input} id="phone" type="text" />
+            <input
+              className={styles.Input}
+              id="phone"
+              name="phone"
+              type="text"
+            />
             <label htmlFor="message">Message</label>
             <textarea
               className={styles.TextArea}
               id="message"
+              name="message"
               required={true}
             />
-            <input
-              className={styles.SubmitButton}
-              name="Submit"
-              type="submit"
-            />
+            <button className={styles.SubmitButton} type="submit">
+              Submit
+            </button>
           </form>
         </div>
       </div>
