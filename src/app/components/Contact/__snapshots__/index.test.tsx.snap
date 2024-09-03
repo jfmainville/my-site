@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Contact/> Test Suite should render the <Contact/> component unchanged 1`] = `
+<div>
+  <section
+    class="Contact"
+    id="contact"
+  >
+    <h1
+      class="TextHeading"
+    >
+      Contact
+    </h1>
+    <div
+      class="ContactSection"
+    >
+      <div
+        class="ContactSectionHeader"
+      >
+        <h2
+          class="TextHeading"
+        >
+          Looking forward to hearing from you!
+        </h2>
+         
+      </div>
+      <div
+        class="ContactSectionForm"
+      >
+        <form>
+          <label
+            for="firstName"
+          >
+            First Name
+          </label>
+          <input
+            class="Input"
+            id="firstName"
+            name="firstName"
+            required=""
+            type="text"
+          />
+          <label
+            for="lastName"
+          >
+            Last Name
+          </label>
+          <input
+            class="Input"
+            id="lastName"
+            name="lastName"
+            required=""
+            type="text"
+          />
+          <label
+            for="email"
+          >
+            Email
+          </label>
+          <input
+            class="Input"
+            id="email"
+            name="email"
+            required=""
+            type="email"
+          />
+          <label
+            for="phone"
+          >
+            Phone
+          </label>
+          <input
+            class="Input"
+            id="phone"
+            name="phone"
+            type="text"
+          />
+          <label
+            for="message"
+          >
+            Message
+          </label>
+          <textarea
+            class="TextArea"
+            id="message"
+            name="message"
+            required=""
+          />
+          <button
+            class="SubmitButton"
+            type="submit"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+`;
