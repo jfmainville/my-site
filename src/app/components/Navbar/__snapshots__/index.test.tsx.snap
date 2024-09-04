@@ -13,6 +13,7 @@ exports[`<Navbar/> Test Suite should render the <Navbar/> component unchanged 1`
     </a>
     <a
       class="Link"
+      hidden=""
       href="/#blog"
     >
       Blog

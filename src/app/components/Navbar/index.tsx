@@ -10,7 +10,7 @@ const Navbar = () => {
       <Link className={styles.Link} href={"/#contact"}>
         Contact
       </Link>
-      <Link className={styles.Link} href={"/#blog"}>
+      <Link hidden={true} className={styles.Link} href={"/#blog"}>
         Blog
       </Link>
       <Link className={styles.Link} href={"/#experience"}>

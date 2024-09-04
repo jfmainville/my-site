@@ -1,0 +1,404 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = `
+<div>
+  <main
+    class="Main"
+  >
+    <div
+      class="Header"
+      id="home"
+    >
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="0"
+        loading="lazy"
+        sizes="100vw"
+        src="/_next/image?url=%2Fimages%2Fbromont.png&w=3840&q=75"
+        srcset="/_next/image?url=%2Fimages%2Fbromont.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbromont.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbromont.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbromont.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbromont.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbromont.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbromont.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbromont.png&w=3840&q=75 3840w"
+        style="color: transparent; width: 100%; height: auto;"
+        width="0"
+      />
+      <h1
+        class="TextHeading"
+        style="position: absolute;"
+      >
+        Hey, I'm Jean-Frederic, welcome to my site! 🔥
+      </h1>
+    </div>
+    <section
+      class="About"
+      id="about"
+    >
+      <h1
+        class="TextHeading"
+      >
+        About
+      </h1>
+      <div
+        class="AboutSection"
+      >
+        <p
+          class="AboutSectionText"
+        >
+          I am an experienced professional with expertise in cloud security, DevOps, and system administration. My career spans roles as a Cloud Security Specialist, Technical Product Owner, DevOps Specialist, Security Analyst, and System Administrator across diverse environments. I excel in designing and implementing secure IT solutions, automating processes, and optimizing performance to strengthen operational resilience and meet business objectives.
+        </p>
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          height="500"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fprofile.png&w=1080&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fprofile.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fprofile.png&w=1080&q=75 2x"
+          style="color: transparent;"
+          width="500"
+        />
+      </div>
+    </section>
+    <section
+      class="Experience"
+      id="experience"
+      style="background-image: url(/img.jpg); width: 100%; height: auto;"
+    >
+      <h1
+        class="TextHeading"
+      >
+        Experience
+      </h1>
+      <div
+        class="ExperienceSection"
+      >
+        <div
+          class="ExperienceSectionEntryLeft"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="50"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75 2x"
+            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+            width="50"
+          />
+          <p
+            class="ExperienceSectionEntryPeriod"
+          >
+            2013-2017
+          </p>
+          <p
+            class="ExperienceSectionEntryRole"
+          >
+            System Administrator
+          </p>
+          <p>
+            As a System Administrator within the Microsoft Center of Expertise (MCoE) business unit, I specialized in managing Windows Server, SharePoint, SQL Server, and Microsoft Azure environments to ensure optimal performance and security
+          </p>
+        </div>
+        <div
+          class="ExperienceSectionEntryCircle"
+        />
+        <div
+          class="ExperienceSectionEntryLine"
+        />
+        <div
+          style="left: 10rem;"
+        />
+        <div>
+          <div
+            class="ExperienceSectionEntryCircle"
+          />
+          <div
+            class="ExperienceSectionEntryLineRight"
+          />
+        </div>
+        <div
+          class="ExperienceSectionEntryRight"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="50"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75 2x"
+            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+            width="50"
+          />
+          <p
+            class="ExperienceSectionEntryPeriod"
+          >
+            2013-2017
+          </p>
+          <p
+            class="ExperienceSectionEntryRole"
+          >
+            Security Analyst
+          </p>
+          <p>
+            As a Security Analyst within the GTO business unit, I specialized in email security and monitoring to mitigate security risks
+          </p>
+        </div>
+        <div
+          class="ExperienceSectionEntryLeft"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="50"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fscfj_logo.jpg&w=128&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fscfj_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fscfj_logo.jpg&w=128&q=75 2x"
+            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+            width="50"
+          />
+          <p
+            class="ExperienceSectionEntryPeriod"
+          >
+            2018-2019
+          </p>
+          <p
+            class="ExperienceSectionEntryRole"
+          >
+            Full-Stack Developer
+          </p>
+          <p>
+            As a Full-Stack Developer, I developed an internal web application to streamline the time-tracking process for freelancers at SCFJ
+          </p>
+        </div>
+        <div
+          class="ExperienceSectionEntryCircle"
+        />
+        <div
+          class="ExperienceSectionEntryLine"
+        />
+        <div
+          style="left: 10rem;"
+        />
+        <div>
+          <div
+            class="ExperienceSectionEntryCircle"
+          />
+          <div
+            class="ExperienceSectionEntryLineRight"
+          />
+        </div>
+        <div
+          class="ExperienceSectionEntryRight"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="50"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75 2x"
+            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+            width="50"
+          />
+          <p
+            class="ExperienceSectionEntryPeriod"
+          >
+            2019-2021
+          </p>
+          <p
+            class="ExperienceSectionEntryRole"
+          >
+            DevOps Specialist
+          </p>
+          <p>
+            As a DevOps Specialist in the identity and access management (IAM) team, I contributed to enhancing the efficiency and security of the IAM infrastructure
+          </p>
+        </div>
+        <div
+          class="ExperienceSectionEntryLeft"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="50"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75 2x"
+            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+            width="50"
+          />
+          <p
+            class="ExperienceSectionEntryPeriod"
+          >
+            2021-2022
+          </p>
+          <p
+            class="ExperienceSectionEntryRole"
+          >
+            Technical Product Owner
+          </p>
+          <p>
+            As a Technical Product Owner in the security operations team, I lead my team in implementing and maintaining solutions to enhance Intact's security posture
+          </p>
+        </div>
+        <div
+          class="ExperienceSectionEntryCircle"
+        />
+        <div
+          class="ExperienceSectionEntryLine"
+        />
+        <div
+          style="left: 10rem;"
+        />
+        <div>
+          <div
+            class="ExperienceSectionEntryCircle"
+          />
+        </div>
+        <div
+          class="ExperienceSectionEntryRight"
+        >
+          <img
+            alt=""
+            data-nimg="1"
+            decoding="async"
+            height="50"
+            loading="lazy"
+            src="/_next/image?url=%2Fimages%2Fpixmob_logo.jpg&w=128&q=75"
+            srcset="/_next/image?url=%2Fimages%2Fpixmob_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fpixmob_logo.jpg&w=128&q=75 2x"
+            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+            width="50"
+          />
+          <p
+            class="ExperienceSectionEntryPeriod"
+          >
+            2022-Present
+          </p>
+          <p
+            class="ExperienceSectionEntryRole"
+          >
+            Cloud Security Specialist
+          </p>
+          <p>
+            As the lead Cloud Security Specialist within the Software team, I designed and implemented the cloud infrastructure hosted on the Google Cloud Platform (GCP) and established robust security guidelines and infrastructure
+          </p>
+        </div>
+      </div>
+      <div
+        style="display: flex; justify-content: center; margin: 3rem 0px 3rem 0px; text-decoration: underline;"
+      >
+        <h4>
+          See my full resume
+        </h4>
+      </div>
+    </section>
+    <section
+      class="Contact"
+      id="contact"
+    >
+      <h1
+        class="TextHeading"
+      >
+        Contact
+      </h1>
+      <div
+        class="ContactSection"
+      >
+        <div
+          class="ContactSectionHeader"
+        >
+          <h2
+            class="TextHeading"
+          >
+            Looking forward to hearing from you!
+          </h2>
+           
+        </div>
+        <div
+          class="ContactSectionForm"
+        >
+          <form
+            id="SubmitForm"
+          >
+            <label
+              for="firstName"
+            >
+              First Name
+            </label>
+            <input
+              class="Input"
+              id="firstName"
+              name="firstName"
+              required=""
+              type="text"
+            />
+            <label
+              for="lastName"
+            >
+              Last Name
+            </label>
+            <input
+              class="Input"
+              id="lastName"
+              name="lastName"
+              required=""
+              type="text"
+            />
+            <label
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              class="Input"
+              id="email"
+              name="email"
+              required=""
+              type="email"
+            />
+            <label
+              for="phone"
+            >
+              Phone
+            </label>
+            <input
+              class="Input"
+              id="phone"
+              name="phone"
+              type="text"
+            />
+            <label
+              for="message"
+            >
+              Message
+            </label>
+            <textarea
+              class="TextArea"
+              id="message"
+              name="message"
+              required=""
+            />
+            <button
+              class="SubmitButton"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section
+      class="Copyright"
+    >
+      <div>
+        Made with ❤️ by Jean-Frederic Mainville
+      </div>
+    </section>
+  </main>
+</div>
+`;

@@ -1,0 +1,24 @@
+@import "../../variables.module.scss";
+
+.About {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-color;
+}
+
+.AboutSection {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.AboutSectionText {
+  display: flex;
+  text-align: end;
+  flex-direction: row;
+  padding: 0 0 0 2rem;
+}
+
+.TextHeading {
+  margin: 2rem;
+}

@@ -6,3 +6,11 @@
   background-color: $background-color;
   min-height: 100vh;
 }
+
+.Copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 2rem 0;
+}

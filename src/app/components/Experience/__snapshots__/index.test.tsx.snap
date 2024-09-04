@@ -1,0 +1,244 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Experience/> Test Suite should render the <Experience/> component unchanged 1`] = `
+<div>
+  <section
+    class="Experience"
+    id="experience"
+    style="background-image: url(/img.jpg); width: 100%; height: auto;"
+  >
+    <h1
+      class="TextHeading"
+    >
+      Experience
+    </h1>
+    <div
+      class="ExperienceSection"
+    >
+      <div
+        class="ExperienceSectionEntryLeft"
+      >
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          height="50"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75 2x"
+          style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+          width="50"
+        />
+        <p
+          class="ExperienceSectionEntryPeriod"
+        >
+          2013-2017
+        </p>
+        <p
+          class="ExperienceSectionEntryRole"
+        >
+          System Administrator
+        </p>
+        <p>
+          As a System Administrator within the Microsoft Center of Expertise (MCoE) business unit, I specialized in managing Windows Server, SharePoint, SQL Server, and Microsoft Azure environments to ensure optimal performance and security
+        </p>
+      </div>
+      <div
+        class="ExperienceSectionEntryCircle"
+      />
+      <div
+        class="ExperienceSectionEntryLine"
+      />
+      <div
+        style="left: 10rem;"
+      />
+      <div>
+        <div
+          class="ExperienceSectionEntryCircle"
+        />
+        <div
+          class="ExperienceSectionEntryLineRight"
+        />
+      </div>
+      <div
+        class="ExperienceSectionEntryRight"
+      >
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          height="50"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75 2x"
+          style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+          width="50"
+        />
+        <p
+          class="ExperienceSectionEntryPeriod"
+        >
+          2013-2017
+        </p>
+        <p
+          class="ExperienceSectionEntryRole"
+        >
+          Security Analyst
+        </p>
+        <p>
+          As a Security Analyst within the GTO business unit, I specialized in email security and monitoring to mitigate security risks
+        </p>
+      </div>
+      <div
+        class="ExperienceSectionEntryLeft"
+      >
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          height="50"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fscfj_logo.jpg&w=128&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fscfj_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fscfj_logo.jpg&w=128&q=75 2x"
+          style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+          width="50"
+        />
+        <p
+          class="ExperienceSectionEntryPeriod"
+        >
+          2018-2019
+        </p>
+        <p
+          class="ExperienceSectionEntryRole"
+        >
+          Full-Stack Developer
+        </p>
+        <p>
+          As a Full-Stack Developer, I developed an internal web application to streamline the time-tracking process for freelancers at SCFJ
+        </p>
+      </div>
+      <div
+        class="ExperienceSectionEntryCircle"
+      />
+      <div
+        class="ExperienceSectionEntryLine"
+      />
+      <div
+        style="left: 10rem;"
+      />
+      <div>
+        <div
+          class="ExperienceSectionEntryCircle"
+        />
+        <div
+          class="ExperienceSectionEntryLineRight"
+        />
+      </div>
+      <div
+        class="ExperienceSectionEntryRight"
+      >
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          height="50"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75 2x"
+          style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+          width="50"
+        />
+        <p
+          class="ExperienceSectionEntryPeriod"
+        >
+          2019-2021
+        </p>
+        <p
+          class="ExperienceSectionEntryRole"
+        >
+          DevOps Specialist
+        </p>
+        <p>
+          As a DevOps Specialist in the identity and access management (IAM) team, I contributed to enhancing the efficiency and security of the IAM infrastructure
+        </p>
+      </div>
+      <div
+        class="ExperienceSectionEntryLeft"
+      >
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          height="50"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75 2x"
+          style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+          width="50"
+        />
+        <p
+          class="ExperienceSectionEntryPeriod"
+        >
+          2021-2022
+        </p>
+        <p
+          class="ExperienceSectionEntryRole"
+        >
+          Technical Product Owner
+        </p>
+        <p>
+          As a Technical Product Owner in the security operations team, I lead my team in implementing and maintaining solutions to enhance Intact's security posture
+        </p>
+      </div>
+      <div
+        class="ExperienceSectionEntryCircle"
+      />
+      <div
+        class="ExperienceSectionEntryLine"
+      />
+      <div
+        style="left: 10rem;"
+      />
+      <div>
+        <div
+          class="ExperienceSectionEntryCircle"
+        />
+      </div>
+      <div
+        class="ExperienceSectionEntryRight"
+      >
+        <img
+          alt=""
+          data-nimg="1"
+          decoding="async"
+          height="50"
+          loading="lazy"
+          src="/_next/image?url=%2Fimages%2Fpixmob_logo.jpg&w=128&q=75"
+          srcset="/_next/image?url=%2Fimages%2Fpixmob_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fpixmob_logo.jpg&w=128&q=75 2x"
+          style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
+          width="50"
+        />
+        <p
+          class="ExperienceSectionEntryPeriod"
+        >
+          2022-Present
+        </p>
+        <p
+          class="ExperienceSectionEntryRole"
+        >
+          Cloud Security Specialist
+        </p>
+        <p>
+          As the lead Cloud Security Specialist within the Software team, I designed and implemented the cloud infrastructure hosted on the Google Cloud Platform (GCP) and established robust security guidelines and infrastructure
+        </p>
+      </div>
+    </div>
+    <div
+      style="display: flex; justify-content: center; margin: 3rem 0px 3rem 0px; text-decoration: underline;"
+    >
+      <h4>
+        See my full resume
+      </h4>
+    </div>
+  </section>
+</div>
+`;

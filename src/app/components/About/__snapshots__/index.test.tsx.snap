@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<About/> Test Suite should render the <About/> component unchanged 1`] = `
+<div>
+  <section
+    class="About"
+    id="about"
+  >
+    <h1
+      class="TextHeading"
+    >
+      About
+    </h1>
+    <div
+      class="AboutSection"
+    >
+      <p
+        class="AboutSectionText"
+      >
+        I am an experienced professional with expertise in cloud security, DevOps, and system administration. My career spans roles as a Cloud Security Specialist, Technical Product Owner, DevOps Specialist, Security Analyst, and System Administrator across diverse environments. I excel in designing and implementing secure IT solutions, automating processes, and optimizing performance to strengthen operational resilience and meet business objectives.
+      </p>
+      <img
+        alt=""
+        data-nimg="1"
+        decoding="async"
+        height="500"
+        loading="lazy"
+        src="/_next/image?url=%2Fimages%2Fprofile.png&w=1080&q=75"
+        srcset="/_next/image?url=%2Fimages%2Fprofile.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fprofile.png&w=1080&q=75 2x"
+        style="color: transparent;"
+        width="500"
+      />
+    </div>
+  </section>
+</div>
+`;

@@ -1,0 +1,66 @@
+@import "../../variables.module.scss";
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary-color;
+}
+
+.ContactSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContactSectionHeader {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ContactSectionForm {
+  display: flex;
+  flex-direction: row;
+}
+
+.Input {
+  display: flex;
+  flex-direction: row;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid;
+  height: 2rem;
+  width: 15rem;
+  margin: 0.5rem 0 0.5rem 0;
+  background-color: $secondary-color;
+}
+
+.TextArea {
+  display: flex;
+  flex-direction: row;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid;
+  height: 10rem;
+  width: 30rem;
+  margin: 0.5rem 0 0.5rem 0;
+  background-color: $secondary-color;
+}
+
+.SubmitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  margin: 2rem 0 2rem 0;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid $secondary-color;
+  color: $secondary-color;
+  height: 2rem;
+  background-color: $text-color;
+}
+
+.TextHeading {
+  margin: 2rem;
+}
