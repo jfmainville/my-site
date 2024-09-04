@@ -11,8 +11,8 @@ export async function POST(request: Request) {
   const info = await transporter.sendMail({
     from: process.env.OUTLOOK_EMAIL,
     to: process.env.OUTLOOK_EMAIL,
-    subject: "Test",
-    html: `<h1>${email}</h1>`,
+    subject: "My Site Contact Form",
+    html: `<p>Hello,<p><br><p>You received a message with the following information: </p><ul><li>First Name: ${firstName}</li><li>Last Name: ${lastName}</li><li>Email: ${email}</li><li>Phone: ${phone}</li><li>Message: ${message}</li></ul>`,
   });
   console.log("Message sent: %s", info.messageId);
   return Response.json({ firstName, lastName, email, phone, message });
