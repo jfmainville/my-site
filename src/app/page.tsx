@@ -11,7 +11,13 @@ const Home = () => {
   const handleSendEmail = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    console.log("formData");
+    const response = await fetch("/api/email", {
+      method: "POST",
+      body: formData,
+    });
+    if (response.ok) {
+      (document.getElementById("SubmitForm") as HTMLFormElement)?.reset();
+    }
   };
 
   return (

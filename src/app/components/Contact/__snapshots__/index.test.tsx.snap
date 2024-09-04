@@ -27,7 +27,9 @@ exports[`<Contact/> Test Suite should render the <Contact/> component unchanged 
       <div
         class="ContactSectionForm"
       >
-        <form>
+        <form
+          id="SubmitForm"
+        >
           <label
             for="firstName"
           >

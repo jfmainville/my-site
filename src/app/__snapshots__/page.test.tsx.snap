@@ -321,7 +321,9 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         <div
           class="ContactSectionForm"
         >
-          <form>
+          <form
+            id="SubmitForm"
+          >
             <label
               for="firstName"
             >

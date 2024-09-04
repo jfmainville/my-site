@@ -16,7 +16,7 @@ const Contact = ({ handleSendEmail }: Props) => {
           </h2>{" "}
         </div>
         <div className={styles.ContactSectionForm}>
-          <form onSubmit={handleSendEmail}>
+          <form id="SubmitForm" onSubmit={handleSendEmail}>
             <label htmlFor="firstName">First Name</label>
             <input
               className={styles.Input}
