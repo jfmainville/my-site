@@ -3,6 +3,19 @@
   position: relative;
 }
 
+.Navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  padding: 2rem;
+  right: 0;
+}
+
+.Link {
+  font-size: 1.17em;
+  padding: 0 1rem 0 1rem;
+}
+
 .TextHeading {
-  margin: 2rem;
+  margin: 8rem 0 0 2rem;
 }
