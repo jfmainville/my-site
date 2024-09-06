@@ -18,9 +18,38 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         sizes="100vw"
         src="/_next/image?url=%2Fimages%2Fbromont.png&w=3840&q=75"
         srcset="/_next/image?url=%2Fimages%2Fbromont.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbromont.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbromont.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbromont.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbromont.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbromont.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbromont.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbromont.png&w=3840&q=75 3840w"
-        style="color: transparent; width: 100%; height: auto;"
+        style="color: transparent; width: 100%; height: 100vh;"
         width="0"
       />
+      <div
+        class="Navbar"
+      >
+        <a
+          class="Link"
+          href="/#contact"
+        >
+          Contact
+        </a>
+        <a
+          class="Link"
+          hidden=""
+          href="/#blog"
+        >
+          Blog
+        </a>
+        <a
+          class="Link"
+          href="/#experience"
+        >
+          Experience
+        </a>
+        <a
+          class="Link"
+          href="/#about"
+        >
+          About
+        </a>
+      </div>
       <h1
         class="TextHeading"
         style="position: absolute;"

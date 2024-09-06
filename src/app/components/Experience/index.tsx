@@ -1,6 +1,7 @@
 import styles from "./index.module.scss";
 import bg from "../../../../public/images/roadmap.jpg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Experience = () => {
   return (
@@ -166,7 +167,9 @@ const Experience = () => {
           textDecoration: "underline",
         }}
       >
-        <h4>See my full resume</h4>
+        <Link className={styles.Link} href={"/resume"}>
+          See my full resume
+        </Link>
       </div>
     </section>
   );
