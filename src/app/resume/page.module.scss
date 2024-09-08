@@ -1,0 +1,57 @@
+@import "../variables.module.scss";
+
+.Main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: center;
+  background-color: #eeeeee;
+  color: $background-color;
+  height: 100vh;
+  width: 100vw;
+}
+
+.Sidebar {
+  background-color: $secondary-color;
+  color: $text-color;
+}
+
+.Navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.Resume {
+  margin: 2rem;
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Profile {
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.WorkExperience {
+  margin-top: 2rem;
+}
+
+.WorkExperienceEntry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.WorkExperienceEntryRole {
+  color: $secondary-color;
+}
+
+.WorkExperienceEntryList {
+  margin: 1rem 0 0 2rem;
+}
