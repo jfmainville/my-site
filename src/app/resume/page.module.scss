@@ -13,6 +13,53 @@
 .Sidebar {
   background-color: $secondary-color;
   color: $text-color;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.ContactEntry {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 1rem 0;
+}
+
+.ContactEntryText {
+  margin-left: 1rem;
+}
+
+.Skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.SkillsList {
+  margin: 0 0 0 1rem;
+}
+
+.Education {
+  display: flex;
+  flex-direction: column;
+}
+
+.EducationList {
+  margin: 0 0 0 1rem;
+}
+
+.Certifications {
+  display: flex;
+  flex-direction: column;
+}
+
+.CertificationsList {
+  margin: 0 0 0 1rem;
+}
+
+.Page {
+  background-color: #eeeeee;
 }
 
 .Navigation {

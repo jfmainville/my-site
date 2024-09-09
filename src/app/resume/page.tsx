@@ -1,4 +1,10 @@
 import styles from "./page.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const ResumePage = () => {
   return (
@@ -6,20 +12,65 @@ const ResumePage = () => {
       <div className={styles.Sidebar}>
         <div className={styles.Contact}>
           <h2>Contact</h2>
+          <div className={styles.ContactEntry}>
+            <FontAwesomeIcon icon={faGlobe} width="20" height="20" />
+            <p className={styles.ContactEntryText}>
+              <Link href="https://jfmainville.me">My Site</Link>
+            </p>
+          </div>
+          <div className={styles.ContactEntry}>
+            <FontAwesomeIcon icon={faEnvelope} width="20" height="20" />
+            <p className={styles.ContactEntryText}>
+              <Link href="mailto:jfmainville@outlook.com">Email</Link>
+            </p>
+          </div>
+          <div className={styles.ContactEntry}>
+            <FontAwesomeIcon icon={faLinkedin} width="20" height="20" />
+            <p className={styles.ContactEntryText}>
+              <Link href="https://www.linkedin.com/in/jean-frederic-mainville-8566b485/">
+                LinkedIn
+              </Link>
+            </p>
+          </div>
+          <div className={styles.ContactEntry}>
+            <FontAwesomeIcon icon={faGithub} width="20" height="20" />
+            <p className={styles.ContactEntryText}>
+              <Link href="https://github.com/jfmainville">GitHub</Link>
+            </p>
+          </div>
         </div>
         <div className={styles.Skills}>
           <h2>Skills</h2>
+          <ul className={styles.SkillsList}>
+            <li>Information Security</li>
+            <li>Cloud Infrastructure</li>
+            <li>DevOps</li>
+            <li>Software Development Security</li>
+            <li>Software Development</li>
+          </ul>
         </div>
         <div className={styles.Education}>
           <h2>Education</h2>
+          <ul className={styles.EducationList}>
+            <li>Polytechnique Montreal / Bachelor of Science (B Sc.)</li>
+            <li>Polytechnique Montreal / Certificate in Cyberinvestigation</li>
+            <li>Polytechnique Montreal / Certificate in Cybersecurity</li>
+            <li>HEC Montreal / Certificate in E-Commerce</li>
+            <li>UQAM / Certificate in General Accounting</li>
+          </ul>
         </div>
         <div className={styles.Certifications}>
           <h2>Certifications</h2>
+          <ul className={styles.CertificationsList}>
+            <li>Certified Information Systems Security Professional (CISSP)</li>
+            <li>GCP Professional Cloud Architect Certification</li>
+            <li>AWS Certified Solutions Architect – Associate</li>
+          </ul>
         </div>
       </div>
-      <div>
+      <div className={styles.Page}>
         <div className={styles.Navigation}>
-          <div>Back to the home page</div>
+          <Link href={"/"}>Back to the home page</Link>
           <div>Export to PDF</div>
         </div>
         <div className={styles.Resume}>
