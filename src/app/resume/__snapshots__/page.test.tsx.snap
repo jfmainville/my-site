@@ -1,0 +1,549 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Resume/> Test Suite should render the <Resume/> page unchanged 1`] = `
+<div>
+  <section
+    class="Main"
+  >
+    <div
+      class="Sidebar"
+    >
+      <div
+        class="Contact"
+      >
+        <h2>
+          Contact
+        </h2>
+        <div
+          class="ContactEntry"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-globe "
+            data-icon="globe"
+            data-prefix="fas"
+            focusable="false"
+            height="20"
+            role="img"
+            viewBox="0 0 512 512"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M352 256c0 22.2-1.2 43.6-3.3 64l-185.3 0c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64l185.3 0c2.2 20.4 3.3 41.8 3.3 64zm28.8-64l123.1 0c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64l-123.1 0c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32l-116.7 0c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0l-176.6 0c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7zm-209 0L18.6 160C48.6 85.9 112.2 29.1 190.6 8.4C165.1 42.6 145.3 96.1 135.3 160zM8.1 192l123.1 0c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64L8.1 320C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zM194.7 446.6c-11.6-26-20.9-58.2-27-94.6l176.6 0c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5C272.6 508.8 263.3 512 256 512s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6C112.2 482.9 48.6 426.1 18.6 352l116.7 0zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6l116.7 0z"
+              fill="currentColor"
+            />
+          </svg>
+          <p
+            class="ContactEntryText"
+          >
+            <a
+              href="https://jfmainville.me"
+            >
+              My Site
+            </a>
+          </p>
+        </div>
+        <div
+          class="ContactEntry"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-envelope "
+            data-icon="envelope"
+            data-prefix="far"
+            focusable="false"
+            height="20"
+            role="img"
+            viewBox="0 0 512 512"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z"
+              fill="currentColor"
+            />
+          </svg>
+          <p
+            class="ContactEntryText"
+          >
+            <a
+              href="mailto:jfmainville@outlook.com"
+            >
+              Email
+            </a>
+          </p>
+        </div>
+        <div
+          class="ContactEntry"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-linkedin "
+            data-icon="linkedin"
+            data-prefix="fab"
+            focusable="false"
+            height="20"
+            role="img"
+            viewBox="0 0 448 512"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+              fill="currentColor"
+            />
+          </svg>
+          <p
+            class="ContactEntryText"
+          >
+            <a
+              href="https://www.linkedin.com/in/jean-frederic-mainville-8566b485/"
+            >
+              LinkedIn
+            </a>
+          </p>
+        </div>
+        <div
+          class="ContactEntry"
+        >
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-github "
+            data-icon="github"
+            data-prefix="fab"
+            focusable="false"
+            height="20"
+            role="img"
+            viewBox="0 0 496 512"
+            width="20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+              fill="currentColor"
+            />
+          </svg>
+          <p
+            class="ContactEntryText"
+          >
+            <a
+              href="https://github.com/jfmainville"
+            >
+              GitHub
+            </a>
+          </p>
+        </div>
+      </div>
+      <div
+        class="Skills"
+      >
+        <h2>
+          Skills
+        </h2>
+        <ul
+          class="SkillsList"
+        >
+          <li>
+            Information Security
+          </li>
+          <li>
+            Cloud Infrastructure
+          </li>
+          <li>
+            DevOps
+          </li>
+          <li>
+            Software Development Security
+          </li>
+          <li>
+            Software Development
+          </li>
+        </ul>
+      </div>
+      <div
+        class="Education"
+      >
+        <h2>
+          Education
+        </h2>
+        <ul
+          class="EducationList"
+        >
+          <li>
+            Polytechnique Montreal / Bachelor of Science (B Sc.)
+          </li>
+          <li>
+            Polytechnique Montreal / Certificate in Cyberinvestigation
+          </li>
+          <li>
+            Polytechnique Montreal / Certificate in Cybersecurity
+          </li>
+          <li>
+            HEC Montreal / Certificate in E-Commerce
+          </li>
+          <li>
+            UQAM / Certificate in General Accounting
+          </li>
+        </ul>
+      </div>
+      <div
+        class="Certifications"
+      >
+        <h2>
+          Certifications
+        </h2>
+        <ul
+          class="CertificationsList"
+        >
+          <li>
+            Certified Information Systems Security Professional (CISSP)
+          </li>
+          <li>
+            GCP Professional Cloud Architect Certification
+          </li>
+          <li>
+            AWS Certified Solutions Architect – Associate
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="Page"
+    >
+      <div
+        class="Navigation"
+      >
+        <a
+          href="/"
+        >
+          Back to the home page
+        </a>
+        <div>
+          Export to PDF
+        </div>
+      </div>
+      <div
+        class="Resume"
+      >
+        <div
+          class="Header"
+        >
+          <h1>
+            Jean-Frederic Mainville
+          </h1>
+          <h2>
+            Cloud Security Specialist
+          </h2>
+        </div>
+        <div
+          class="Profile"
+        >
+          <h2>
+            Profile
+          </h2>
+          <p>
+            I am an experienced professional with expertise in cloud security, DevOps, and system administration. My career spans roles as a Cloud Security Specialist, Technical Product Owner, DevOps Specialist, Security Analyst, and System Administrator across diverse environments. I excel in designing and implementing secure IT solutions, automating processes, and optimizing performance to strengthen operational resilience and meet business objectives.
+          </p>
+        </div>
+        <div
+          class="WorkExperience"
+        >
+          <h2>
+            Work Experience
+          </h2>
+          <div
+            class="WorkExperienceEntry"
+          >
+            <h3
+              class="WorkExperienceEntryRole"
+            >
+              Cloud Security Specialist
+            </h3>
+            <p
+              style="margin-bottom: 1rem;"
+            >
+              PixMob / Montreal, Quebec, Canada / July 2022 - Now
+            </p>
+            <p>
+              As the lead Cloud Security Specialist within the Software team, I designed and implemented the cloud infrastructure hosted on the Google Cloud Platform (GCP) and established robust security guidelines and infrastructure:
+            </p>
+            <ul
+              class="WorkExperienceEntryList"
+            >
+              <li>
+                Created and executed a strategic security roadmap to improve the security posture and address existing gaps, ensuring alignment with business objectives and regulatory requirements
+              </li>
+              <li>
+                Designed and deployed GitLab CI pipelines to automate the deployment of services within our cloud infrastructure, improving the software development life cycle
+              </li>
+              <li>
+                Implemented security best practices and fortified our cloud infrastructure, as well as other solutions in our portfolio, to mitigate potential risks and vulnerabilities
+              </li>
+              <li>
+                Deployed and integrated advanced security application testing mechanisms, including secret detection and Static Application Security Testing (SAST), to proactively identify and address security vulnerabilities
+              </li>
+              <li>
+                Conducted regular security assessments, vulnerability scans, and penetration testing to identify and remediate security weaknesses, ensuring continuous compliance with industry standards and best practices
+              </li>
+              <li>
+                Established monitoring and incident response protocols to detect, respond to, and recover from security incidents, minimizing potential impacts
+              </li>
+            </ul>
+            <p
+              style="margin-top: 1rem; margin-bottom: 1rem;"
+            >
+              Environments
+            </p>
+            <p>
+              Google Cloud Platform (GCP), Google Kubernetes Engine (GKE), Datadog, Security Command Center, Cloud Run, Cloud SQL, MongoDB Atlas, PostgreSQL, Terraform, Ansible, GitLab, GitLab CI, Amazon Web Services (AWS), Javascript, Typescript, Next.js, React, Express.js, Python, Docker, Jira
+            </p>
+          </div>
+          <div
+            class="WorkExperienceEntry"
+          >
+            <h3
+              class="WorkExperienceEntryRole"
+            >
+              Technical Product Owner
+            </h3>
+            <p
+              style="margin-bottom: 1rem;"
+            >
+              Intact / Sainte-Hyacinthe, Quebec, Canada / August 2021 - June 2022
+            </p>
+            <p>
+              As a Technical Product Owner in the security operations team, I lead my team in implementing and maintaining solutions to enhance Intact's security posture:
+               
+            </p>
+            <ul
+              class="WorkExperienceEntryList"
+            >
+              <li>
+                Created and executed a strategic security roadmap to improve the security posture and address existing gaps, ensuring alignment with business objectives and regulatory requirements
+              </li>
+              <li>
+                Worked with internal and external auditors to design and implement necessary security controls, ensuring compliance with industry standards and best practices
+              </li>
+              <li>
+                Collaborated with the architecture team to design and optimize the existing SIEM infrastructure, enhancing detection and response capabilities
+              </li>
+              <li>
+                Partnered closely with the security incident response team (SIRT) to ensure our SIEM solution met operational needs and improve threat detection and response efficiency
+              </li>
+              <li>
+                Planned and prioritized sprint activities, setting clear goals to maximize value delivery and improve overall project outcomes - Regularly communicated with stakeholders, providing updates on SIEM solution progress, gathering feedback, and making data-driven decisions to enhance system performance
+              </li>
+              <li>
+                Implemented a continuous improvement process for the SIEM solution, incorporating feedback and new technologies to stay ahead of emerging threats like threat intelligence and threat hunting
+              </li>
+            </ul>
+            <p
+              style="margin-top: 1rem; margin-bottom: 1rem;"
+            >
+              Environments
+            </p>
+            <p>
+              Microsoft Azure, Microsoft Sentinel, Log Analytics Workspace (LAW), Elastic Stack, Microsoft 365 Defender, Ansible, Ubuntu, Logic Apps, Function Apps, Azure AD, GitHub Enterprise, Grafana, MITRE ATT&CK, Jira, Confluence
+            </p>
+          </div>
+          <div
+            class="WorkExperienceEntry"
+          >
+            <h3
+              class="WorkExperienceEntryRole"
+            >
+              DevOps Specialist
+            </h3>
+            <p
+              style="margin-bottom: 1rem;"
+            >
+              Intact / Sainte-Hyacinthe, Quebec, Canada / April 2019 - August 2021
+            </p>
+            <p>
+              As a DevOps Specialist in the identity and access management (IAM) team, I contributed to enhancing the efficiency and security of the IAM infrastructure:
+               
+            </p>
+            <ul
+              class="WorkExperienceEntryList"
+            >
+              <li>
+                Developed and refined Ansible playbooks for automating the deployment and configuration of IBM Security Access Manager, IBM Security Directory Suite, and Citrix ADC appliances, ensuring secure and consistent environments
+              </li>
+              <li>
+                Implemented configurations, patches, and vulnerability mitigation strategies across various platforms using Ansible, reducing vulnerabilities and ensuring compliance with security policies
+              </li>
+              <li>
+                Managed and configured Identity and Access Management (IAM) platforms, streamlining access control and improving security measures
+              </li>
+              <li>
+                Set up monitoring and alerting systems to detect and respond to operational and security incidents promptly, minimizing potential impact
+              </li>
+              <li>
+                Developed Python scripts for automating security tasks and processes, enhancing operational efficiency
+              </li>
+            </ul>
+            <p
+              style="margin-top: 1rem; margin-bottom: 1rem;"
+            >
+              Environments
+            </p>
+            <p>
+              Ansible, IBM Security Access Manager, IBM Security Directory Suite, Citrix ADC, RHEL, Python, Docker, Terraform, GitHub Enterprise, GitLab, Jira
+            </p>
+          </div>
+          <div
+            class="WorkExperienceEntry"
+          >
+            <h3
+              class="WorkExperienceEntryRole"
+            >
+              Full-Stack Developer
+            </h3>
+            <p
+              style="margin-bottom: 1rem;"
+            >
+              SCFJ / Montreal, Quebec, Canada / January 2018 - April 2019
+            </p>
+            <p>
+              As a Full-Stack Developer, I developed an internal web application to streamline the time-tracking process for freelancers at SCFJ:
+            </p>
+            <ul
+              class="WorkExperienceEntryList"
+            >
+              <li>
+                Designed the user experience and user interface of the web application using Figma, ensuring a user-friendly and visually appealing product
+              </li>
+              <li>
+                Built the web application from the ground up using React, Redux, and Django REST framework, delivering a robust and responsive solution
+              </li>
+              <li>
+                Developed a REST API with Django REST framework to facilitate seamless communication between the front-end and back-end
+              </li>
+              <li>
+                Implemented unit tests, integration tests and end-to-end (E2E) tests using Jest, Enzyme and Selenium to ensure code quality and reliability
+              </li>
+              <li>
+                Monitored project progress and deliverables, ensuring timely completion and organization
+              </li>
+              <li>
+                Applied IaC principles to deploy and configure the Google Kubernetes Engine (GKE) platform using Terraform, enhancing deployment efficiency
+              </li>
+              <li>
+                Deployed GitLab CI pipelines to automate the deployment process, ensuring continuous integration and delivery
+              </li>
+              <li>
+                Incorporated basic security practices in the application development lifecycle to ensure secure code and deployment
+              </li>
+            </ul>
+            <p
+              style="margin-top: 1rem; margin-bottom: 1rem;"
+            >
+              Environments
+            </p>
+            <p>
+              JavaScript, HTML, SCSS, React, Node.js, Django REST framework, Python, Redis, Jest, Enzyme, Selenium, Docker, Google Cloud Platform (GCP), Google Kubernetes Engine (GKE), Terraform, Ubuntu Server, Figma, Trello
+            </p>
+          </div>
+          <div
+            class="WorkExperienceEntry"
+          >
+            <h3
+              class="WorkExperienceEntryRole"
+            >
+              Security Analyst
+            </h3>
+            <p
+              style="margin-bottom: 1rem;"
+            >
+              CGI / Montreal, Quebec, Canada / June 2017 - December 2017
+            </p>
+            <p>
+              As a Security Analyst within the GTO business unit, I specialized in email security and monitoring to mitigate security risks:
+            </p>
+            <ul
+              class="WorkExperienceEntryList"
+            >
+              <li>
+                Analyzed email logs to proactively identify, prevent, and block potential threats such as SPAM, phishing attacks and other attack vectors
+              </li>
+              <li>
+                Managed and administered the Proofpoint-on-Demand (POD) platform to enhance email security and threat detection capabilities
+              </li>
+              <li>
+                Supported and maintained the Symantec Email Protection (SEP) platform, ensuring reliable email filtering and protection against emerging threats
+              </li>
+              <li>
+                Administered the Sophos SafeGuard encryption platform for CGI workstations, safeguarding sensitive data and ensuring compliance with security policies
+              </li>
+              <li>
+                Collaborated within ITIL incident and change management processes, ensuring efficient handling of security incidents and changes while adhering to best practices
+              </li>
+              <li>
+                Implemented and maintained operational procedures to enhance email security posture and response capabilities
+              </li>
+            </ul>
+            <p
+              style="margin-top: 1rem; margin-bottom: 1rem;"
+            >
+              Environments
+            </p>
+            <p>
+              IT Service Management (ITSM), ServiceNOW, Proofpoint-on-Demand (POD), Symantec Email Protection (SEP), Sophos SafeGuard
+            </p>
+          </div>
+          <div
+            class="WorkExperienceEntry"
+          >
+            <h3
+              class="WorkExperienceEntryRole"
+            >
+              System Administrator
+            </h3>
+            <p
+              style="margin-bottom: 1rem;"
+            >
+              CGI / Montreal, Quebec, Canada / November 2013 - October 2017
+            </p>
+            <p>
+              As a System Administrator within the Microsoft Center of Expertise (MCoE) business unit, I specialized in managing Windows Server, SharePoint, SQL Server, and Microsoft Azure environments to ensure optimal performance and security:
+               
+            </p>
+            <ul
+              class="WorkExperienceEntryList"
+            >
+              <li>
+                Developed and maintained PowerShell scripts to automate deployment, configuration, and monitoring for SharePoint environments, improving operational efficiency
+              </li>
+              <li>
+                Designed, deployed, and managed multiple Active Directory, ADFS, Web Application Proxy (WAP), and Dynamics CRM environments on Microsoft Azure, ensuring scalable and secure infrastructures
+              </li>
+              <li>
+                Installed and configured highly available clustered environments for SharePoint Server (2007, 2010, 2013) and Project Server (2010, 2013), optimizing performance and reliability
+              </li>
+              <li>
+                Conducted comprehensive workload tests to identify and address performance bottlenecks, enhancing overall SharePoint environment performance
+              </li>
+              <li>
+                Led and executed migrations of SharePoint environments to newer versions, ensuring minimal downtime and seamless transition - Implemented security best practices and configurations across SharePoint, SQL Server, and Azure environments to safeguard data and comply with organizational policies
+              </li>
+              <li>
+                Collaborated with cross-functional teams to troubleshoot complex technical issues and provide timely resolutions
+              </li>
+            </ul>
+            <p
+              style="margin-top: 1rem; margin-bottom: 1rem;"
+            >
+              Environments
+            </p>
+            <p>
+              PowerShell, Windows Server (2008 R2, 2012 R2), Active Directory, DNS Server, Group Policies, Microsoft Azure, Dynamics CRM (2011, 2013, 2015, 2016), ADFS, Web Application Proxy (WAP), SQL Server (2008 R2, 2012, 2014), SSRS, SharePoint Server (2010, 2013, 2016), Project Server (2010, 2013, 2016)
+            </p>
+          </div>
+        </div>
+        <div />
+      </div>
+    </div>
+  </section>
+</div>
+`;
