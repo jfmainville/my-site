@@ -17,7 +17,10 @@ export async function POST(request: Request) {
   });
   console.log("Message sent: %s", info.messageId);
   return NextResponse.json(
-    { message: "Successfully exported the resume to a PDF file" },
+    {
+      message:
+        "Successfully sent the contact form to the defined email address",
+    },
     { status: 201 },
   );
 }
