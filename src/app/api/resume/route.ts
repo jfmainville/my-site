@@ -1,3 +1,4 @@
+import { NextResponse } from "next/server";
 import { chromium } from "@playwright/test";
 
 export async function POST(request: Request) {
@@ -14,5 +15,8 @@ export async function POST(request: Request) {
     printBackground: true,
   });
   await browser.close();
-  return Response.json({});
+  return NextResponse.json(
+    { message: "Successfully exported the resume to a PDF file" },
+    { status: 201 },
+  );
 }
