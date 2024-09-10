@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { chromium } from "@playwright/test";
 
 export async function POST(request: Request) {
-  const hostname = request.headers.get("host");
+  const hostname: string | null = request.headers.get("host");
   const browser = await chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
