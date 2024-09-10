@@ -213,13 +213,16 @@ exports[`<Resume/> Test Suite should render the <Resume/> page unchanged 1`] = `
     >
       <div
         class="Navigation"
+        id="Navigation"
       >
         <a
           href="/"
         >
           Back to the home page
         </a>
-        <div>
+        <div
+          class="PdfExportButton"
+        >
           Export to PDF
         </div>
       </div>

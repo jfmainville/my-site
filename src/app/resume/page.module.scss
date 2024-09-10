@@ -1,13 +1,23 @@
 @import "../variables.module.scss";
 
+@media print {
+  .Navigation {
+    display: none !important;
+  }
+}
+
 .Main {
   display: grid;
   grid-template-columns: 1fr 4fr;
   justify-content: center;
   background-color: #eeeeee;
   color: $background-color;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
+}
+
+.PdfExportButton {
+  cursor: pointer;
 }
 
 .Sidebar {

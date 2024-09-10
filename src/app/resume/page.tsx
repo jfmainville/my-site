@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./page.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -7,6 +9,12 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const ResumePage = () => {
+  const handlePdfExport = async () => {
+    await fetch("/api/resume", {
+      method: "POST",
+    });
+  };
+
   return (
     <section className={styles.Main}>
       <div className={styles.Sidebar}>
@@ -69,9 +77,11 @@ const ResumePage = () => {
         </div>
       </div>
       <div className={styles.Page}>
-        <div className={styles.Navigation}>
+        <div id="Navigation" className={styles.Navigation}>
           <Link href={"/"}>Back to the home page</Link>
-          <div>Export to PDF</div>
+          <div className={styles.PdfExportButton} onClick={handlePdfExport}>
+            Export to PDF
+          </div>
         </div>
         <div className={styles.Resume}>
           <div className={styles.Header}>
