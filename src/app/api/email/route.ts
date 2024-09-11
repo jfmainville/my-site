@@ -1,3 +1,4 @@
+import { NextResponse } from "next/server";
 import { transporter } from "../../lib/nodemailer/nodemailerConfig";
 
 export async function POST(request: Request) {
@@ -15,5 +16,11 @@ export async function POST(request: Request) {
     html: `<p>Hello,<p><br><p>You received a message with the following information: </p><ul><li>First Name: ${firstName}</li><li>Last Name: ${lastName}</li><li>Email: ${email}</li><li>Phone: ${phone}</li><li>Message: ${message}</li></ul>`,
   });
   console.log("Message sent: %s", info.messageId);
-  return Response.json({ firstName, lastName, email, phone, message });
+  return NextResponse.json(
+    {
+      message:
+        "Successfully sent the contact form to the defined email address",
+    },
+    { status: 201 },
+  );
 }

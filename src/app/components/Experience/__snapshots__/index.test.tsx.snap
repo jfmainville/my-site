@@ -235,9 +235,12 @@ exports[`<Experience/> Test Suite should render the <Experience/> component unch
     <div
       style="display: flex; justify-content: center; margin: 3rem 0px 3rem 0px; text-decoration: underline;"
     >
-      <h4>
+      <a
+        class="Link"
+        href="/resume"
+      >
         See my full resume
-      </h4>
+      </a>
     </div>
   </section>
 </div>

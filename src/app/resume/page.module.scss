@@ -1,0 +1,119 @@
+@import "../variables.module.scss";
+
+@media print {
+  .Navigation {
+    display: none !important;
+  }
+}
+
+.Main {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  justify-content: center;
+  background-color: #eeeeee;
+  color: $background-color;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.PdfExportButton {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+  color: $background-color;
+}
+
+.Sidebar {
+  background-color: $secondary-color;
+  color: $text-color;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.Contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.ContactEntry {
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 1rem 0;
+}
+
+.ContactEntryText {
+  margin-left: 1rem;
+}
+
+.Skills {
+  display: flex;
+  flex-direction: column;
+}
+
+.SkillsList {
+  margin: 0 0 0 1rem;
+}
+
+.Education {
+  display: flex;
+  flex-direction: column;
+}
+
+.EducationList {
+  margin: 0 0 0 1rem;
+}
+
+.Certifications {
+  display: flex;
+  flex-direction: column;
+}
+
+.CertificationsList {
+  margin: 0 0 0 1rem;
+}
+
+.Page {
+  background-color: #eeeeee;
+}
+
+.Navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2rem;
+}
+
+.Resume {
+  margin: 2rem;
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Profile {
+  margin-top: 2rem;
+  text-align: justify;
+}
+
+.WorkExperience {
+  margin-top: 2rem;
+}
+
+.WorkExperienceEntry {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.WorkExperienceEntryRole {
+  color: $secondary-color;
+}
+
+.WorkExperienceEntryList {
+  margin: 1rem 0 0 2rem;
+}
