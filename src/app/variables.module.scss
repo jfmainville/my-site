@@ -10,6 +10,7 @@ $text-color: #eeeeee;
 // Shadows
 
 // Media Queries
+$small-screen: 705px;
 
 :export {
   fontFamily: $font-family;
@@ -17,4 +18,5 @@ $text-color: #eeeeee;
   primaryColor: $primary-color;
   secondaryColor: $secondary-color;
   textColor: $text-color;
+  smallScreen: $small-screen;
 }
