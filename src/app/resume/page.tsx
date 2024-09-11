@@ -91,8 +91,8 @@ const ResumePage = () => {
       <div className={styles.Page}>
         <div id="Navigation" className={styles.Navigation}>
           <Link href={"/"}>Back to the home page</Link>
-          <div className={styles.PdfExportButton} onClick={handlePdfExport}>
-            Export to PDF
+          <div onClick={handlePdfExport}>
+            <button className={styles.PdfExportButton}>Export to PDF</button>
           </div>
         </div>
         <div className={styles.Resume}>

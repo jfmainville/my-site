@@ -220,10 +220,12 @@ exports[`<Resume/> Test Suite should render the <Resume/> page unchanged 1`] = `
         >
           Back to the home page
         </a>
-        <div
-          class="PdfExportButton"
-        >
-          Export to PDF
+        <div>
+          <button
+            class="PdfExportButton"
+          >
+            Export to PDF
+          </button>
         </div>
       </div>
       <div
