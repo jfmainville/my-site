@@ -12,6 +12,12 @@
   flex-direction: row;
 }
 
+@media (max-width: $small-screen) {
+  .AboutSection {
+    flex-direction: column;
+  }
+}
+
 .AboutSectionText {
   display: flex;
   text-align: end;
