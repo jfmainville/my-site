@@ -7,6 +7,7 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { RESUME_FILENAME } from "../utils/constants";
 
 const ResumePage = () => {
   const handlePdfExport = async () => {
@@ -19,7 +20,7 @@ const ResumePage = () => {
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "Resume_Jean_Frederic_Mainville.pdf";
+      a.download = RESUME_FILENAME;
       document.body.appendChild(a);
       a.click();
       a.remove();
