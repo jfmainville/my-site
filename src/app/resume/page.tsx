@@ -10,9 +10,20 @@ import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 const ResumePage = () => {
   const handlePdfExport = async () => {
-    await fetch("/api/resume", {
-      method: "POST",
+    const response = await fetch("/api/resume", {
+      method: "GET",
     });
+
+    if (response.ok) {
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "Resume_Jean_Frederic_Mainville.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
   };
 
   return (
