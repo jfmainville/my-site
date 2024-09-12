@@ -7,10 +7,16 @@
 }
 
 .ContactSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+
+@media (max-width: $small-screen) {
+  .ContactSection {
+    flex-direction: column;
+  }
 }
 
 .ContactSectionHeader {
@@ -45,6 +51,12 @@
   width: 30rem;
   margin: 0.5rem 0 0.5rem 0;
   background-color: $secondary-color;
+}
+
+@media (max-width: $small-screen) {
+  .TextArea {
+    width: 100%;
+  }
 }
 
 .SubmitButton {
