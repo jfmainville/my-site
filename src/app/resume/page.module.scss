@@ -16,6 +16,12 @@
   width: 100vw;
 }
 
+@media (max-width: $small-screen) {
+  .Main {
+    grid-template-columns: 1fr;
+  }
+}
+
 .PdfExportButton {
   cursor: pointer;
   outline: none;
