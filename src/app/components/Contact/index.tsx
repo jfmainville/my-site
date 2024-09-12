@@ -1,5 +1,14 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./index.module.scss";
 import { FormEvent } from "react";
+import Link from "next/link";
+import {
+  faFacebook,
+  faGithub,
+  faLinkedin,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
   handleSendEmail: (event: FormEvent<HTMLFormElement>) => void;
@@ -14,6 +23,28 @@ const Contact = ({ handleSendEmail }: Props) => {
           <h2 className={styles.TextHeading}>
             Looking forward to hearing from you!
           </h2>{" "}
+          <div className={styles.ContactSocialMedia}>
+            <div className={styles.ContactSocialMediaEntry}>
+              <Link href="https://github.com/jfmainville">
+                <FontAwesomeIcon icon={faGithub} size="2x" />
+              </Link>
+            </div>
+            <div className={styles.ContactSocialMediaEntry}>
+              <Link href="https://www.linkedin.com/in/jean-frederic-mainville-8566b485">
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              </Link>
+            </div>
+            <div className={styles.ContactSocialMediaEntry}>
+              <Link href="https://www.facebook.com/jeanfrederic.mainville/">
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
+              </Link>
+            </div>
+            <div className={styles.ContactSocialMediaEntry}>
+              <Link href="https://x.com/JeanMainvi">
+                <FontAwesomeIcon icon={faXTwitter} size="2x" />
+              </Link>
+            </div>
+          </div>
         </div>
         <div className={styles.ContactSectionForm}>
           <form id="SubmitForm" onSubmit={handleSendEmail}>
