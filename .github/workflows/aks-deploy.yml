@@ -4,6 +4,9 @@ on:
     branches:
       - main
       - "NUA-*" # FIXME: Remove this line once the pipeline works properly
+permissions:
+  id-token: write
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
