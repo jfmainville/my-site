@@ -1,8 +1,9 @@
 name: Build Docker image and deploy to the Azure AKS cluster
-# on:
-#   push:
-#     branches:
-#       - main
+on:
+  push:
+    branches:
+      - main
+      - "NUA-*" # FIXME: Remove this line once the pipeline works properly
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -52,4 +53,3 @@ jobs:
   #         kubectl apply -k kubernetes/${{ vars.ENVIRONMENT_NAME }}/
   #         kubectl set image deployment/mysite-deployment mysite-container=${{ vars.ACR_NAME }}.azurecr.io/mysite:${{ github.SHA }}
   #   needs: build
-
