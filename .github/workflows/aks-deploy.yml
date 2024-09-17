@@ -27,7 +27,7 @@ jobs:
         with:
           azcliversion: latest
           inlineScript: |
-            az acr login --registry ${{ vars.ACR_NAME }}
+            az acr login --name ${{ vars.ACR_NAME }}
       - name: Build and push
         uses: docker/build-push-action@v6
         with:
