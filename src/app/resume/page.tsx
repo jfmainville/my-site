@@ -183,7 +183,7 @@ const ResumePage = () => {
               <p>
                 As a Technical Product Owner in the security operations team, I
                 lead my team in implementing and maintaining solutions to
-                enhance Intact's security posture:{" "}
+                enhance Intact&apos;s security posture:{" "}
               </p>
               <ul className={styles.WorkExperienceEntryList}>
                 <li>
