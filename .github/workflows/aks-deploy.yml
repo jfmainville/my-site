@@ -26,8 +26,8 @@ jobs:
         uses: azure/docker-login@v2
         with:
           login-server: ${{ vars.AZURE_ACR_URL }}
-          username: ${{ secrets.AZURE_ACR_SP_CLIENT_ID }}
-          password: ${{ secrets.AZURE_ACR_SP_CLIENT_SECRET }}
+          username: ${{ secrets.AZURE_ACR_USERNAME }}
+          password: ${{ secrets.AZURE_ACR_PASSWORD }}
       - run: |
           docker build -t ${{ vars.AZURE_ACR_URL }}/my-site:latest -t ${{ vars.AZURE_ACR_URL }}/my-site:${{ github.SHA }} .
           docker push ${{ vars.AZURE_ACR_URL }}/my-site:latest
