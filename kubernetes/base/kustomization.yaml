@@ -1,0 +1,10 @@
+commonLabels:
+  app: my-site
+  env: lab
+  tier: frontend
+namePrefix: my-site-
+resources:
+  - deployment.yaml
+  - service.yaml
+  - issuer.yaml
+
