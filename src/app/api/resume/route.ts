@@ -7,7 +7,7 @@ import { RESUME_FILENAME } from "@/app/utils/constants";
 export async function GET(request: Request) {
   const hostname: string | null = request.headers.get("host");
   const browser = await chromium.launch();
-  const context = await browser.newContext({ timeout: 30000 });
+  const context = await browser.newContext();
   const page = await context.newPage();
   await page.goto(
     `${process.env.NODE_ENV === "development" ? "http" : "https"}://${hostname}/resume`,
