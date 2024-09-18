@@ -27,4 +27,5 @@ jobs:
         uses: actions/setup-node@v3
       - run: |
           npm ci --all
+          npx playwright install
           npm run test
