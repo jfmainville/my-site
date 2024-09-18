@@ -1,0 +1,30 @@
+name: Complete the validations for the code in a Pull Request (PR)
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout the current git repository
+        uses: actions/checkout@main
+      - name: Run the NPM lint command
+        uses: actions/setup-node@v3
+      - run: |
+          npm ci --all
+          npm run lint
+  test:
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout the current git repository
+        uses: actions/checkout@main
+      - name: Run the NPM test command
+        uses: actions/setup-node@v3
+      - run: |
+          npm ci --all
+          npm run test
