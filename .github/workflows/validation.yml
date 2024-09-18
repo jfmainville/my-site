@@ -28,5 +28,4 @@ jobs:
       - run: |
           npm ci --all
           npx playwright install
-          npm run dev
-          npm run test
+          npm run ci:test
