@@ -51,4 +51,4 @@ jobs:
         run: |-
           kubectl apply -k kubernetes/${{ vars.ENVIRONMENT_NAME }}/
           kubectl set image deployment/mysite-deployment mysite-container=${{ vars.ACR_NAME }}.azurecr.io/mysite:${{ github.SHA }}
-    needs: build
+    # needs: build
