@@ -50,5 +50,5 @@ jobs:
       - name: Deploy the latest Docker image in the AKS cluster
         run: |-
           kubectl apply -k kubernetes/${{ vars.ENVIRONMENT_NAME }}/
-          kubectl set image deployment/mysite-deployment mysite-container=${{ vars.ACR_NAME }}.azurecr.io/mysite:${{ github.SHA }}
+          kubectl set image deployment/my-site-deployment my-site-container=${{ vars.AZURE_ACR_URL }}/my-site:${{ github.SHA }}
     # needs: build
