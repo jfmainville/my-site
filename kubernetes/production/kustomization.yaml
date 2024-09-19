@@ -10,4 +10,4 @@ images:
     newTag: latest
 patchesStrategicMerge:
   - deployment.yaml
-
+  - ingress.yaml
