@@ -28,7 +28,7 @@ const Header = () => {
         </Link>
       </div>
       <h1 className={styles.TextHeading} style={{ position: "absolute" }}>
-        Hey, I'm Jean-Frederic, welcome to my site! 🔥
+        Hey, I&apos;m Jean-Frederic, welcome to my site! 🔥
       </h1>
     </div>
   );

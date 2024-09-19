@@ -1,0 +1,14 @@
+namePrefix: my-site-
+resources:
+- deployment.yaml
+- service.yaml
+- issuer.yaml
+- ingress.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+labels:
+- includeSelectors: true
+  pairs:
+    app: my-site
+    env: lab
+    tier: frontend
