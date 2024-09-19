@@ -15,7 +15,7 @@ jobs:
       - name: Run the NPM lint command
         uses: actions/setup-node@v4
       - run: |
-          npm ci --all
+          npm ci
           npm run lint
   test:
     runs-on: ubuntu-latest
@@ -26,6 +26,6 @@ jobs:
       - name: Run the NPM test command
         uses: actions/setup-node@v4
       - run: |
-          npm ci --all
+          npm ci
           npx playwright install
           npm run ci:test
