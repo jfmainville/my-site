@@ -2,16 +2,13 @@ import { NextResponse } from "next/server";
 import { chromium } from "@playwright/test";
 import fs from "fs";
 import path from "path";
-import { RESUME_FILENAME } from "@/app/utils/constants";
+import { RESUME_FILENAME, MY_SITE_URL } from "@/app/utils/constants";
 
-export async function GET(request: Request) {
-  const hostname: string | null = request.headers.get("host");
+export async function GET() {
   const browser = await chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
-  await page.goto(
-    `${process.env.NODE_ENV === "development" ? "http" : "https"}://${hostname}/resume`,
-  );
+  await page.goto(MY_SITE_URL);
   await page.emulateMedia({ media: "print" });
   await page.pdf({
     path: `./${RESUME_FILENAME}`,

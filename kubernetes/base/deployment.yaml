@@ -25,6 +25,9 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          env:
+            - name: MY_SITE_URL
+              value: jfmainville.me
           resources:
             limits:
               cpu: 100m

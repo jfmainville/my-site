@@ -3,5 +3,5 @@ export const currentDateTime: Date = new Date(
 );
 
 export const PORT = process.env.PORT || "3000";
-export const HOSTNAME = process.env.HOSTNAME || `http://localhost:${PORT}`;
+export const MY_SITE_URL = process.env.HOSTNAME || `http://localhost:${PORT}`;
 export const RESUME_FILENAME = "Resume_Jean_Frederic_Mainville.pdf";
