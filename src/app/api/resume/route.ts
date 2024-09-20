@@ -4,6 +4,9 @@ import fs from "fs";
 import path from "path";
 import { RESUME_FILENAME, MY_SITE_URL } from "@/app/utils/constants";
 
+// Need to use force-dynamic for Playwright to work properly during the next build command execution
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const browser = await chromium.launch();
   const context = await browser.newContext();
