@@ -8,7 +8,7 @@ export async function GET() {
   const browser = await chromium.launch();
   const context = await browser.newContext();
   const page = await context.newPage();
-  await page.goto(MY_SITE_URL);
+  await page.goto(`${MY_SITE_URL}/resume`);
   await page.emulateMedia({ media: "print" });
   await page.pdf({
     path: `./${RESUME_FILENAME}`,
