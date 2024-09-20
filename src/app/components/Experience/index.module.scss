@@ -16,6 +16,7 @@
   flex-direction: column;
   text-align: end;
   align-items: flex-end;
+  color: $text-color;
   margin-right: 2rem;
 }
 
@@ -24,6 +25,7 @@
   flex-direction: column;
   text-align: start;
   align-items: flex-start;
+  color: $text-color;
   margin-left: 2rem;
 }
 
@@ -55,10 +57,13 @@
 }
 
 .TextHeading {
+  color: $text-color;
   margin: 2rem;
 }
 
 .Link {
   font-size: 1.17em;
+  color: $text-color;
+  text-decoration: underline;
   padding: 0 1rem 0 1rem;
 }

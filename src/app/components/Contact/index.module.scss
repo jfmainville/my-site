@@ -32,6 +32,7 @@
 }
 
 .ContactSocialMediaEntry {
+  color: $text-color;
   margin: 0 2rem 1rem 0;
 }
 
@@ -44,6 +45,7 @@
   display: flex;
   flex-direction: row;
   outline: none;
+  color: $text-color;
   box-shadow: none;
   border: 1px solid;
   height: 2rem;
@@ -52,10 +54,15 @@
   background-color: $secondary-color;
 }
 
+.InputLabel {
+  color: $text-color;
+}
+
 .TextArea {
   display: flex;
   flex-direction: row;
   outline: none;
+  color: $text-color;
   box-shadow: none;
   border: 1px solid;
   height: 10rem;
@@ -85,5 +92,6 @@
 }
 
 .TextHeading {
+  color: $text-color;
   margin: 2rem;
 }
