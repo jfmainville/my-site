@@ -25,6 +25,20 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          env:
+            - name: MY_SITE_URL
+              value: https://jfmainville.me
+            - name: OUTLOOK_SMTP_SERVER
+              value: smtp-mail.outlook.com
+            - name: OUTLOOK_SMTP_SERVER_PORT
+            - value: 587
+            - name: OUTLOOK_EMAIL
+              value: jfmainville@outlook.com
+            - name: OUTLOOK_APP_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: my-site-secret
+                  key: OUTLOOK_APP_PASSWORD
           resources:
             limits:
               cpu: 100m
@@ -32,4 +46,3 @@ spec:
             requests:
               cpu: 50m
               memory: 100Mi
-
