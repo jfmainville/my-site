@@ -48,7 +48,9 @@ const Contact = ({ handleSendEmail }: Props) => {
         </div>
         <div className={styles.ContactSectionForm}>
           <form id="SubmitForm" onSubmit={handleSendEmail}>
-            <label htmlFor="firstName">First Name</label>
+            <label htmlFor="firstName" className={styles.InputLabel}>
+              First Name
+            </label>
             <input
               className={styles.Input}
               id="firstName"
@@ -56,7 +58,9 @@ const Contact = ({ handleSendEmail }: Props) => {
               required={true}
               type="text"
             />
-            <label htmlFor="lastName">Last Name</label>
+            <label htmlFor="lastName" className={styles.InputLabel}>
+              Last Name
+            </label>
             <input
               className={styles.Input}
               id="lastName"
@@ -64,7 +68,9 @@ const Contact = ({ handleSendEmail }: Props) => {
               required={true}
               type="text"
             />
-            <label htmlFor="email">Email</label>
+            <label htmlFor="email" className={styles.InputLabel}>
+              Email
+            </label>
             <input
               className={styles.Input}
               id="email"
@@ -72,14 +78,18 @@ const Contact = ({ handleSendEmail }: Props) => {
               required={true}
               type="email"
             />
-            <label htmlFor="phone">Phone</label>
+            <label htmlFor="phone" className={styles.InputLabel}>
+              Phone
+            </label>
             <input
               className={styles.Input}
               id="phone"
               name="phone"
               type="text"
             />
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className={styles.InputLabel}>
+              Message
+            </label>
             <textarea
               className={styles.TextArea}
               id="message"
