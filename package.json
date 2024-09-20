@@ -16,12 +16,13 @@
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@playwright/test": "^1.47.1",
     "next": "14.2.7",
     "nodemailer": "^6.9.15",
-    "@playwright/test": "^1.47.1",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
