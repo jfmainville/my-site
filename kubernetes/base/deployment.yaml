@@ -27,7 +27,7 @@ spec:
             - containerPort: 8080
           env:
             - name: MY_SITE_URL
-              value: jfmainville.me
+              value: https://jfmainville.me
             - name: OUTLOOK_SMTP_SERVER
               value: smtp-mail.outlook.com
             - name: OUTLOOK_SMTP_SERVER_PORT
