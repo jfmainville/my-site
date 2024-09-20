@@ -31,7 +31,7 @@ spec:
             - name: OUTLOOK_SMTP_SERVER
               value: smtp-mail.outlook.com
             - name: OUTLOOK_SMTP_SERVER_PORT
-            - value: 587
+              value: "587"
             - name: OUTLOOK_EMAIL
               value: jfmainville@outlook.com
             - name: OUTLOOK_APP_PASSWORD
