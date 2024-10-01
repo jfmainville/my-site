@@ -1,8 +1,9 @@
-name: Build Docker image and deploy to the Azure AKS cluster
+name: Build Docker image and deploy to the Azure App Service service
 on:
   push:
     branches:
       - main
+      - NUA-* # FIXME: This needs to be removed before the merge
 permissions:
   id-token: write
   contents: read
