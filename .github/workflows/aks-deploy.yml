@@ -38,17 +38,11 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      - name: Set AKS context
-        id: set-context
-        uses: azure/aks-set-context@v3
+      - name: Build and deploy Docker container in Azure App Service service
+        uses: azure/container-apps-deploy-action@v1
         with:
-          resource-group: "${{ vars.AZURE_RESOURCE_GROUP_NAME }}"
-          cluster-name: "${{ vars.AZURE_AKS_CLUSTER_NAME }}"
-      - name: Setup kubectl
-        id: install-kubectl
-        uses: azure/setup-kubectl@v3
-      - name: Deploy the latest Docker image in the AKS cluster
-        run: |-
-          kubectl apply -k kubernetes/${{ vars.ENVIRONMENT_NAME }}/
-          kubectl set image deployment/my-site-deployment my-site-container=${{ vars.AZURE_ACR_URL }}/my-site:${{ github.SHA }}
+          acrName: ${{ vars.AZURE_ACR_URL }}
+          containerAppName: ${{ vars.AZURE_APP_SERVICE_NAME }}
+          resourceGroup: ${{ vars.AZURE_RESOURCE_GROUP_NAME }}
+          imageToDeploy: ${{ vars.AZURE_ACR_URL }}/my-site:${{ github.SHA }}
     needs: build
