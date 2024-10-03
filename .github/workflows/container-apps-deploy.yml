@@ -41,7 +41,7 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           acrName: ${{ vars.AZURE_ACR_NAME }}
-          containerAppName: ${{ vars.AZURE_APP_SERVICE_NAME }}
+          containerAppName: ${{ vars.AZURE_CONTAINER_APPS_NAME }}
           resourceGroup: ${{ vars.AZURE_RESOURCE_GROUP_NAME }}
           imageToDeploy: ${{ vars.AZURE_ACR_URL }}/my-site:${{ github.SHA }}
           environmentVariables: |
