@@ -45,4 +45,6 @@ jobs:
           containerAppName: ${{ vars.AZURE_APP_SERVICE_NAME }}
           resourceGroup: ${{ vars.AZURE_RESOURCE_GROUP_NAME }}
           imageToDeploy: ${{ vars.AZURE_ACR_URL }}/my-site:${{ github.SHA }}
+          environmentVariables: |
+            "OUTLOOK_SMTP_SERVER=smtp-mail.outlook.com" "OUTLOOK_SMTP_SERVER_PORT=587" "OUTLOOK_EMAIL=jfmainville@outlook.com" "OUTLOOK_APP_PASSWORD=secretref:outlook-app-password"
     needs: build
