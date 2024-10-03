@@ -1,4 +1,4 @@
-name: Build Docker image and deploy to the Azure App Service service
+name: Build Docker image and deploy to the Azure Container Apps service
 on:
   push:
     branches:
