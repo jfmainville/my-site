@@ -1,5 +1,3 @@
-"use client";
-
 import styles from "./page.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
@@ -7,26 +5,8 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import { RESUME_FILENAME } from "../utils/constants";
 
 const ResumePage = () => {
-  const handlePdfExport = async () => {
-    const response = await fetch("/api/resume", {
-      method: "GET",
-    });
-
-    if (response.ok) {
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = RESUME_FILENAME;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-    }
-  };
-
   return (
     <section className={styles.Main}>
       <div className={styles.Sidebar}>
@@ -91,9 +71,6 @@ const ResumePage = () => {
       <div className={styles.Page}>
         <div id="Navigation" className={styles.Navigation}>
           <Link href={"/"}>Back to the home page</Link>
-          <div onClick={handlePdfExport}>
-            <button className={styles.PdfExportButton}>Export to PDF</button>
-          </div>
         </div>
         <div className={styles.Resume}>
           <div className={styles.Header}>
