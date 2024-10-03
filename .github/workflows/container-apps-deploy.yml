@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - NUA-* # FIXME: This needs to be removed before the merge
 permissions:
   id-token: write
   contents: read
