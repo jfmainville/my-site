@@ -1,6 +1,6 @@
 # My Site
 
-This repository contains the code for hosting my personal website.
+This repository contains the code for my personal website.
 
 ## Getting Started
 
