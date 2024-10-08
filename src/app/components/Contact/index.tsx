@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./index.module.scss";
-import { FormEvent, useState } from "react";
+import { FormEvent } from "react";
 import Link from "next/link";
 import {
   faFacebook,
