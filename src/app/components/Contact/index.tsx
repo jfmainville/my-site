@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./index.module.scss";
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import Link from "next/link";
 import {
   faFacebook,
@@ -8,13 +8,34 @@ import {
   faLinkedin,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faX } from "@fortawesome/free-solid-svg-icons";
 
 type Props = {
   handleSendEmail: (event: FormEvent<HTMLFormElement>) => void;
+  firstName: string;
+  setFirstName: (value: string) => void;
+  lastName: string;
+  setLastName: (value: string) => void;
+  email: string;
+  setEmail: (value: string) => void;
+  phone: string;
+  setPhone: (value: string) => void;
+  message: string;
+  setMessage: (value: string) => void;
 };
 
-const Contact = ({ handleSendEmail }: Props) => {
+const Contact = ({
+  handleSendEmail,
+  firstName,
+  setFirstName,
+  lastName,
+  setLastName,
+  email,
+  setEmail,
+  phone,
+  setPhone,
+  message,
+  setMessage,
+}: Props) => {
   return (
     <section id={"contact"} className={styles.Contact}>
       <h1 className={styles.TextHeading}>Contact</h1>
@@ -57,6 +78,8 @@ const Contact = ({ handleSendEmail }: Props) => {
               name="firstName"
               required={true}
               type="text"
+              value={firstName}
+              onChange={(event) => setFirstName(event.target.value)}
             />
             <label htmlFor="lastName" className={styles.InputLabel}>
               Last Name
@@ -67,6 +90,8 @@ const Contact = ({ handleSendEmail }: Props) => {
               name="lastName"
               required={true}
               type="text"
+              value={lastName}
+              onChange={(event) => setLastName(event.target.value)}
             />
             <label htmlFor="email" className={styles.InputLabel}>
               Email
@@ -77,6 +102,8 @@ const Contact = ({ handleSendEmail }: Props) => {
               name="email"
               required={true}
               type="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
             />
             <label htmlFor="phone" className={styles.InputLabel}>
               Phone
@@ -86,6 +113,8 @@ const Contact = ({ handleSendEmail }: Props) => {
               id="phone"
               name="phone"
               type="text"
+              value={phone}
+              onChange={(event) => setPhone(event.target.value)}
             />
             <label htmlFor="message" className={styles.InputLabel}>
               Message
@@ -95,6 +124,8 @@ const Contact = ({ handleSendEmail }: Props) => {
               id="message"
               name="message"
               required={true}
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
             />
             <button className={styles.SubmitButton} type="submit">
               Submit
