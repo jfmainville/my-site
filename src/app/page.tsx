@@ -14,13 +14,14 @@ const Home = () => {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSendEmail = async (event: FormEvent<HTMLFormElement>) => {
+  const handleSendEmail = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    await fetch("/api/email", {
+    fetch("/api/email", {
       method: "POST",
       body: formData,
     });
+
     setFirstName("");
     setLastName("");
     setEmail("");
