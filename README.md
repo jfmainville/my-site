@@ -20,12 +20,12 @@ The following applications need to be installed on the local computer in order t
 
 The following environment variables needs to be set to use this application:
 
-| Name                     | Description                                                             | Example               |
-| ------------------------ | :---------------------------------------------------------------------- | :-------------------- |
-| OUTLOOK_SMTP_SERVER      | Outlook SMTP server URL                                                 | smtp-mail.outlook.com |
-| OUTLOOK_SMTP_SERVER_PORT | Outlook SMTP server port                                                | 587                   |
-| OUTLOOK_EMAIL            | Destination email address                                               | test@outlook.com      |
-| OUTLOOK_APP_PASSWORD     | Outlook App password that can be generated from the Outlook web console |                       |
+| Name                   | Description                                                         | Example        |
+| ---------------------- | :------------------------------------------------------------------ | :------------- |
+| GMAIL_SMTP_SERVER      | Gmail SMTP server URL                                               | smtp.gmail.com |
+| GMAIL_SMTP_SERVER_PORT | Gmail SMTP server port                                              | 587            |
+| GMAIL_EMAIL            | Destination email address                                           | test@gmail.com |
+| GMAIL_APP_PASSWORD     | Gmail App password that can be generated from the Gmail web console |                |
 
 ### Development
 

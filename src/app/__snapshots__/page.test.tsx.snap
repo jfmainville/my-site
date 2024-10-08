@@ -464,6 +464,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
               name="firstName"
               required=""
               type="text"
+              value=""
             />
             <label
               class="InputLabel"
@@ -477,6 +478,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
               name="lastName"
               required=""
               type="text"
+              value=""
             />
             <label
               class="InputLabel"
@@ -490,6 +492,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
               name="email"
               required=""
               type="email"
+              value=""
             />
             <label
               class="InputLabel"
@@ -502,6 +505,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
               id="phone"
               name="phone"
               type="text"
+              value=""
             />
             <label
               class="InputLabel"

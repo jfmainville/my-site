@@ -138,6 +138,7 @@ exports[`<Contact/> Test Suite should render the <Contact/> component unchanged 
             name="firstName"
             required=""
             type="text"
+            value=""
           />
           <label
             class="InputLabel"
@@ -151,6 +152,7 @@ exports[`<Contact/> Test Suite should render the <Contact/> component unchanged 
             name="lastName"
             required=""
             type="text"
+            value=""
           />
           <label
             class="InputLabel"
@@ -164,6 +166,7 @@ exports[`<Contact/> Test Suite should render the <Contact/> component unchanged 
             name="email"
             required=""
             type="email"
+            value=""
           />
           <label
             class="InputLabel"
@@ -176,6 +179,7 @@ exports[`<Contact/> Test Suite should render the <Contact/> component unchanged 
             id="phone"
             name="phone"
             type="text"
+            value=""
           />
           <label
             class="InputLabel"
