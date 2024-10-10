@@ -2,6 +2,10 @@
   "name": "my-site",
   "version": "0.1.0",
   "private": true,
+  "prisma": {
+    "generate": "generate",
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
