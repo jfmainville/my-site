@@ -23,12 +23,18 @@
     "@next/third-parties": "^14.2.14",
     "@playwright/test": "^1.47.1",
     "@prisma/client": "^5.20.0",
+    "@tiptap/extension-highlight": "^2.8.0",
+    "@tiptap/extension-typography": "^2.8.0",
+    "@tiptap/pm": "^2.8.0",
+    "@tiptap/react": "^2.8.0",
+    "@tiptap/starter-kit": "^2.8.0",
     "next": "14.2.7",
     "nodemailer": "^6.9.15",
     "react": "^18",
     "react-dom": "^18",
     "sass": "^1.77.8",
-    "sharp": "^0.33.5"
+    "sharp": "^0.33.5",
+    "uninstall": "^0.0.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^10.4.0",
