@@ -1,0 +1,25 @@
+@import "../../variables.module.scss";
+
+.Header {
+  display: flex;
+  position: relative;
+}
+
+.Navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  padding: 2rem;
+  right: 0;
+}
+
+.Link {
+  font-size: 1.17em;
+  color: $text-color;
+  padding: 0 1rem 0 1rem;
+}
+
+.TextHeading {
+  margin: 8rem 0 0 2rem;
+  color: $text-color;
+}
