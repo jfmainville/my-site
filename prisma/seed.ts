@@ -41,6 +41,7 @@ async function main() {
   const posts: Post[] = [
     {
       id: randomUUID(),
+      slug: "dummy-blog-bost-1",
       title: "Dummy Blog Post 1",
       content: "<h1>Dummy Blog Post 1</h1>",
       status: "DRAFT",
@@ -51,6 +52,7 @@ async function main() {
     },
     {
       id: randomUUID(),
+      slug: "dummy-blog-bost-2",
       title: "Dummy Blog Post 2",
       content: "<h1>Dummy Blog Post 2</h1>",
       status: "DRAFT",
