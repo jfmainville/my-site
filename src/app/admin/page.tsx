@@ -14,11 +14,15 @@ const AdminPage = async () => {
       <Link className={styles.Link} href={"/admin/post"}>
         Create Post
       </Link>
-      <ul>
-        {posts.data.map((post: any) => (
-          <li key={post.id}>{post.title}</li>
-        ))}
-      </ul>
+      {posts.data.map((post: any) => (
+        <Link
+          className={styles.Link}
+          key={post.id}
+          href={`/admin/post/${post.slug}`}
+        >
+          {post.title}
+        </Link>
+      ))}
     </section>
   );
 };
