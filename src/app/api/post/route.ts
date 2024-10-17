@@ -1,10 +1,23 @@
-import { NextResponse } from "next/server";
-import { PrismaClient, Post } from "@prisma/client";
+import { NextRequest, NextResponse } from "next/server";
+import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export async function GET(request: Request) {
-  const posts = await prisma.post.findMany();
+export async function GET(request: NextRequest) {
+  const searchParams = request.nextUrl.searchParams;
+  const slug = searchParams.get("slug");
+
+  let posts;
+
+  if (slug) {
+    posts = await prisma.post.findUnique({
+      where: {
+        slug: slug,
+      },
+    });
+  } else {
+    posts = await prisma.post.findMany();
+  }
 
   return NextResponse.json(
     {
@@ -21,32 +34,30 @@ export async function POST(request: Request) {
     data: post,
   });
 
-  return NextResponse.json(
-    {
-      data: post,
-    },
-    { status: 201 },
-  );
+  return NextResponse.json({ status: 201 });
 }
 
 export async function PUT(request: Request) {
-  const posts = await prisma.post.findMany();
+  const post = await request.json();
 
-  return NextResponse.json(
-    {
-      data: posts,
+  await prisma.post.update({
+    where: {
+      id: post.id,
     },
-    { status: 200 },
-  );
+    data: post,
+  });
+
+  return NextResponse.json({ status: 200 });
 }
 
 export async function DELETE(request: Request) {
-  const posts = await prisma.post.findMany();
+  const post = await request.json();
 
-  return NextResponse.json(
-    {
-      data: posts,
+  await prisma.post.delete({
+    where: {
+      id: post.id,
     },
-    { status: 200 },
-  );
+  });
+
+  return NextResponse.json({ status: 204 });
 }
