@@ -116,7 +116,7 @@ const Writer = ({ postData }: any) => {
         placeholder="Category"
         onChange={(event) => setPostCategory(event.target.value)}
       />
-      <EditorContent editor={editor} />
+      <EditorContent data-testid="TipTap" editor={editor} />
       <button
         onClick={() => handleOnPostSave(postTitle, postContent, postCategory)}
       >
