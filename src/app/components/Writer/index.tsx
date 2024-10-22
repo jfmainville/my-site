@@ -108,10 +108,12 @@ const Writer = ({ postData }: any) => {
     <div>
       <input
         value={postTitle}
+        placeholder="Title"
         onChange={(event) => setPostTitle(event.target.value)}
       />
       <input
         value={postCategory}
+        placeholder="Category"
         onChange={(event) => setPostCategory(event.target.value)}
       />
       <EditorContent editor={editor} />
