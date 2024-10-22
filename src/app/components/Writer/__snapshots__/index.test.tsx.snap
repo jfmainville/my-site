@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Writer/> Test Suite should render the <Writer/> component unchanged 1`] = `
+<div>
+  <div>
+    <input
+      placeholder="Title"
+      value=""
+    />
+    <input
+      placeholder="Category"
+      value=""
+    />
+    <div
+      data-testid="TipTap"
+    >
+      <div
+        class="tiptap ProseMirror"
+        contenteditable="true"
+        tabindex="0"
+        translate="no"
+      >
+        <p>
+          <br
+            class="ProseMirror-trailingBreak"
+          />
+        </p>
+      </div>
+    </div>
+    <button>
+      Save
+    </button>
+  </div>
+</div>
+`;
