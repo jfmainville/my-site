@@ -32,41 +32,49 @@ const Writer = ({ postData }: any) => {
     postCategory: String,
   ) => {
     try {
-      if (!postData.id) {
-        await fetch(`${MY_SITE_URL}/api/post`, {
-          method: "POST",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            title: postTitle,
-            slug: postTitle.replace(" ", "-").toLowerCase(),
-            content: postContent,
-            status: "DRAFT",
-            category: postCategory,
-            // TODO: Need to use the current userId as reference instead of a hardcoded value
-            userId: "48eceb63-fc36-426f-85a5-58ccc850eade",
-          }),
-        });
-      } else if (postData.id) {
-        await fetch(`${MY_SITE_URL}/api/post`, {
-          method: "PUT",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            id: postData.id,
-            title: postTitle,
-            slug: postTitle.replace(" ", "-").toLowerCase(),
-            content: postContent,
-            status: postData.status,
-            category: postCategory,
-            // TODO: Need to use the current userId as reference instead of a hardcoded value
-            userId: "48eceb63-fc36-426f-85a5-58ccc850eade",
-          }),
-        });
+      if (!postData) {
+        try {
+          await fetch(`${MY_SITE_URL}/api/post`, {
+            method: "POST",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              title: postTitle,
+              slug: postTitle.replace(" ", "-").toLowerCase(),
+              content: postContent,
+              status: "DRAFT",
+              category: postCategory,
+              // TODO: Need to use the current userId as reference instead of a hardcoded value
+              userId: "48eceb63-fc36-426f-85a5-58ccc850eade",
+            }),
+          });
+        } catch (e) {
+          console.error("Failed to create the post in the database");
+        }
+      } else if (postData) {
+        try {
+          await fetch(`${MY_SITE_URL}/api/post`, {
+            method: "PUT",
+            headers: {
+              Accept: "application/json",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              id: postData.id,
+              title: postTitle,
+              slug: postTitle.replace(" ", "-").toLowerCase(),
+              content: postContent,
+              status: postData.status,
+              category: postCategory,
+              // TODO: Need to use the current userId as reference instead of a hardcoded value
+              userId: "48eceb63-fc36-426f-85a5-58ccc850eade",
+            }),
+          });
+        } catch (e) {
+          console.error("Failed to update the post in the database");
+        }
       }
 
       // Navigate back to the admin page
@@ -75,7 +83,7 @@ const Writer = ({ postData }: any) => {
       // Rehydrate the state after navigating back the admin page
       router.refresh();
     } catch (e) {
-      console.error("Failed to create the post in the database");
+      console.error("Failed to save the post in the database", e);
     }
   };
 
