@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { PrismaClient } from "@prisma/client";
+import { PrismaClient, Post } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: Request) {
-  const post = await request.json();
+  const post: Post = await request.json();
 
   await prisma.post.create({
     data: post,
@@ -38,7 +38,7 @@ export async function POST(request: Request) {
 }
 
 export async function PUT(request: Request) {
-  const post = await request.json();
+  const post: Post = await request.json();
 
   await prisma.post.update({
     where: {
@@ -51,7 +51,7 @@ export async function PUT(request: Request) {
 }
 
 export async function DELETE(request: Request) {
-  const post = await request.json();
+  const post: Post = await request.json();
 
   await prisma.post.delete({
     where: {
