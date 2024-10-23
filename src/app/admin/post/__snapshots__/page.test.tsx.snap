@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostPage/> Test Suite should render the <PostPage/> page unchanged 1`] = `
+<div>
+  <section
+    class="Main"
+  >
+    <div
+      class="Navbar"
+    >
+      <div>
+        Admin
+      </div>
+      <div>
+        Logout
+      </div>
+    </div>
+    <a
+      class="Link"
+      href="/admin"
+    >
+      Back
+    </a>
+    <div>
+      <input
+        placeholder="Title"
+        value=""
+      />
+      <input
+        placeholder="Category"
+        value=""
+      />
+      <div
+        data-testid="TipTap"
+      >
+        <div
+          class="tiptap ProseMirror"
+          contenteditable="true"
+          tabindex="0"
+          translate="no"
+        >
+          <p>
+            <br
+              class="ProseMirror-trailingBreak"
+            />
+          </p>
+        </div>
+      </div>
+      <button>
+        Save
+      </button>
+    </div>
+  </section>
+</div>
+`;
