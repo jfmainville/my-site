@@ -10,7 +10,7 @@ type Props = {
 const Button = ({ onButtonClickEvent, buttonText }: Props) => {
   const onButtonClick = () => {
     if (onButtonClickEvent) {
-      onButtonClickEvent();
+      return onButtonClickEvent();
     }
   };
   return (
