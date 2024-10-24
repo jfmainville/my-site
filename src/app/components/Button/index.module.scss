@@ -1,0 +1,15 @@
+@import "../../variables.module.scss";
+
+.Button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: $secondary-color;
+  color: $text-color;
+  height: 3rem;
+  width: 8rem;
+  border: none;
+  cursor: pointer;
+}
