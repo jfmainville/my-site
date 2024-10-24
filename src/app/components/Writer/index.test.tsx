@@ -76,7 +76,7 @@ describe("<Writer/> Test Suite", () => {
   });
 
   it("should create the post data in the <Writer/> component", () => {
-    window.fetch = mockFetch({});
+    window.fetch = mockFetch({ data: [] });
     render(<Writer />);
     const postTitle = screen.getByPlaceholderText("Title");
     const postCategory = screen.getByPlaceholderText("Category");
@@ -95,7 +95,7 @@ describe("<Writer/> Test Suite", () => {
   });
 
   it("should update the post in the <Writer/> component", () => {
-    window.fetch = mockFetch({});
+    window.fetch = mockFetch({ data: [] });
     const postData = {
       id: "12345",
       title: "Test Title",
@@ -115,7 +115,7 @@ describe("<Writer/> Test Suite", () => {
   });
 
   it("should delete the post in the <Writer/> component", () => {
-    window.fetch = mockFetch({});
+    window.fetch = mockFetch({ data: [] });
     const postData = {
       id: "12345",
       title: "Test Title",
