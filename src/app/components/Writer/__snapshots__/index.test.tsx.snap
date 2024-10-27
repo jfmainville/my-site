@@ -2,16 +2,23 @@
 
 exports[`<Writer/> Test Suite should render the <Writer/> component unchanged 1`] = `
 <div>
-  <div>
+  <div
+    class="Writer"
+  >
     <input
+      class="WriterInput"
       placeholder="Title"
+      required=""
       value=""
     />
     <input
+      class="WriterInput"
       placeholder="Category"
+      required=""
       value=""
     />
     <div
+      class="WriterContent"
       data-testid="TipTap"
     >
       <div
@@ -21,15 +28,21 @@ exports[`<Writer/> Test Suite should render the <Writer/> component unchanged 1`
         translate="no"
       >
         <p>
-          <br
-            class="ProseMirror-trailingBreak"
-          />
+          Enter text here...
         </p>
       </div>
     </div>
-    <button>
-      Save
-    </button>
+    <div
+      class="WriterButtons"
+    >
+      <div
+        class="Button"
+      >
+        <div>
+          Save
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 `;
