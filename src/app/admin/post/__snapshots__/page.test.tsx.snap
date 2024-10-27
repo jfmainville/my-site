@@ -21,16 +21,23 @@ exports[`<PostPage/> Test Suite should render the <PostPage/> page unchanged 1`]
     >
       Back
     </a>
-    <div>
+    <div
+      class="Writer"
+    >
       <input
+        class="WriterInput"
         placeholder="Title"
+        required=""
         value=""
       />
       <input
+        class="WriterInput"
         placeholder="Category"
+        required=""
         value=""
       />
       <div
+        class="WriterContent"
         data-testid="TipTap"
       >
         <div
@@ -40,15 +47,21 @@ exports[`<PostPage/> Test Suite should render the <PostPage/> page unchanged 1`]
           translate="no"
         >
           <p>
-            <br
-              class="ProseMirror-trailingBreak"
-            />
+            Enter text here...
           </p>
         </div>
       </div>
-      <button>
-        Save
-      </button>
+      <div
+        class="WriterButtons"
+      >
+        <div
+          class="Button"
+        >
+          <div>
+            Save
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>
