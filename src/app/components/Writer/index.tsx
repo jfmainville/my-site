@@ -1,5 +1,6 @@
 "use client";
 
+import styles from "./index.module.scss";
 import { useState } from "react";
 import Highlight from "@tiptap/extension-highlight";
 import Typography from "@tiptap/extension-typography";
@@ -7,12 +8,13 @@ import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { MY_SITE_URL } from "@/app/utils/constants";
 import { useRouter } from "next/navigation";
+import Button from "../../components/Button/index";
 
 const Writer = ({ postData }: any) => {
   const router = useRouter();
   const [postTitle, setPostTitle] = useState(postData ? postData.title : "");
   const [postContent, setPostContent] = useState(
-    postData ? postData.content : "",
+    postData ? postData.content : "Enter text here...",
   );
   const [postCategory, setPostCategory] = useState(
     postData ? postData.category : "",
@@ -113,26 +115,41 @@ const Writer = ({ postData }: any) => {
   };
 
   return (
-    <div>
+    <div className={styles.Writer}>
       <input
+        className={styles.WriterInput}
         value={postTitle}
         placeholder="Title"
+        required={true}
         onChange={(event) => setPostTitle(event.target.value)}
       />
       <input
+        className={styles.WriterInput}
         value={postCategory}
         placeholder="Category"
+        required={true}
         onChange={(event) => setPostCategory(event.target.value)}
       />
-      <EditorContent data-testid="TipTap" editor={editor} />
-      <button
-        onClick={() => handleOnPostSave(postTitle, postContent, postCategory)}
-      >
-        Save
-      </button>
-      {postData ? (
-        <button onClick={() => handleOnPostDelete(postData.id)}>Delete</button>
-      ) : null}
+      <EditorContent
+        data-testid="TipTap"
+        className={styles.WriterContent}
+        editor={editor}
+      />
+      <div className={styles.WriterButtons}>
+        <Button
+          onButtonClickEvent={() =>
+            handleOnPostSave(postTitle, postContent, postCategory)
+          }
+          buttonText={"Save"}
+        />
+        {postData ? (
+          <Button
+            onButtonClickEvent={() => handleOnPostDelete(postData.id)}
+            buttonText={"Delete"}
+            buttonColor="red"
+          />
+        ) : null}
+      </div>
     </div>
   );
 };
