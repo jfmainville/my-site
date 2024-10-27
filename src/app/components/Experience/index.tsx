@@ -149,10 +149,10 @@ const Experience = () => {
           />
           <p className={styles.ExperienceSectionEntryPeriod}>2022-Present</p>
           <p className={styles.ExperienceSectionEntryRole}>
-            Cloud Security Specialist
+            DevSecOps Specialist
           </p>
           <p>
-            As the lead Cloud Security Specialist within the Software team, I
+            As the lead DevSecOps Specialist within the Software team, I
             designed and implemented the cloud infrastructure hosted on the
             Google Cloud Platform (GCP) and established robust security
             guidelines and infrastructure

@@ -31,8 +31,8 @@ describe("<Experience/> Test Suite", () => {
         exact: false,
       },
     );
-    const roleCloudSecuritySpecialist = screen.getAllByText(
-      "Cloud Security Specialist",
+    const roleDevSecOpsSpecialist = screen.getAllByText(
+      "DevSecOps Specialist",
       {
         exact: false,
       },
@@ -42,7 +42,7 @@ describe("<Experience/> Test Suite", () => {
     expect(roleFullStackDeveloper).toHaveLength(2);
     expect(roleDevOpsSpecialist).toHaveLength(2);
     expect(roleTechnicalProductOwner).toHaveLength(2);
-    expect(roleCloudSecuritySpecialist).toHaveLength(2);
+    expect(roleDevSecOpsSpecialist).toHaveLength(2);
   });
 
   it("should show the correct amount of company logos in the <Experience /> component", () => {

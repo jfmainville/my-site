@@ -310,10 +310,10 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
           <p
             class="ExperienceSectionEntryRole"
           >
-            Cloud Security Specialist
+            DevSecOps Specialist
           </p>
           <p>
-            As the lead Cloud Security Specialist within the Software team, I designed and implemented the cloud infrastructure hosted on the Google Cloud Platform (GCP) and established robust security guidelines and infrastructure
+            As the lead DevSecOps Specialist within the Software team, I designed and implemented the cloud infrastructure hosted on the Google Cloud Platform (GCP) and established robust security guidelines and infrastructure
           </p>
         </div>
       </div>
