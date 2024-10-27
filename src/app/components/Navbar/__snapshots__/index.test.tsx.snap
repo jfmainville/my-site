@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navbar/> Test Suite should render the <Navbar/> component unchanged 1`] = `
+<div>
+  <div
+    class="Navbar"
+  >
+    <div>
+      Admin
+    </div>
+    <div>
+      Logout
+    </div>
+  </div>
+</div>
+`;

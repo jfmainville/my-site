@@ -1,0 +1,17 @@
+@import "../../variables.module.scss";
+
+.Navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: $primary-color;
+  color: $text-color;
+  height: 4rem;
+}
+
+.TextHeading {
+  margin: 8rem 0 0 2rem;
+  color: $text-color;
+}

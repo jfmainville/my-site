@@ -1,0 +1,31 @@
+@import "../../variables.module.scss";
+
+.Writer {
+  display: flex;
+  flex-direction: column;
+}
+
+.WriterInput {
+  display: flex;
+  height: 2rem;
+  width: 20rem;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.WriterContent {
+  margin-left: 1rem;
+  background-color: #ffffff;
+  border: 1px $primary-color;
+  min-height: 50px;
+}
+
+.WriterButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.Link {
+  font-size: 1.17em;
+  color: $text-color;
+  padding: 0 1rem 0 1rem;
+}
