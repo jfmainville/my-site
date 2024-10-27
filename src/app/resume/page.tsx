@@ -75,17 +75,17 @@ const ResumePage = () => {
         <div className={styles.Resume}>
           <div className={styles.Header}>
             <h1>Jean-Frederic Mainville</h1>
-            <h2>Cloud Security Specialist</h2>
+            <h2>DevSecOps Specialist</h2>
           </div>
           <div className={styles.Profile}>
             <h2>Profile</h2>
             <p>
               I am an experienced professional with expertise in cloud security,
               DevOps, and system administration. My career spans roles as a
-              Cloud Security Specialist, Technical Product Owner, DevOps
-              Specialist, Security Analyst, and System Administrator across
-              diverse environments. I excel in designing and implementing secure
-              IT solutions, automating processes, and optimizing performance to
+              DevSecOps Specialist, Technical Product Owner, DevOps Specialist,
+              Security Analyst, and System Administrator across diverse
+              environments. I excel in designing and implementing secure IT
+              solutions, automating processes, and optimizing performance to
               strengthen operational resilience and meet business objectives.
             </p>
           </div>
@@ -93,15 +93,15 @@ const ResumePage = () => {
             <h2>Work Experience</h2>
             <div className={styles.WorkExperienceEntry}>
               <h3 className={styles.WorkExperienceEntryRole}>
-                Cloud Security Specialist
+                DevSecOps Specialist
               </h3>
               <p style={{ marginBottom: "1rem" }}>
                 PixMob / Montreal, Quebec, Canada / July 2022 - Now
               </p>
               <p>
-                As the lead Cloud Security Specialist within the Software team,
-                I designed and implemented the cloud infrastructure hosted on
-                the Google Cloud Platform (GCP) and established robust security
+                As the lead DevSecOps specialist within the Software team, I
+                designed and implemented the cloud infrastructure hosted on the
+                Google Cloud Platform (GCP) and established robust security
                 guidelines and infrastructure:
               </p>
               <ul className={styles.WorkExperienceEntryList}>
