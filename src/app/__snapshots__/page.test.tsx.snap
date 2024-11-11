@@ -533,7 +533,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
       class="Copyright"
     >
       <div>
-        Made with ❤️ by Jean-Frederic Mainville
+        Made with ❤️ by Jean-Frederic Mainville using Next.js
       </div>
     </section>
   </main>
