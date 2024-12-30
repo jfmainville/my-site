@@ -19,7 +19,14 @@ exports[`<PostPage/> Test Suite should render the <PostPage/> page unchanged 1`]
       class="Link"
       href="/admin"
     >
-      Back
+      <div
+        class="Button"
+        style="color: black; background-color: transparent;"
+      >
+        <div>
+          &lt;- Back
+        </div>
+      </div>
     </a>
     <div
       class="CreateButton"

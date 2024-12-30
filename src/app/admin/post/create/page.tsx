@@ -2,6 +2,7 @@ import styles from "./page.module.scss";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Writer from "@/app/components/Writer";
+import Button from "@/app/components/Button";
 
 export type PostData = {
   postStatus: String;
@@ -15,7 +16,11 @@ const PostPage = async () => {
     <div className={styles.Main}>
       <Navbar />
       <Link className={styles.Link} href={"/admin/post"}>
-        Back
+        <Button
+          buttonText="<- Back"
+          buttonTextColor="black"
+          buttonColor="transparent"
+        />
       </Link>
       <Writer />
     </div>

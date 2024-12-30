@@ -24,7 +24,11 @@ const PostPage = async () => {
     <section className={styles.Main}>
       <Navbar />
       <Link className={styles.Link} href={"/admin"}>
-        Back
+        <Button
+          buttonText="<- Back"
+          buttonTextColor="black"
+          buttonColor="transparent"
+        />
       </Link>
       <div className={styles.CreateButton}>
         <Link className={styles.Link} href={"/admin/post/create"}>
