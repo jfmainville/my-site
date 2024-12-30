@@ -9,7 +9,7 @@ services:
       MSSQL_SA_PASSWORD: Adminxyz22#
       POSTGRES_USER: sqluser
       POSTGRES_PASSWORD: "Password!"
-      POSTGRES_DB: cloudgraph
+      POSTGRES_DB: my-site
     volumes:
       - ./mssql/data:/var/opt/mssql/data
       - ./mssql/log:/var/opt/mssql/log
