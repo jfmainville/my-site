@@ -43,6 +43,7 @@ async function main() {
       id: randomUUID(),
       slug: "dummy-blog-bost-1",
       title: "Dummy Blog Post 1",
+      thumbnail: "",
       content: "<h1>Dummy Blog Post 1</h1>",
       status: "DRAFT",
       category: "Cybersecurity",
