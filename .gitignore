@@ -46,6 +46,8 @@ next-env.d.ts
 mssql/
 # PostgreSQL
 pgsql/
+# PostgreSQL
+pgsql/
 
 # Prisma
 prisma/

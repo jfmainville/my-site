@@ -10,6 +10,7 @@ services:
       POSTGRES_USER: sqluser
       POSTGRES_PASSWORD: "Password!"
       POSTGRES_DB: my-site
+      POSTGRES_DB: cloudgraph
     volumes:
       - ./mssql/data:/var/opt/mssql/data
       - ./mssql/log:/var/opt/mssql/log
