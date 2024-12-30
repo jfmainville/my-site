@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Writer from "@/app/components/Writer";
 import { MY_SITE_URL } from "../../../utils/constants";
+import Button from "@/app/components/Button";
 
 export type PostData = {
   postStatus: String;
@@ -19,7 +20,11 @@ const PostUpdatePage = async ({ params }: { params: { slug: string } }) => {
     <section className={styles.Main}>
       <Navbar />
       <Link className={styles.Link} href={"/admin/post"}>
-        Back
+        <Button
+          buttonText="<- Back"
+          buttonTextColor="black"
+          buttonColor="transparent"
+        />
       </Link>
       <Writer postData={postData.data} />
     </section>
