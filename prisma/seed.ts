@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 async function main() {
   const users: User[] = [
     {
-      id: randomUUID(),
+      id: "seed-user-1",
       firstName: "Tony",
       lastName: "Stark",
       email: "tony.stark@test.com",
@@ -15,7 +15,7 @@ async function main() {
       updatedAt: currentDateTime,
     },
     {
-      id: randomUUID(),
+      id: "seed-user-2",
       firstName: "Steve",
       lastName: "Rogers",
       email: "steve.rogers@test.com",
@@ -23,7 +23,7 @@ async function main() {
       updatedAt: currentDateTime,
     },
     {
-      id: randomUUID(),
+      id: "seed-user-3",
       firstName: "Thord",
       lastName: "Odinson",
       email: "thor.odinson@test.com",
@@ -40,7 +40,7 @@ async function main() {
 
   const posts: Post[] = [
     {
-      id: randomUUID(),
+      id: "seed-post-1",
       slug: "dummy-blog-bost-1",
       title: "Dummy Blog Post 1",
       thumbnail: "",
@@ -52,9 +52,10 @@ async function main() {
       updatedAt: currentDateTime,
     },
     {
-      id: randomUUID(),
+      id: "seed-post-2",
       slug: "dummy-blog-bost-2",
       title: "Dummy Blog Post 2",
+      thumbnail: "",
       content: "<h1>Dummy Blog Post 2</h1>",
       status: "DRAFT",
       category: "Cybersecurity",
