@@ -130,10 +130,11 @@ const Writer = ({ postData }: any) => {
         required={true}
         onChange={(event) => setPostCategory(event.target.value)}
       />
-      <EditorContent
-        data-testid="TipTap"
-        className={styles.WriterContent}
-        editor={editor}
+      <input
+        className={styles.WriterInput}
+        value={postThumbnail}
+        placeholder="Thumbnail"
+        onChange={(event) => setPostThumbnail(event.target.value)}
       />
       <div className={styles.WriterButtons}>
         <Button
