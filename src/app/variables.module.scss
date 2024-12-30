@@ -7,6 +7,14 @@ $primary-color: #313640;
 $secondary-color: #76acae;
 $text-color: #eeeeee;
 
+$white-color: #ffffff;
+$grey-dark-color: #333; // Dark Grey
+$grey-dusky-color: #666; // Medium Dark Grey
+$grey-news-color: #999; // Medium Grey
+$grey-light-color: #ccc; // Light Grey
+$grey-lighter-color: #e0e0e0; // Very Light Grey
+$grey-lightest-color: #f5f5f5; // Almost White Grey
+
 // Shadows
 
 // Media Queries
@@ -18,5 +26,12 @@ $small-screen: 705px;
   primaryColor: $primary-color;
   secondaryColor: $secondary-color;
   textColor: $text-color;
+  whiteColor: $white-color;
+  greyDarkColor: $grey-dark-color;
+  greyDuskyColor: $grey-dusky-color;
+  greyNewsColor: $grey-news-color;
+  greyLightColor: $grey-light-color;
+  greyLighterColor: $grey-lighter-color;
+  greyLightestColor: $grey-lightest-color;
   smallScreen: $small-screen;
 }
