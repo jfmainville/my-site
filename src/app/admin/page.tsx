@@ -22,7 +22,7 @@ const AdminPage = async () => {
       <Link className={styles.Link} href={"/admin/post"}>
         <Button buttonText={"Create Post"} />
       </Link>
-      {posts.data ? (
+      {posts && posts.data ? (
         posts.data?.map((post: Post) => (
           <div key={post.id} className={styles.BlogPost}>
             <Link className={styles.Link} href={`/admin/post/${post.slug}`}>
