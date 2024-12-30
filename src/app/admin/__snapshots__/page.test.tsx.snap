@@ -15,26 +15,18 @@ exports[`<AdminPage/> Test Suite should render the <AdminPage/> page unchanged 1
         Logout
       </div>
     </div>
-    <section>
-      <h2>
-        Blog Posts
-      </h2>
-    </section>
-    <a
-      class="Link"
-      href="/admin/post"
+    <section
+      class="Section"
     >
-      <div
-        class="Button"
+      <a
+        class="SectionLinkItem"
+        href="/admin/post"
       >
         <div>
-          Create Post
+          Blog Posts
         </div>
-      </div>
-    </a>
-    <div>
-      No posts
-    </div>
+      </a>
+    </section>
   </section>
 </div>
 `;

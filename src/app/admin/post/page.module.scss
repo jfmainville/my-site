@@ -8,3 +8,24 @@
   min-height: 100vh;
   width: 100vw;
 }
+
+.CreateButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.BlogPost {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem;
+  border: 1px solid black;
+}
+
+.BlogPostHeader {
+  display: contents;
+}
+
+.BlogPostItem {
+  display: contents;
+}

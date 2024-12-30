@@ -49,7 +49,7 @@ const Writer = ({ postData }: any) => {
               status: "DRAFT",
               category: postCategory,
               // TODO: Need to use the current userId as reference instead of a hardcoded value
-              userId: "48eceb63-fc36-426f-85a5-58ccc850eade",
+              userId: "874128cf-ae33-4836-89d1-4312a3e4d481",
             }),
           });
         } catch (e) {
@@ -71,7 +71,7 @@ const Writer = ({ postData }: any) => {
               status: postData.status,
               category: postCategory,
               // TODO: Need to use the current userId as reference instead of a hardcoded value
-              userId: "48eceb63-fc36-426f-85a5-58ccc850eade",
+              userId: "874128cf-ae33-4836-89d1-4312a3e4d481",
             }),
           });
         } catch (e) {
@@ -80,7 +80,7 @@ const Writer = ({ postData }: any) => {
       }
 
       // Navigate back to the admin page
-      router.push("/admin");
+      router.push("/admin/post");
 
       // Rehydrate the state after navigating back the admin page
       router.refresh();
@@ -105,7 +105,7 @@ const Writer = ({ postData }: any) => {
       }
 
       // Navigate back to the admin page
-      router.push("/admin");
+      router.push("/admin/post");
 
       // Rehydrate the state after navigating back the admin page
       router.refresh();

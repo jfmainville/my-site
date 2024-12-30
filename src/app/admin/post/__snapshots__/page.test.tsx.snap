@@ -22,45 +22,38 @@ exports[`<PostPage/> Test Suite should render the <PostPage/> page unchanged 1`]
       Back
     </a>
     <div
-      class="Writer"
+      class="CreateButton"
     >
-      <input
-        class="WriterInput"
-        placeholder="Title"
-        required=""
-        value=""
-      />
-      <input
-        class="WriterInput"
-        placeholder="Category"
-        required=""
-        value=""
-      />
-      <div
-        class="WriterContent"
-        data-testid="TipTap"
-      >
-        <div
-          class="tiptap ProseMirror"
-          contenteditable="true"
-          tabindex="0"
-          translate="no"
-        >
-          <p>
-            Enter text here...
-          </p>
-        </div>
-      </div>
-      <div
-        class="WriterButtons"
+      <a
+        class="Link"
+        href="/admin/post/create"
       >
         <div
           class="Button"
         >
           <div>
-            Save
+            Create Post
           </div>
         </div>
+      </a>
+    </div>
+    <div
+      class="BlogPost"
+    >
+      <div>
+        Name
+      </div>
+      <div>
+        Status
+      </div>
+      <div>
+        Create Date
+      </div>
+      <div>
+        Update Date
+      </div>
+      <div>
+        No posts
       </div>
     </div>
   </section>
