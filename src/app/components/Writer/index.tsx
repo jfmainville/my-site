@@ -53,6 +53,7 @@ const Writer = ({ postData }: any) => {
     postThumbnail: String,
     postContent: String,
     postCategory: String,
+    postStatus: String,
   ) => {
     try {
       if (!postData) {
@@ -91,7 +92,7 @@ const Writer = ({ postData }: any) => {
               thumbnail: postThumbnail,
               slug: postTitle.replace(" ", "-").toLowerCase(),
               content: postContent,
-              status: postData.status,
+              status: postStatus,
               category: postCategory,
               // TODO: Need to use the current userId as reference instead of a hardcoded value
               userId: "seed-user-2",
@@ -144,6 +145,7 @@ const Writer = ({ postData }: any) => {
       editor.chain().focus().setImage({ src: url }).run();
     }
   }, [editor]);
+
   if (!editor) {
     return null;
   }
@@ -169,6 +171,12 @@ const Writer = ({ postData }: any) => {
         value={postThumbnail}
         placeholder="Thumbnail"
         onChange={(event) => setPostThumbnail(event.target.value)}
+      />
+      <input
+        className={styles.WriterInput}
+        value={postStatus}
+        placeholder="Status"
+        onChange={(event) => setPostStatus(event.target.value)}
       />
       <div className={styles.WriterEditorBar}>
         <button
@@ -285,7 +293,13 @@ const Writer = ({ postData }: any) => {
       <div className={styles.WriterButtons}>
         <Button
           onButtonClickEvent={() =>
-            handleOnPostSave(postTitle, postContent, postCategory)
+            handleOnPostSave(
+              postTitle,
+              postThumbnail,
+              postContent,
+              postCategory,
+              postStatus,
+            )
           }
           buttonText={"Save"}
         />
