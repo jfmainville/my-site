@@ -16,10 +16,8 @@
 }
 
 .BlogPost {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin: 1rem;
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .BlogPostHeader {
@@ -27,5 +25,13 @@
 }
 
 .BlogPostItem {
-  display: contents;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white-color;
+  height: 100%;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }

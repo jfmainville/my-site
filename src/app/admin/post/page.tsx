@@ -4,6 +4,7 @@ import Navbar from "../../components/Navbar";
 import { Post } from "@prisma/client";
 import { MY_SITE_URL } from "../../utils/constants";
 import Button from "@/app/components/Button";
+import Image from "next/image";
 
 export type PostData = {
   postStatus: String;
@@ -36,23 +37,22 @@ const PostPage = async () => {
         </Link>
       </div>
       <div className={styles.BlogPost}>
-        <div>Name</div>
-        <div>Status</div>
-        <div>Create Date</div>
-        <div>Update Date</div>
         {posts && posts.data ? (
           posts.data?.map((post: Post) => (
             <div key={post.id} className={styles.BlogPostItem}>
+              <Image
+                src={
+                  post.thumbnail ||
+                  "https://archive.org/download/placeholder-image/placeholder-image.jpg"
+                }
+                width={150}
+                height={150}
+                alt=""
+              />
               <Link className={styles.Link} href={`/admin/post/${post.slug}`}>
-                {post.title}
+                <h2>{post.title}</h2>
               </Link>
               <div className={styles.BlogPostStatus}>{post.status}</div>
-              <div className={styles.BlogPostCreatedDate}>
-                {post.createdAt.toString()}
-              </div>
-              <div className={styles.BlogPostUpdatedDate}>
-                {post.updatedAt.toString()}
-              </div>
             </div>
           ))
         ) : (
