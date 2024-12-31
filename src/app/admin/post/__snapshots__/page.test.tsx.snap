@@ -48,18 +48,6 @@ exports[`<PostPage/> Test Suite should render the <PostPage/> page unchanged 1`]
       class="BlogPost"
     >
       <div>
-        Name
-      </div>
-      <div>
-        Status
-      </div>
-      <div>
-        Create Date
-      </div>
-      <div>
-        Update Date
-      </div>
-      <div>
         No posts
       </div>
     </div>
