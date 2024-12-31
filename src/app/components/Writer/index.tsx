@@ -4,8 +4,6 @@ import styles from "./index.module.scss";
 import { useState, useCallback } from "react";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
-import CodeBlock from "@tiptap/extension-code-block";
-import Dropcursor from "@tiptap/extension-dropcursor";
 import Image from "@tiptap/extension-image";
 import { MY_SITE_URL } from "@/app/utils/constants";
 import { useRouter } from "next/navigation";
@@ -42,7 +40,7 @@ const Writer = ({ postData }: any) => {
         class: styles.WriterEditor,
       },
     },
-    extensions: [StarterKit, CodeBlock, Image, Dropcursor],
+    extensions: [StarterKit, Image],
     content: postContent,
     onBlur({ editor }) {
       setPostContent(editor.getHTML());
