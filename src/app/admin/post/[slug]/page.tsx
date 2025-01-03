@@ -13,7 +13,9 @@ export type PostData = {
 };
 
 const PostUpdatePage = async ({ params }: { params: { slug: string } }) => {
-  const data = await fetch(`${MY_SITE_URL}/api/post?slug=${params.slug}`);
+  const data = await fetch(`${MY_SITE_URL}/api/post?slug=${params.slug}`, {
+    cache: "no-store",
+  });
   const postData = await data.json();
 
   return (
