@@ -25,9 +25,13 @@ describe("<Writer/> Test Suite", () => {
     render(<Writer />);
     const postTitle = screen.getByPlaceholderText("Title");
     const postCategory = screen.getByPlaceholderText("Category");
+    const postThumbnail = screen.getByPlaceholderText("Thumbnail");
+    const postStatus = screen.getByPlaceholderText("Status");
     const postContent = screen.getByTestId("TipTap");
     expect(postTitle).toBeInTheDocument();
     expect(postCategory).toBeInTheDocument();
+    expect(postThumbnail).toBeInTheDocument();
+    expect(postStatus).toBeInTheDocument();
     expect(postContent).toBeInTheDocument();
   });
 
@@ -36,13 +40,22 @@ describe("<Writer/> Test Suite", () => {
       id: "12345",
       title: "Test Title",
       category: "Cybersecurity",
+      thumbnail:
+        "https://images.unsplash.com/photo-1725714834773-b5f278346915?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      status: "DRAFT",
       content: "<h1>Test Content</h1>",
     };
     render(<Writer postData={postData} />);
     const postTitle = screen.getByPlaceholderText("Title");
     const postCategory = screen.getByPlaceholderText("Category");
+    const postThumbnail = screen.getByPlaceholderText("Thumbnail");
+    const postStatus = screen.getByPlaceholderText("Status");
     expect(postTitle).toHaveValue("Test Title");
     expect(postCategory).toHaveValue("Cybersecurity");
+    expect(postThumbnail).toHaveValue(
+      "https://images.unsplash.com/photo-1725714834773-b5f278346915?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    );
+    expect(postStatus).toHaveValue("DRAFT");
   });
 
   it("should show the delete button if the postData props are being passed in the <Writer/> component", () => {
@@ -50,6 +63,9 @@ describe("<Writer/> Test Suite", () => {
       id: "12345",
       title: "Test Title",
       category: "Cybersecurity",
+      thumbnail:
+        "https://images.unsplash.com/photo-1725714834773-b5f278346915?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      status: "DRAFT",
       content: "<h1>Test Content</h1>",
     };
     render(<Writer postData={postData} />);
@@ -67,12 +83,19 @@ describe("<Writer/> Test Suite", () => {
     render(<Writer />);
     const postTitle = screen.getByPlaceholderText("Title");
     const postCategory = screen.getByPlaceholderText("Category");
+    const postThumbnail = screen.getByPlaceholderText("Thumbnail");
+    const postStatus = screen.getByPlaceholderText("Status");
+    const postContent = screen.getByTestId("TipTap");
 
     fireEvent.change(postTitle, { target: { value: "Test Title" } });
     fireEvent.change(postCategory, { target: { value: "Cybersecurity" } });
+    fireEvent.change(postThumbnail, { target: { value: "" } });
+    fireEvent.change(postStatus, { target: { value: "DRAFT" } });
 
     expect(postTitle).toHaveValue("Test Title");
     expect(postCategory).toHaveValue("Cybersecurity");
+    expect(postThumbnail).toHaveValue("");
+    expect(postStatus).toHaveValue("DRAFT");
   });
 
   it("should create the post data in the <Writer/> component", () => {
@@ -100,6 +123,8 @@ describe("<Writer/> Test Suite", () => {
       id: "12345",
       title: "Test Title",
       category: "Cybersecurity",
+      thumbnail: "",
+      status: "DRAFT",
       content: "<h1>Test Content</h1>",
     };
     render(<Writer postData={postData} />);
@@ -120,6 +145,8 @@ describe("<Writer/> Test Suite", () => {
       id: "12345",
       title: "Test Title",
       category: "Cybersecurity",
+      thumbnail: "",
+      status: "DRAFT",
       content: "<h1>Test Content</h1>",
     };
     render(<Writer postData={postData} />);
