@@ -85,7 +85,6 @@ describe("<Writer/> Test Suite", () => {
     const postCategory = screen.getByPlaceholderText("Category");
     const postThumbnail = screen.getByPlaceholderText("Thumbnail");
     const postStatus = screen.getByPlaceholderText("Status");
-    const postContent = screen.getByTestId("TipTap");
 
     fireEvent.change(postTitle, { target: { value: "Test Title" } });
     fireEvent.change(postCategory, { target: { value: "Cybersecurity" } });
