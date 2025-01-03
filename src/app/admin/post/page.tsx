@@ -41,10 +41,7 @@ const PostPage = async () => {
           posts.data?.map((post: Post) => (
             <div key={post.id} className={styles.BlogPostItem}>
               <Image
-                src={
-                  post.thumbnail ||
-                  "https://archive.org/download/placeholder-image/placeholder-image.jpg"
-                }
+                src={post.thumbnail || "/images/placeholder.jpg"}
                 width={150}
                 height={150}
                 alt=""
