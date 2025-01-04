@@ -42,8 +42,8 @@ next-env.d.ts
 /blob-report/
 /playwright/.cache/
 
-# Microsoft SQL Server
-mssql/
+# PostgreSQL
+pgsql/
 
 # Prisma
 prisma/

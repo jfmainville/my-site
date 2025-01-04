@@ -1,0 +1,97 @@
+@import "../../variables.module.scss";
+
+.Writer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+.WriterInput {
+  display: flex;
+  height: 2rem;
+  width: 20rem;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.ButtonBulletList {
+  display: flex;
+  background-color: red;
+  height: 2rem;
+  border: none;
+}
+
+.WriterEditorBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 0 0 3px $grey-lighter-color;
+}
+
+.WriterEditorButton {
+  border: none;
+  outline: none;
+  background-color: white;
+  cursor: pointer;
+  height: 2rem;
+
+  &:hover {
+    background-color: lightgray;
+  }
+}
+
+.WriterEditorButtonActive {
+  border: none;
+  outline: none;
+  background-color: $grey-light-color;
+  cursor: pointer;
+  height: 2rem;
+}
+
+.WriterEditor {
+  background-color: #ffffff;
+  border: 1px $primary-color;
+  padding-top: 1rem;
+  min-height: 50rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  ul,
+  ol {
+    padding: 0 1rem;
+    margin: 1.25rem 1rem 1.25rem 0.4rem;
+
+    li p {
+      margin-top: 0.25em;
+      margin-bottom: 0.25em;
+    }
+  }
+
+  pre {
+    background: black;
+    color: white;
+    border-radius: 0.5rem;
+    font-family: "JetBrainsMono", monospace;
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+
+    code {
+      background: none;
+      color: inherit;
+      font-size: 0.8rem;
+      padding: 0;
+    }
+  }
+}
+
+.WriterButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+.Link {
+  font-size: 1.17em;
+  color: $text-color;
+  padding: 0 1rem 0 1rem;
+}

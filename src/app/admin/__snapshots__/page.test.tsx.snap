@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AdminPage/> Test Suite should render the <AdminPage/> page unchanged 1`] = `
+<div>
+  <section
+    class="Main"
+  >
+    <div
+      class="Navbar"
+    >
+      <div>
+        Admin
+      </div>
+      <div>
+        Logout
+      </div>
+    </div>
+    <section
+      class="Section"
+    >
+      <a
+        class="SectionLinkItem"
+        href="/admin/post"
+      >
+        <div>
+          Blog Posts
+        </div>
+      </a>
+    </section>
+  </section>
+</div>
+`;

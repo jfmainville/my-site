@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16.3
+    platform: linux/amd64
+    environment:
+      POSTGRES_USER: sqluser
+      POSTGRES_PASSWORD: "Password!"
+      POSTGRES_DB: my-site
+    volumes:
+      - ./pgsql/data:/var/lib/postgresql/data
+      - ./pgsql/secrets:/run/secrets
+    ports:
+      - "5432:5432"
