@@ -141,7 +141,7 @@ const Writer = ({ postData }: any) => {
   const addImage = useCallback(() => {
     const url = window.prompt("URL");
 
-    if (url) {
+    if (url && editor) {
       editor.chain().focus().setImage({ src: url }).run();
     }
   }, [editor]);
