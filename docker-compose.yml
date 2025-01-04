@@ -1,22 +1,13 @@
 services:
-  mssql:
-    image: mcr.microsoft.com/mssql/server:2022-latest
   db:
     image: postgres:16.3
     platform: linux/amd64
     environment:
-      ACCEPT_EULA: Y
-      MSSQL_SA_PASSWORD: Adminxyz22#
       POSTGRES_USER: sqluser
       POSTGRES_PASSWORD: "Password!"
       POSTGRES_DB: my-site
-      POSTGRES_DB: cloudgraph
     volumes:
-      - ./mssql/data:/var/opt/mssql/data
-      - ./mssql/log:/var/opt/mssql/log
-      - ./mssql/secrets:/var/opt/mssql/secrets
       - ./pgsql/data:/var/lib/postgresql/data
       - ./pgsql/secrets:/run/secrets
     ports:
-      - "1433:1433"
       - "5432:5432"
