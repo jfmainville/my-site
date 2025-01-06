@@ -3,8 +3,8 @@ export const currentDateTime: Date = new Date(
 );
 
 export const PORT = process.env.PORT || "3000";
-export const MY_SITE_URL =
-  process.env.MY_SITE_URL || `http://localhost:${PORT}`;
+export const NEXT_PUBLIC_MY_SITE_URL =
+  process.env.NEXT_PUBLIC_MY_SITE_URL || `http://localhost:${PORT}`;
 export const RESUME_FILENAME = "Resume_Jean_Frederic_Mainville.pdf";
 export const GMAIL_SMTP_SERVER =
   process.env.GMAIL_SMTP_SERVER || "smtp.gmail.com";
