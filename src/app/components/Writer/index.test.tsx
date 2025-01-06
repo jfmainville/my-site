@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Writer from "./index";
 import { mockFetch } from "../../utils/mockFetch";
-import { MY_SITE_URL } from "@/app/utils/constants";
+import { NEXT_PUBLIC_MY_SITE_URL } from "@/app/utils/constants";
 
 // Mock the useRouter navigation
 jest.mock("next/navigation", () => ({
@@ -111,7 +111,7 @@ describe("<Writer/> Test Suite", () => {
 
     expect(window.fetch).toHaveBeenCalledTimes(1);
     expect(window.fetch).toHaveBeenCalledWith(
-      `${MY_SITE_URL}/api/post`,
+      `${NEXT_PUBLIC_MY_SITE_URL}/api/post`,
       expect.objectContaining({ method: "POST" }),
     );
   });
@@ -133,7 +133,7 @@ describe("<Writer/> Test Suite", () => {
 
     expect(window.fetch).toHaveBeenCalledTimes(1);
     expect(window.fetch).toHaveBeenCalledWith(
-      `${MY_SITE_URL}/api/post`,
+      `${NEXT_PUBLIC_MY_SITE_URL}/api/post`,
       expect.objectContaining({ method: "PUT" }),
     );
   });
@@ -155,7 +155,7 @@ describe("<Writer/> Test Suite", () => {
 
     expect(window.fetch).toHaveBeenCalledTimes(1);
     expect(window.fetch).toHaveBeenCalledWith(
-      `${MY_SITE_URL}/api/post`,
+      `${NEXT_PUBLIC_MY_SITE_URL}/api/post`,
       expect.objectContaining({ method: "DELETE" }),
     );
   });

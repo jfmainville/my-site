@@ -5,7 +5,7 @@ import { useState, useCallback } from "react";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
-import { MY_SITE_URL } from "@/app/utils/constants";
+import { NEXT_PUBLIC_MY_SITE_URL } from "@/app/utils/constants";
 import { useRouter } from "next/navigation";
 import Button from "../../components/Button/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -58,7 +58,7 @@ const Writer = ({ postData }: any) => {
     try {
       if (!postData) {
         try {
-          await fetch(`${MY_SITE_URL}/api/post`, {
+          await fetch(`${NEXT_PUBLIC_MY_SITE_URL}/api/post`, {
             method: "POST",
             headers: {
               Accept: "application/json",
@@ -80,7 +80,7 @@ const Writer = ({ postData }: any) => {
         }
       } else if (postData) {
         try {
-          await fetch(`${MY_SITE_URL}/api/post`, {
+          await fetch(`${NEXT_PUBLIC_MY_SITE_URL}/api/post`, {
             method: "PUT",
             headers: {
               Accept: "application/json",
@@ -116,7 +116,7 @@ const Writer = ({ postData }: any) => {
   const handleOnPostDelete = async (postId: String) => {
     try {
       if (postId) {
-        await fetch(`${MY_SITE_URL}/api/post`, {
+        await fetch(`${NEXT_PUBLIC_MY_SITE_URL}/api/post`, {
           method: "DELETE",
           headers: {
             Accept: "application/json",
