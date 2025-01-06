@@ -45,5 +45,5 @@ jobs:
           resourceGroup: ${{ vars.AZURE_RESOURCE_GROUP_NAME }}
           imageToDeploy: ${{ vars.AZURE_ACR_URL }}/my-site:${{ github.SHA }}
           environmentVariables: |
-            "GMAIL_SMTP_SERVER=${{ vars.GMAIL_SMTP_SERVER }}" "GMAIL_SMTP_SERVER_PORT=${{ vars.GMAIL_SMTP_SERVER_PORT }}" "GMAIL_EMAIL=${{ vars.GMAIL_EMAIL }}" "GMAIL_APP_PASSWORD=secretref:gmail-app-password"
+            "GMAIL_SMTP_SERVER=${{ vars.GMAIL_SMTP_SERVER }}" "GMAIL_SMTP_SERVER_PORT=${{ vars.GMAIL_SMTP_SERVER_PORT }}" "GMAIL_EMAIL=${{ vars.GMAIL_EMAIL }}" "GMAIL_APP_PASSWORD=secretref:gmail-app-password" "DATABASE_URL=secretref:database-url" "NEXT_PUBLIC_MY_SITE_URL=${{ vars.NEXT_PUBLIC_MY_SITE_URL }}"
     needs: build

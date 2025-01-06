@@ -2,7 +2,7 @@ import styles from "./page.module.scss";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import { Post } from "@prisma/client";
-import { MY_SITE_URL } from "../../utils/constants";
+import { NEXT_PUBLIC_MY_SITE_URL } from "../../utils/constants";
 import Button from "@/app/components/Button";
 import Image from "next/image";
 
@@ -15,7 +15,9 @@ export type PostData = {
 
 const PostPage = async () => {
   let posts;
-  let response = await fetch(`${MY_SITE_URL}/api/post`, { cache: "no-store" });
+  let response = await fetch(`${NEXT_PUBLIC_MY_SITE_URL}/api/post`, {
+    cache: "no-store",
+  });
 
   if (response.ok) {
     posts = await response.json();
