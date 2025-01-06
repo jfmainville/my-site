@@ -20,12 +20,14 @@ The following applications need to be installed on the local computer in order t
 
 The following environment variables needs to be set to use this application:
 
-| Name                   | Description                                                         | Example        |
-| ---------------------- | :------------------------------------------------------------------ | :------------- |
-| GMAIL_SMTP_SERVER      | Gmail SMTP server URL                                               | smtp.gmail.com |
-| GMAIL_SMTP_SERVER_PORT | Gmail SMTP server port                                              | 587            |
-| GMAIL_EMAIL            | Destination email address                                           | test@gmail.com |
-| GMAIL_APP_PASSWORD     | Gmail App password that can be generated from the Gmail web console |                |
+| Name                    | Description                                                         | Example                                               |
+| ----------------------- | :------------------------------------------------------------------ | :---------------------------------------------------- |
+| GMAIL_SMTP_SERVER       | Gmail SMTP server URL                                               | smtp.gmail.com                                        |
+| GMAIL_SMTP_SERVER_PORT  | Gmail SMTP server port                                              | 587                                                   |
+| GMAIL_EMAIL             | Destination email address                                           | test@gmail.com                                        |
+| GMAIL_APP_PASSWORD      | Gmail App password that can be generated from the Gmail web console | abcd abcd abcd abcd                                   |
+| DATABASE_URL            | The database URL to use to connect to the backend database service  | postgresql://sqluser:Password!@localhost:5432/my_site |
+| NEXT_PUBLIC_MY_SITE_URL | The URL to use on the client side                                   | https://jfmainville.me                                |
 
 ### Development
 
