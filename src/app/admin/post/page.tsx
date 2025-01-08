@@ -2,7 +2,7 @@ import styles from "./page.module.scss";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import { Post } from "@prisma/client";
-import { NEXT_PUBLIC_MY_SITE_URL } from "../../utils/constants";
+import { getPosts } from "../../lib/db";
 import Button from "@/app/components/Button";
 import Image from "next/image";
 
@@ -14,14 +14,7 @@ export type PostData = {
 };
 
 const PostPage = async () => {
-  let posts;
-  let response = await fetch(`${NEXT_PUBLIC_MY_SITE_URL}/api/post`, {
-    cache: "no-store",
-  });
-
-  if (response.ok) {
-    posts = await response.json();
-  }
+  const posts = await getPosts();
 
   return (
     <section className={styles.Main}>
@@ -39,8 +32,8 @@ const PostPage = async () => {
         </Link>
       </div>
       <div className={styles.BlogPost}>
-        {posts && posts.data ? (
-          posts.data?.map((post: Post) => (
+        {posts ? (
+          posts?.map((post: Post) => (
             <div key={post.id} className={styles.BlogPostItem}>
               <Image
                 src={post.thumbnail || "/images/placeholder.jpg"}

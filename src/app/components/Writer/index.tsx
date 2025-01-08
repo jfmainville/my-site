@@ -18,6 +18,7 @@ import {
   faCode,
   faImage,
 } from "@fortawesome/free-solid-svg-icons";
+import { createPost, updatePost, deletePost } from "@/app/lib/db";
 
 const Writer = ({ postData }: any) => {
   const router = useRouter();
@@ -47,71 +48,6 @@ const Writer = ({ postData }: any) => {
     },
     immediatelyRender: false, // Need to pass this attribute to prevent rehydration mismatch when using SSR
   });
-
-  const handleOnPostSave = async (
-    postTitle: String,
-    postThumbnail: String,
-    postContent: String,
-    postCategory: String,
-    postStatus: String,
-  ) => {
-    try {
-      if (!postData) {
-        try {
-          await fetch(`${NEXT_PUBLIC_MY_SITE_URL}/api/post`, {
-            method: "POST",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              title: postTitle,
-              thumbnail: postThumbnail,
-              slug: postTitle.replace(" ", "-").toLowerCase(),
-              content: postContent,
-              status: "DRAFT",
-              category: postCategory,
-              // TODO: Need to use the current userId as reference instead of a hardcoded value
-              userId: "seed-user-1",
-            }),
-          });
-        } catch (e) {
-          console.error("Failed to create the post in the database");
-        }
-      } else if (postData) {
-        try {
-          await fetch(`${NEXT_PUBLIC_MY_SITE_URL}/api/post`, {
-            method: "PUT",
-            headers: {
-              Accept: "application/json",
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              id: postData.id,
-              title: postTitle,
-              thumbnail: postThumbnail,
-              slug: postTitle.replace(" ", "-").toLowerCase(),
-              content: postContent,
-              status: postStatus,
-              category: postCategory,
-              // TODO: Need to use the current userId as reference instead of a hardcoded value
-              userId: "seed-user-2",
-            }),
-          });
-        } catch (e) {
-          console.error("Failed to update the post in the database");
-        }
-      }
-
-      // Navigate back to the admin page
-      router.push("/admin/post");
-
-      // Rehydrate the state after navigating back the admin page
-      router.refresh();
-    } catch (e) {
-      console.error("Failed to save the post in the database", e);
-    }
-  };
 
   const handleOnPostDelete = async (postId: String) => {
     try {
@@ -291,21 +227,31 @@ const Writer = ({ postData }: any) => {
       </div>
       <EditorContent data-testid="TipTap" editor={editor} />
       <div className={styles.WriterButtons}>
-        <Button
-          onButtonClickEvent={() =>
-            handleOnPostSave(
-              postTitle,
-              postThumbnail,
-              postContent,
-              postCategory,
-              postStatus,
-            )
-          }
-          buttonText={"Save"}
-        />
-        {postData ? (
+        {postData && postData.id ? (
           <Button
-            onButtonClickEvent={() => handleOnPostDelete(postData.id)}
+            onButtonClickEvent={() =>
+              updatePost(
+                postData,
+                postTitle,
+                postThumbnail,
+                postContent,
+                postCategory,
+                postStatus,
+              )
+            }
+            buttonText={"Update"}
+          />
+        ) : (
+          <Button
+            onButtonClickEvent={() =>
+              createPost(postTitle, postThumbnail, postContent, postCategory)
+            }
+            buttonText={"Create"}
+          />
+        )}
+        {postData && postData.id ? (
+          <Button
+            onButtonClickEvent={() => deletePost(postData.id)}
             buttonText={"Delete"}
             buttonColor="red"
           />
