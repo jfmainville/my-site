@@ -29,10 +29,10 @@ export async function getUniquePost(slug: String) {
 
 export async function createPost(
   postTitle: String,
+  postCategory: String,
   postThumbnail: String,
   postStatus: String,
   postContent: String,
-  postCategory: String,
 ) {
   let post;
 
