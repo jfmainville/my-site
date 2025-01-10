@@ -2,8 +2,8 @@ import styles from "./page.module.scss";
 import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Writer from "@/app/components/Writer";
-import { NEXT_PUBLIC_MY_SITE_URL } from "../../../utils/constants";
 import Button from "@/app/components/Button";
+import { getUniquePost } from "@/app/lib/db";
 
 export type PostData = {
   postStatus: String;
@@ -13,13 +13,7 @@ export type PostData = {
 };
 
 const PostUpdatePage = async ({ params }: { params: { slug: string } }) => {
-  const data = await fetch(
-    `${NEXT_PUBLIC_MY_SITE_URL}/api/post?slug=${params.slug}`,
-    {
-      cache: "no-store",
-    },
-  );
-  const postData = await data.json();
+  const post = await getUniquePost(params.slug);
 
   return (
     <section className={styles.Main}>
@@ -31,7 +25,7 @@ const PostUpdatePage = async ({ params }: { params: { slug: string } }) => {
           buttonColor="transparent"
         />
       </Link>
-      <Writer postData={postData.data} />
+      <Writer postData={post} />
     </section>
   );
 };
