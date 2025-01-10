@@ -30,6 +30,7 @@ export async function getUniquePost(slug: String) {
 export async function createPost(
   postTitle: String,
   postThumbnail: String,
+  postStatus: String,
   postContent: String,
   postCategory: String,
 ) {
@@ -40,7 +41,7 @@ export async function createPost(
     thumbnail: postThumbnail as string | null,
     slug: postTitle.replace(" ", "-").toLowerCase() as string,
     content: postContent as string,
-    status: "DRAFT" as PostStatus,
+    status: (postStatus as PostStatus) || "DRAFT",
     category: postCategory as string,
     // TODO: Need to use the current userId as reference instead of a hardcoded value
     userId: "seed-user-1",
