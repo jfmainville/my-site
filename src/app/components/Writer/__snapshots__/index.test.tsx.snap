@@ -217,7 +217,7 @@ exports[`<Writer/> Test Suite should render the <Writer/> component unchanged 1`
         class="Button"
       >
         <div>
-          Save
+          Create
         </div>
       </div>
     </div>

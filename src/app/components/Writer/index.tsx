@@ -5,8 +5,6 @@ import { useState, useCallback } from "react";
 import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Image from "@tiptap/extension-image";
-import { NEXT_PUBLIC_MY_SITE_URL } from "@/app/utils/constants";
-import { useRouter } from "next/navigation";
 import Button from "../../components/Button/index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -21,7 +19,6 @@ import {
 import { createPost, updatePost, deletePost } from "@/app/lib/db";
 
 const Writer = ({ postData }: any) => {
-  const router = useRouter();
   const [postTitle, setPostTitle] = useState(postData ? postData.title : "");
   const [postThumbnail, setPostThumbnail] = useState(
     postData ? postData.thumbnail : "",
@@ -48,31 +45,6 @@ const Writer = ({ postData }: any) => {
     },
     immediatelyRender: false, // Need to pass this attribute to prevent rehydration mismatch when using SSR
   });
-
-  const handleOnPostDelete = async (postId: String) => {
-    try {
-      if (postId) {
-        await fetch(`${NEXT_PUBLIC_MY_SITE_URL}/api/post`, {
-          method: "DELETE",
-          headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            id: postId,
-          }),
-        });
-      }
-
-      // Navigate back to the admin page
-      router.push("/admin/post");
-
-      // Rehydrate the state after navigating back the admin page
-      router.refresh();
-    } catch (e) {
-      console.error("Failed to create the post in the database");
-    }
-  };
 
   const addImage = useCallback(() => {
     const url = window.prompt("URL");
@@ -244,7 +216,13 @@ const Writer = ({ postData }: any) => {
         ) : (
           <Button
             onButtonClickEvent={() =>
-              createPost(postTitle, postThumbnail, postContent, postCategory)
+              createPost(
+                postTitle,
+                postCategory,
+                postThumbnail,
+                postStatus,
+                postContent,
+              )
             }
             buttonText={"Create"}
           />

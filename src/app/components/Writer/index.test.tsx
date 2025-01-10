@@ -1,19 +1,9 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Writer from "./index";
-import { mockFetch } from "../../utils/mockFetch";
-import { NEXT_PUBLIC_MY_SITE_URL } from "@/app/utils/constants";
+import { createPost, updatePost, deletePost } from "../../lib/db";
 
-// Mock the useRouter navigation
-jest.mock("next/navigation", () => ({
-  useRouter() {
-    return {
-      prefetch: () => null,
-      push: jest.fn(),
-      refresh: jest.fn(),
-    };
-  },
-}));
+jest.mock("../../lib/db");
 
 describe("<Writer/> Test Suite", () => {
   it("should render the <Writer/> component unchanged", () => {
@@ -98,26 +88,31 @@ describe("<Writer/> Test Suite", () => {
   });
 
   it("should create the post data in the <Writer/> component", () => {
-    window.fetch = mockFetch({ data: [] });
     render(<Writer />);
     const postTitle = screen.getByPlaceholderText("Title");
     const postCategory = screen.getByPlaceholderText("Category");
-    const postSaveButton = screen.getByText("Save");
+    const postThumbnail = screen.getByPlaceholderText("Thumbnail");
+    const postStatus = screen.getByPlaceholderText("Status");
+    const postCreateButton = screen.getByText("Create");
 
     fireEvent.change(postTitle, { target: { value: "Test Title" } });
     fireEvent.change(postCategory, { target: { value: "Cybersecurity" } });
+    fireEvent.change(postThumbnail, { target: { value: "" } });
+    fireEvent.change(postStatus, { target: { value: "DRAFT" } });
 
-    fireEvent.click(postSaveButton);
+    fireEvent.click(postCreateButton);
 
-    expect(window.fetch).toHaveBeenCalledTimes(1);
-    expect(window.fetch).toHaveBeenCalledWith(
-      `${NEXT_PUBLIC_MY_SITE_URL}/api/post`,
-      expect.objectContaining({ method: "POST" }),
+    expect(createPost as jest.Mock).toHaveBeenCalledTimes(1);
+    expect(createPost as jest.Mock).toHaveBeenCalledWith(
+      "Test Title",
+      "Cybersecurity",
+      "",
+      "DRAFT",
+      "Enter text here...",
     );
   });
 
   it("should update the post in the <Writer/> component", () => {
-    window.fetch = mockFetch({ data: [] });
     const postData = {
       id: "12345",
       title: "Test Title",
@@ -127,19 +122,29 @@ describe("<Writer/> Test Suite", () => {
       content: "<h1>Test Content</h1>",
     };
     render(<Writer postData={postData} />);
-    const postSaveButton = screen.getByText("Save");
+    const postSaveButton = screen.getByText("Update");
 
     fireEvent.click(postSaveButton);
 
-    expect(window.fetch).toHaveBeenCalledTimes(1);
-    expect(window.fetch).toHaveBeenCalledWith(
-      `${NEXT_PUBLIC_MY_SITE_URL}/api/post`,
-      expect.objectContaining({ method: "PUT" }),
+    expect(updatePost as jest.Mock).toHaveBeenCalledTimes(1);
+    expect(updatePost as jest.Mock).toHaveBeenCalledWith(
+      {
+        id: "12345",
+        title: "Test Title",
+        category: "Cybersecurity",
+        thumbnail: "",
+        status: "DRAFT",
+        content: "<h1>Test Content</h1>",
+      },
+      "Test Title",
+      "",
+      "<h1>Test Content</h1>",
+      "Cybersecurity",
+      "DRAFT",
     );
   });
 
   it("should delete the post in the <Writer/> component", () => {
-    window.fetch = mockFetch({ data: [] });
     const postData = {
       id: "12345",
       title: "Test Title",
@@ -153,10 +158,7 @@ describe("<Writer/> Test Suite", () => {
 
     fireEvent.click(postDeleteButton);
 
-    expect(window.fetch).toHaveBeenCalledTimes(1);
-    expect(window.fetch).toHaveBeenCalledWith(
-      `${NEXT_PUBLIC_MY_SITE_URL}/api/post`,
-      expect.objectContaining({ method: "DELETE" }),
-    );
+    expect(deletePost as jest.Mock).toHaveBeenCalledTimes(1);
+    expect(deletePost as jest.Mock).toHaveBeenCalledWith("12345");
   });
 });
