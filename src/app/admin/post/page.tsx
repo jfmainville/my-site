@@ -6,6 +6,8 @@ import { getPosts } from "../../lib/db";
 import Button from "@/app/components/Button";
 import Image from "next/image";
 
+export const dynamic = "force-dynamic";
+
 export type PostData = {
   postStatus: String;
   postTitle: String;
