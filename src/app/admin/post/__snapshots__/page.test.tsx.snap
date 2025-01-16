@@ -12,7 +12,11 @@ exports[`<PostPage/> Test Suite should render the <PostPage/> page unchanged 1`]
         Admin
       </div>
       <div>
-        Logout
+        <button
+          type="submit"
+        >
+          Logout
+        </button>
       </div>
     </div>
     <a
