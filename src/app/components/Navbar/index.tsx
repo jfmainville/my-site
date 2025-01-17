@@ -4,7 +4,11 @@ const Navbar = () => {
   return (
     <div className={styles.Navbar}>
       <div>Admin</div>
-      <div>Logout</div>
+      <div>
+        <button className={styles.LogoutButton} type="submit">
+          <a href="/api/auth/logout">Logout</a>
+        </button>
+      </div>
     </div>
   );
 };

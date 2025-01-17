@@ -11,7 +11,10 @@
   height: 4rem;
 }
 
-.TextHeading {
-  margin: 8rem 0 0 2rem;
+.LogoutButton {
+  background-color: transparent;
+  outline: none;
+  border: none;
   color: $text-color;
+  cursor: pointer;
 }

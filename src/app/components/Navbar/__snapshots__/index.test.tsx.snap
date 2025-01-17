@@ -9,7 +9,16 @@ exports[`<Navbar/> Test Suite should render the <Navbar/> component unchanged 1`
       Admin
     </div>
     <div>
-      Logout
+      <button
+        class="LogoutButton"
+        type="submit"
+      >
+        <a
+          href="/api/auth/logout"
+        >
+          Logout
+        </a>
+      </button>
     </div>
   </div>
 </div>

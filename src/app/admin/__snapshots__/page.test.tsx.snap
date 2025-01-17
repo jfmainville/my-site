@@ -12,7 +12,16 @@ exports[`<AdminPage/> Test Suite should render the <AdminPage/> page unchanged 1
         Admin
       </div>
       <div>
-        Logout
+        <button
+          class="LogoutButton"
+          type="submit"
+        >
+          <a
+            href="/api/auth/logout"
+          >
+            Logout
+          </a>
+        </button>
       </div>
     </div>
     <section
