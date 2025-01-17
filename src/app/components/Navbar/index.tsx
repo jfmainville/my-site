@@ -5,7 +5,9 @@ const Navbar = () => {
     <div className={styles.Navbar}>
       <div>Admin</div>
       <div>
-        <button type="submit">Logout</button>
+        <button type="submit">
+          <a href="/api/auth/logout">Logout</a>
+        </button>
       </div>
     </div>
   );

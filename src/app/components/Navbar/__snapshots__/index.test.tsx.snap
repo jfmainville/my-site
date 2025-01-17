@@ -12,7 +12,11 @@ exports[`<Navbar/> Test Suite should render the <Navbar/> component unchanged 1`
       <button
         type="submit"
       >
-        Logout
+        <a
+          href="/api/auth/logout"
+        >
+          Logout
+        </a>
       </button>
     </div>
   </div>

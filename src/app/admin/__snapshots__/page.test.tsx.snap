@@ -15,7 +15,11 @@ exports[`<AdminPage/> Test Suite should render the <AdminPage/> page unchanged 1
         <button
           type="submit"
         >
-          Logout
+          <a
+            href="/api/auth/logout"
+          >
+            Logout
+          </a>
         </button>
       </div>
     </div>
