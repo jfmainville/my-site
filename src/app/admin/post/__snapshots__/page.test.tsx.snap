@@ -13,6 +13,7 @@ exports[`<PostPage/> Test Suite should render the <PostPage/> page unchanged 1`]
       </div>
       <div>
         <button
+          class="LogoutButton"
           type="submit"
         >
           <a

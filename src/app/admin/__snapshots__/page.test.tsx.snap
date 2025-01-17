@@ -13,6 +13,7 @@ exports[`<AdminPage/> Test Suite should render the <AdminPage/> page unchanged 1
       </div>
       <div>
         <button
+          class="LogoutButton"
           type="submit"
         >
           <a
