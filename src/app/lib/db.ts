@@ -1,7 +1,25 @@
 "use server";
 
-import { PrismaClient, Post, PostStatus } from "@prisma/client";
+import { PrismaClient, User, Post, PostStatus } from "@prisma/client";
 import { redirect } from "next/navigation";
+
+export type UserSession = {
+  user: {
+    nickname: string;
+    name: string;
+    picture: string;
+    updated_at: string;
+    email: string;
+    email_verified: boolean;
+    sub: string;
+    sid: string;
+    accessToken: string;
+    accessTokenScope: string;
+    accessTokenExpiresAt: string;
+    idToken: string;
+    token_type: string;
+  };
+};
 
 const prisma = new PrismaClient();
 
@@ -89,4 +107,25 @@ export async function deletePost(postId: String) {
     },
   });
   redirect("/admin/post");
+}
+
+export async function handleUserSession(userSession: UserSession) {
+  if (userSession && userSession.user) {
+    const userData: User | null = await prisma.user.findUnique({
+      where: {
+        username: userSession.user?.nickname as string,
+      },
+    });
+
+    if (!userData) {
+      await prisma.user.create({
+        data: {
+          username: userSession.user.nickname as string,
+          email: (userSession.user.email as string) || "",
+          firstName: (userSession.user.name?.split(" ")[0] as string) || "",
+          lastName: (userSession.user.name?.split(" ")[1] as string) || "",
+        },
+      });
+    }
+  }
 }
