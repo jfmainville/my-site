@@ -13,12 +13,12 @@ export type UserSession = {
     email_verified: boolean;
     sub: string;
     sid: string;
-    accessToken: string;
-    accessTokenScope: string;
-    accessTokenExpiresAt: string;
-    idToken: string;
-    token_type: string;
   };
+  accessToken: string;
+  accessTokenScope: string;
+  accessTokenExpiresAt: number;
+  idToken: string;
+  token_type: string;
 };
 
 const prisma = new PrismaClient();
