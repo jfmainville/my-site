@@ -110,22 +110,40 @@ export async function deletePost(postId: String) {
 }
 
 export async function handleUserSession(userSession: UserSession) {
-  if (userSession && userSession.user) {
-    const userData: User | null = await prisma.user.findUnique({
-      where: {
-        username: userSession.user?.nickname as string,
-      },
-    });
-
-    if (!userData) {
-      await prisma.user.create({
-        data: {
-          username: userSession.user.nickname as string,
-          email: (userSession.user.email as string) || "",
-          firstName: (userSession.user.name?.split(" ")[0] as string) || "",
-          lastName: (userSession.user.name?.split(" ")[1] as string) || "",
+  try {
+    if (userSession && userSession.user) {
+      const userData: User | null = await prisma.user.findUnique({
+        where: {
+          username: userSession.user?.nickname as string,
         },
       });
+
+      if (!userData) {
+        await prisma.user.create({
+          data: {
+            username: userSession.user.nickname as string,
+            email: (userSession.user.email as string) || "",
+            firstName: (userSession.user.name?.split(" ")[0] as string) || "",
+            lastName: (userSession.user.name?.split(" ")[1] as string) || "",
+          },
+        });
+        return {
+          success: true,
+          error: false,
+          message: `Successfully created the user with the username ${userSession.user.nickname}`,
+        };
+      }
+      return {
+        success: true,
+        error: false,
+        message: `Skipping the creation of the user with the username ${userSession.user.nickname} as it already exists`,
+      };
     }
+  } catch (error) {
+    return {
+      success: false,
+      error: true,
+      message: error,
+    };
   }
 }
