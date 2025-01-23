@@ -3,9 +3,10 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { getSession } from "@auth0/nextjs-auth0";
 import { handleUserSession } from "../lib/db";
+import { UserSession } from "../types";
 
 const AdminPage = async () => {
-  const userSession = await getSession();
+  const userSession: UserSession | null = (await getSession()) as UserSession;
   await handleUserSession(userSession);
 
   return (

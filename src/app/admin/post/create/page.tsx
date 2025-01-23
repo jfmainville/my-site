@@ -3,6 +3,9 @@ import Link from "next/link";
 import Navbar from "../../../components/Navbar";
 import Writer from "@/app/components/Writer";
 import Button from "@/app/components/Button";
+import { handleUserSession } from "../../../lib/db";
+import { ReturnStatement, UserSession } from "../../../types";
+import { getSession } from "@auth0/nextjs-auth0";
 
 export type PostData = {
   postStatus: String;
@@ -12,6 +15,11 @@ export type PostData = {
 };
 
 const PostPage = async () => {
+  const userSession: UserSession | null = (await getSession()) as UserSession;
+  const userData: ReturnStatement | null = (await handleUserSession(
+    userSession,
+  )) as ReturnStatement;
+
   return (
     <div className={styles.Main}>
       <Navbar />
@@ -22,7 +30,7 @@ const PostPage = async () => {
           buttonColor="transparent"
         />
       </Link>
-      <Writer />
+      <Writer userData={userData.data} />
     </div>
   );
 };

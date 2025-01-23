@@ -16,7 +16,7 @@ export type PostData = {
 };
 
 const PostPage = async () => {
-  const posts = await getPosts();
+  const posts: Post[] = await getPosts();
 
   return (
     <section className={styles.Main}>

@@ -88,7 +88,17 @@ describe("<Writer/> Test Suite", () => {
   });
 
   it("should create the post data in the <Writer/> component", () => {
-    render(<Writer />);
+    const userData = {
+      id: "seed-user-1",
+      firstName: "Tony",
+      lastName: "Stark",
+      username: "tstark",
+      email: "tstark@test.com",
+      createdAt: "2025-01-20T01:51:31.356Z",
+      updatedAt: "2025-01-20T01:51:31.356Z",
+    };
+
+    render(<Writer userData={userData} />);
     const postTitle = screen.getByPlaceholderText("Title");
     const postCategory = screen.getByPlaceholderText("Category");
     const postThumbnail = screen.getByPlaceholderText("Thumbnail");
@@ -109,6 +119,15 @@ describe("<Writer/> Test Suite", () => {
       "",
       "DRAFT",
       "Enter text here...",
+      {
+        id: "seed-user-1",
+        firstName: "Tony",
+        lastName: "Stark",
+        username: "tstark",
+        email: "tstark@test.com",
+        createdAt: "2025-01-20T01:51:31.356Z",
+        updatedAt: "2025-01-20T01:51:31.356Z",
+      },
     );
   });
 
@@ -121,7 +140,17 @@ describe("<Writer/> Test Suite", () => {
       status: "DRAFT",
       content: "<h1>Test Content</h1>",
     };
-    render(<Writer postData={postData} />);
+    const userData = {
+      id: "seed-user-1",
+      firstName: "Tony",
+      lastName: "Stark",
+      username: "tstark",
+      email: "tstark@test.com",
+      createdAt: "2025-01-20T01:51:31.356Z",
+      updatedAt: "2025-01-20T01:51:31.356Z",
+    };
+
+    render(<Writer postData={postData} userData={userData} />);
     const postSaveButton = screen.getByText("Update");
 
     fireEvent.click(postSaveButton);
@@ -141,6 +170,15 @@ describe("<Writer/> Test Suite", () => {
       "<h1>Test Content</h1>",
       "Cybersecurity",
       "DRAFT",
+      {
+        id: "seed-user-1",
+        firstName: "Tony",
+        lastName: "Stark",
+        username: "tstark",
+        email: "tstark@test.com",
+        createdAt: "2025-01-20T01:51:31.356Z",
+        updatedAt: "2025-01-20T01:51:31.356Z",
+      },
     );
   });
 
