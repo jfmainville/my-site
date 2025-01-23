@@ -18,7 +18,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { createPost, updatePost, deletePost } from "@/app/lib/db";
 
-const Writer = ({ postData }: any) => {
+const Writer = ({ postData, userData }: any) => {
   const [postTitle, setPostTitle] = useState(postData ? postData.title : "");
   const [postThumbnail, setPostThumbnail] = useState(
     postData ? postData.thumbnail : "",
@@ -209,6 +209,7 @@ const Writer = ({ postData }: any) => {
                 postContent,
                 postCategory,
                 postStatus,
+                userData,
               )
             }
             buttonText={"Update"}
@@ -222,6 +223,7 @@ const Writer = ({ postData }: any) => {
                 postThumbnail,
                 postStatus,
                 postContent,
+                userData,
               )
             }
             buttonText={"Create"}

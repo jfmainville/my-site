@@ -12,7 +12,8 @@
     "start": "next start",
     "lint": "next lint",
     "ci:test": "(npm run dev&) && NODE_ENV=development jest",
-    "test": "NODE_ENV=development jest --watchAll"
+    "test": "NODE_ENV=development jest --watchAll",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^3.5.0",

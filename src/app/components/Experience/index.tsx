@@ -1,4 +1,5 @@
 import styles from "./index.module.scss";
+//@ts-ignore
 import bg from "../../../../public/images/roadmap.jpg";
 import Image from "next/image";
 import Link from "next/link";
