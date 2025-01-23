@@ -6,6 +6,16 @@ on:
       - synchronize
       - reopened
 jobs:
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the current git repository
+        uses: actions/checkout@main
+      - name: Run the NPM tsc command
+        uses: actions/setup-node@v4
+      - run: |
+          - npm ci
+          - npm run type-check
   lint:
     runs-on: ubuntu-latest
     environment: production
