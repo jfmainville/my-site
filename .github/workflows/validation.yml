@@ -7,7 +7,7 @@ on:
       - reopened
 jobs:
   typescript:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout the current git repository
         uses: actions/checkout@main
@@ -17,7 +17,7 @@ jobs:
           npm ci
           npm run type-check
   lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment: production
     steps:
       - name: Checkout the current git repository
@@ -28,7 +28,7 @@ jobs:
           npm ci
           npm run lint
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment: production
     steps:
       - name: Checkout the current git repository
