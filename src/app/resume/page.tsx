@@ -75,28 +75,74 @@ const ResumePage = () => {
         <div className={styles.Resume}>
           <div className={styles.Header}>
             <h1>Jean-Frederic Mainville</h1>
-            <h2>DevSecOps Specialist</h2>
+            <h2>Senior DevOps</h2>
           </div>
           <div className={styles.Profile}>
             <h2>Profile</h2>
             <p>
               I am an experienced professional with expertise in cloud security,
               DevOps, and system administration. My career spans roles as a
-              DevSecOps Specialist, Technical Product Owner, DevOps Specialist,
-              Security Analyst, and System Administrator across diverse
-              environments. I excel in designing and implementing secure IT
-              solutions, automating processes, and optimizing performance to
-              strengthen operational resilience and meet business objectives.
+              Senior DevOps, DevSecOps Specialist, Technical Product Owner,
+              DevOps Specialist, Security Analyst, and System Administrator
+              across diverse environments. I excel in designing and implementing
+              secure IT solutions, automating processes, and optimizing
+              performance to strengthen operational resilience and meet business
+              objectives.
             </p>
           </div>
           <div className={styles.WorkExperience}>
             <h2>Work Experience</h2>
             <div className={styles.WorkExperienceEntry}>
+              <h3 className={styles.WorkExperienceEntryRole}>Senior DevOps</h3>
+              <p style={{ marginBottom: "1rem" }}>
+                Sherweb / Sherbrooke, Quebec, Canada / December 2024 - Now
+              </p>
+              <p>
+                As a Senior DevOps within the Platform Engineering team, I am
+                responsible for ensuring the seamless deployment, management,
+                and scalability of critical infrastructure and platforms:
+              </p>
+              <ul className={styles.WorkExperienceEntryList}>
+                <li>
+                  Managing Kubernetes clusters hosted in Microsoft Azure AKS to
+                  ensure robust and efficient application orchestration
+                </li>
+                <li>
+                  Administering both cloud-based and on-premise infrastructures
+                  using Terraform and Ansible for infrastructure automation and
+                  consistency
+                </li>
+                <li>
+                  Managing the configuration, maintenance, and optimization of
+                  Windows and Ubuntu servers, ensuring system reliability and
+                  compliance
+                </li>
+                <li>
+                  Managing and enhancing CI/CD pipelines, primarily through
+                  Azure Pipelines to automate the deployment of services in
+                  Kubernetes clusters
+                </li>
+                <li>
+                  Defining the roadmap to align platform engineering goals with
+                  organizational objectives and technical innovations
+                </li>
+              </ul>
+              <p style={{ marginTop: "1rem", marginBottom: "1rem" }}>
+                Environments
+              </p>
+              <p>
+                Kubernetes, Microsoft Azure, Azure Kubernetes Service (AKS),
+                Azure DevOps, Azure Pipelines, Datadog, Elastic Cloud, Windows
+                Server, Ubuntu Server, MicroK8S, Istio, Calico, ArgoCD, Python,
+                MongoDB Atlas
+              </p>
+            </div>
+            <div className={styles.WorkExperienceEntry}>
               <h3 className={styles.WorkExperienceEntryRole}>
                 DevSecOps Specialist
               </h3>
               <p style={{ marginBottom: "1rem" }}>
-                PixMob / Montreal, Quebec, Canada / July 2022 - Now
+                PixMob / Montreal, Quebec, Canada / July 2022 - December 2024
               </p>
               <p>
                 As the lead DevSecOps specialist within the Software team, I

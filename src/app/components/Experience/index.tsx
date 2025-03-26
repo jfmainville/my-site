@@ -136,6 +136,7 @@ const Experience = () => {
         <div style={{ left: "10rem" }} />
         <div>
           <div className={styles.ExperienceSectionEntryCircle}></div>
+          <div className={styles.ExperienceSectionEntryLineRight}></div>
         </div>
         <div className={styles.ExperienceSectionEntryRight}>
           <Image
@@ -148,7 +149,7 @@ const Experience = () => {
               margin: "0 0 1rem 0",
             }}
           />
-          <p className={styles.ExperienceSectionEntryPeriod}>2022-Present</p>
+          <p className={styles.ExperienceSectionEntryPeriod}>2022-2024</p>
           <p className={styles.ExperienceSectionEntryRole}>
             DevSecOps Specialist
           </p>
@@ -158,6 +159,31 @@ const Experience = () => {
             Google Cloud Platform (GCP) and established robust security
             guidelines and infrastructure
           </p>
+        </div>
+        <div className={styles.ExperienceSectionEntryLeft}>
+          <Image
+            src="/images/sherweb_logo.jpg"
+            width={50}
+            height={50}
+            alt=""
+            style={{
+              height: "auto",
+              margin: "0 0 1rem 0",
+            }}
+          />
+          <p className={styles.ExperienceSectionEntryPeriod}>2024-Now</p>
+          <p className={styles.ExperienceSectionEntryRole}>Senior DevOps</p>
+          <p>
+            As a Senior DevOps within the Platform Engineering team, I am
+            responsible for ensuring the seamless deployment, management, and
+            scalability of critical infrastructure and platforms
+          </p>
+        </div>
+        <div className={styles.ExperienceSectionEntryCircle}></div>
+        <div className={styles.ExperienceSectionEntryLine}></div>
+        <div style={{ left: "10rem" }} />
+        <div>
+          <div className={styles.ExperienceSectionEntryCircle}></div>
         </div>
       </div>
       <div
