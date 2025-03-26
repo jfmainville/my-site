@@ -48,6 +48,6 @@ describe("<Experience/> Test Suite", () => {
   it("should show the correct amount of company logos in the <Experience /> component", () => {
     render(<Experience />);
     const companyLogos = screen.getAllByRole("presentation");
-    expect(companyLogos).toHaveLength(6);
+    expect(companyLogos).toHaveLength(7);
   });
 });
