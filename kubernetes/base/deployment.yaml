@@ -79,3 +79,10 @@ spec:
             periodSeconds: 10
             successThreshold: 1
             failureThreshold: 3
+          affinity:
+            podAntiAffinity:
+              requiredDuringSchedulingIgnoredDuringExecution:
+                - labelSelector:
+                    matchLabels:
+                      app: my-site
+                  topologyKey: "kubernetes.io/hostname"
