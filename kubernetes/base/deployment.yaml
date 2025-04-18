@@ -72,7 +72,6 @@ spec:
                   key: AUTH0_CLIENT_SECRET
           resources:
             limits:
-              cpu: 100m
               memory: 500Mi
             requests:
               cpu: 50m
