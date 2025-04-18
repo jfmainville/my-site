@@ -1,0 +1,14 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../base/
+images:
+  - name: my-site-image
+    newName: registry.digitalocean.com/nuagir-cr-nyc3-prod/my-site
+    newTag: 1.0.1
+labels:
+  - includeSelectors: true
+    pairs:
+      env: production
+patches:
+  - path: deployment.yaml
