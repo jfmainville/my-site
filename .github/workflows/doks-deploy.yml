@@ -36,7 +36,7 @@ jobs:
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
       - name: Save the DigitalOcean Kubernetes kubeconfig configuration with a short-lived credentials
-        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ secrets.CLUSTER_NAME }}
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ${{ vars.DIGITALOCEAN_DOKS_CLUSTER_NAME }}
       - name: Deploy the latest Docker image in the DigitalOcean Kubernetes cluster
         run: |-
           kubectl apply -k kubernetes/${{ vars.ENVIRONMENT_NAME }}/
