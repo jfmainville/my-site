@@ -19,6 +19,13 @@ spec:
       labels:
         app: my-site
     spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app: my-site
+              topologyKey: "kubernetes.io/hostname"
       containers:
         - name: my-site-container
           image: my-site-image
