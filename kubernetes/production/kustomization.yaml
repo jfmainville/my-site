@@ -5,7 +5,7 @@ resources:
 images:
   - name: my-site-image
     newName: registry.digitalocean.com/nuagir-cr-nyc3-prod/my-site
-    newTag: 1.0.1
+    newTag: latest
 labels:
   - includeSelectors: true
     pairs:
