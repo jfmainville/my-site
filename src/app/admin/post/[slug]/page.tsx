@@ -15,8 +15,11 @@ export type PostData = {
   postCategory: String;
 };
 
-const PostUpdatePage = async ({ params }: { params: { slug: string } }) => {
-  const post = await getUniquePost(params.slug);
+type Params = Promise<{ slug: string }>;
+
+const PostUpdatePage = async ({ params }: { params: Params }) => {
+  const { slug } = await params;
+  const post = await getUniquePost(slug);
   const userSession: UserSession = (await getSession()) as UserSession;
   const userData: any = await handleUserSession(userSession);
 
