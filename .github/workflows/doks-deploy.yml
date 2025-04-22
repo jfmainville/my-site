@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - refactor/* # FIXME: Remove this before merging the PR on the main branch
 permissions:
   id-token: write
   contents: read
