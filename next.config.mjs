@@ -5,9 +5,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**",
+        hostname: "nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com",
         port: "",
-        pathname: "**",
+        pathname: "/public/images/**",
+        search: "",
       },
     ],
   },

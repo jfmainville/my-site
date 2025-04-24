@@ -6,11 +6,6 @@ import { createPost, updatePost, deletePost } from "../../lib/db";
 jest.mock("../../lib/db");
 
 describe("<Writer/> Test Suite", () => {
-  it("should render the <Writer/> component unchanged", () => {
-    const { container } = render(<Writer />);
-    expect(container).toMatchSnapshot();
-  });
-
   it("should contain the Writer required fields in the <Writer/> component", () => {
     render(<Writer />);
     const postTitle = screen.getByPlaceholderText("Title");

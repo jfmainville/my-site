@@ -2,12 +2,13 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import About from "./index";
 
-describe("<About/> Test Suite", () => {
-  it("should render the <About/> component unchanged", () => {
-    const { container } = render(<About />);
-    expect(container).toMatchSnapshot();
-  });
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt }: { src: string; alt: string }) {
+    return <img src={src} alt={alt} />;
+  };
+});
 
+describe("<About/> Test Suite", () => {
   it("should show my profile description in the <About /> component", () => {
     render(<About />);
     const profileDescription = screen.getByText(

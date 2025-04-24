@@ -5,6 +5,12 @@ import { getPosts } from "@/app/lib/db";
 
 jest.mock("../../lib/db");
 
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt }: { src: string; alt: string }) {
+    return <img src={src} alt={alt} />;
+  };
+});
+
 describe("<PostPage/> Test Suite", () => {
   it("should render the <PostPage/> page unchanged", async () => {
     const { container } = render(await PostPage());

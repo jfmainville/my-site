@@ -5,6 +5,7 @@ import { Post } from "@prisma/client";
 import { getPosts } from "../../lib/db";
 import Button from "@/app/components/Button";
 import Image from "next/image";
+import { NEXT_PUBLIC_AWS_BUCKET_URL } from "@/app/utils/constants";
 
 export const dynamic = "force-dynamic";
 
@@ -38,7 +39,10 @@ const PostPage = async () => {
           posts?.map((post: Post) => (
             <div key={post.id} className={styles.BlogPostItem}>
               <Image
-                src={post.thumbnail || "/images/placeholder.jpg"}
+                src={
+                  post.thumbnail ||
+                  `${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/placeholder.jpg`
+                }
                 width={150}
                 height={150}
                 alt=""

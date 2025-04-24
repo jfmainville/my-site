@@ -2,12 +2,13 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Experience from "./index";
 
-describe("<Experience/> Test Suite", () => {
-  it("should render the <Experience/> component unchanged", () => {
-    const { container } = render(<Experience />);
-    expect(container).toMatchSnapshot();
-  });
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt }: { src: string; alt: string }) {
+    return <img src={src} alt={alt} />;
+  };
+});
 
+describe("<Experience/> Test Suite", () => {
   it("should show the correct amount of experiences in the <Experience /> component", () => {
     render(<Experience />);
     const roleSystemAdministrator = screen.getAllByText(

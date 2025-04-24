@@ -1,12 +1,13 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
 import Image from "next/image";
+import { NEXT_PUBLIC_AWS_BUCKET_URL } from "@/app/utils/constants";
 
 const Header = () => {
   return (
     <div id={"home"} className={styles.Header}>
       <Image
-        src="/images/bromont.png"
+        src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/bromont.png`}
         width={0}
         height={0}
         sizes="100vw"
