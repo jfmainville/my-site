@@ -48,7 +48,7 @@ const Home = () => {
         setMessage={setMessage}
       />
       <section className={styles.Copyright}>
-        <div>Made with ❤️ by Jean-Frederic Mainville using Next.js</div>
+        <div>Made with ❤️ by Jean-Frederic Mainville</div>
       </section>
     </main>
   );
