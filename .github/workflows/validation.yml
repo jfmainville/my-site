@@ -38,4 +38,4 @@ jobs:
       - run: |
           npm ci
           npx playwright install
-          npm run ci:test
+          npm run ci:test -- -u
