@@ -1,6 +1,8 @@
 ARG NODE_VERSION=20.17.0-alpine
 FROM node:${NODE_VERSION}
 
+ARG NEXT_PUBLIC_AWS_BUCKET_URL
+
 WORKDIR /app
 COPY . .
 RUN apk --update add postgresql-client
