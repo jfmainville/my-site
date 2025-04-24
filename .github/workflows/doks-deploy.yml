@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - fix/* # FIXME: Remove this before merging the PR
 permissions:
   id-token: write
   contents: read
@@ -21,7 +22,7 @@ jobs:
         run: doctl registry login --expiry-seconds 1200
       - name: Docker build and push image to DigitalOcean ACR
         run: |
-          docker build --build-arg NEXT_PUBLIC_AWS_BUCKET_URL=${{ vars.NEXT_PUBLIC_AWS_BUCKET_URL }} -t ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:latest -t ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:${{ github.SHA }} .
+          docker build --build-arg NEXT_PUBLIC_AWS_BUCKET_URL="${{ vars.NEXT_PUBLIC_AWS_BUCKET_URL }}" -t ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:latest -t ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:${{ github.SHA }} .
           docker push ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:latest
           docker push ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:${{ github.SHA }}
   deploy:
