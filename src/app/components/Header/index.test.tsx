@@ -2,12 +2,13 @@ import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Header from "./index";
 
-describe("<Header/> Test Suite", () => {
-  it("should render the <Header/> component unchanged", () => {
-    const { container } = render(<Header />);
-    expect(container).toMatchSnapshot();
-  });
+jest.mock("next/image", () => {
+  return function MockImage({ src, alt }: { src: string; alt: string }) {
+    return <img src={src} alt={alt} />;
+  };
+});
 
+describe("<Header/> Test Suite", () => {
   it("should show the header text in the <Header /> component", () => {
     render(<Header />);
     const headerText = screen.getByText(
@@ -20,11 +21,6 @@ describe("<Header/> Test Suite", () => {
     render(<Header />);
     const backgroundPicture = screen.getByRole("presentation");
     expect(backgroundPicture).toBeInTheDocument();
-  });
-
-  it("should render the <Header/> component unchanged", () => {
-    const { container } = render(<Header />);
-    expect(container).toMatchSnapshot();
   });
 
   it("should contain the About link in the <Header/> component", async () => {

@@ -1,6 +1,5 @@
+import { NEXT_PUBLIC_AWS_BUCKET_URL } from "@/app/utils/constants";
 import styles from "./index.module.scss";
-//@ts-ignore
-import bg from "../../../../public/images/roadmap.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ const Experience = () => {
       id={"experience"}
       className={styles.Experience}
       style={{
-        backgroundImage: `url(${bg.src})`,
+        backgroundImage: `url(${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/roadmap.jpg)`,
         width: "100%",
         height: "auto",
       }}
@@ -19,7 +18,7 @@ const Experience = () => {
       <div className={styles.ExperienceSection}>
         <div className={styles.ExperienceSectionEntryLeft}>
           <Image
-            src="/images/cgi_logo.jpg"
+            src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/cgi_logo.jpg`}
             width={50}
             height={50}
             alt=""
@@ -48,7 +47,7 @@ const Experience = () => {
         </div>
         <div className={styles.ExperienceSectionEntryRight}>
           <Image
-            src="/images/cgi_logo.jpg"
+            src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/cgi_logo.jpg`}
             width={50}
             height={50}
             alt=""
@@ -66,7 +65,7 @@ const Experience = () => {
         </div>
         <div className={styles.ExperienceSectionEntryLeft}>
           <Image
-            src="/images/scfj_logo.jpg"
+            src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/scfj_logo.jpg`}
             width={50}
             height={50}
             alt=""
@@ -93,7 +92,7 @@ const Experience = () => {
         </div>
         <div className={styles.ExperienceSectionEntryRight}>
           <Image
-            src="/images/intact_logo.jpg"
+            src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/intact_logo.jpg`}
             width={50}
             height={50}
             alt=""
@@ -112,7 +111,7 @@ const Experience = () => {
         </div>
         <div className={styles.ExperienceSectionEntryLeft}>
           <Image
-            src="/images/intact_logo.jpg"
+            src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/intact_logo.jpg`}
             width={50}
             height={50}
             alt=""
@@ -140,7 +139,7 @@ const Experience = () => {
         </div>
         <div className={styles.ExperienceSectionEntryRight}>
           <Image
-            src="/images/pixmob_logo.jpg"
+            src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/pixmob_logo.jpg`}
             width={50}
             height={50}
             alt=""
@@ -162,7 +161,7 @@ const Experience = () => {
         </div>
         <div className={styles.ExperienceSectionEntryLeft}>
           <Image
-            src="/images/sherweb_logo.jpg"
+            src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/sherweb_logo.jpg`}
             width={50}
             height={50}
             alt=""

@@ -1,3 +1,4 @@
+import { NEXT_PUBLIC_AWS_BUCKET_URL } from "@/app/utils/constants";
 import styles from "./index.module.scss";
 import Image from "next/image";
 
@@ -15,7 +16,12 @@ const About = () => {
           solutions, automating processes, and optimizing performance to
           strengthen operational resilience and meet business objectives.
         </p>
-        <Image src="/images/profile.png" width={500} height={500} alt="" />
+        <Image
+          src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/profile.png`}
+          width={500}
+          height={500}
+          alt=""
+        />
       </div>
     </section>
   );

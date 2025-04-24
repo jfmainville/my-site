@@ -11,15 +11,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
     >
       <img
         alt=""
-        data-nimg="1"
-        decoding="async"
-        height="0"
-        loading="lazy"
-        sizes="100vw"
-        src="/_next/image?url=%2Fimages%2Fbromont.png&w=3840&q=75"
-        srcset="/_next/image?url=%2Fimages%2Fbromont.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fbromont.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fbromont.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fbromont.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fbromont.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fbromont.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fbromont.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fbromont.png&w=3840&q=75 3840w"
-        style="color: transparent; width: 100%; height: 100vh;"
-        width="0"
+        src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/bromont.png"
       />
       <div
         class="Navbar"
@@ -76,21 +68,14 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         </p>
         <img
           alt=""
-          data-nimg="1"
-          decoding="async"
-          height="500"
-          loading="lazy"
-          src="/_next/image?url=%2Fimages%2Fprofile.png&w=1080&q=75"
-          srcset="/_next/image?url=%2Fimages%2Fprofile.png&w=640&q=75 1x, /_next/image?url=%2Fimages%2Fprofile.png&w=1080&q=75 2x"
-          style="color: transparent;"
-          width="500"
+          src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/profile.png"
         />
       </div>
     </section>
     <section
       class="Experience"
       id="experience"
-      style="background-image: url(/img.jpg); width: 100%; height: auto;"
+      style="background-image: url(https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/roadmap.jpg); width: 100%; height: auto;"
     >
       <h1
         class="TextHeading"
@@ -105,14 +90,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            data-nimg="1"
-            decoding="async"
-            height="50"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75"
-            srcset="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75 2x"
-            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
-            width="50"
+            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/cgi_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -150,14 +128,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            data-nimg="1"
-            decoding="async"
-            height="50"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75"
-            srcset="/_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fcgi_logo.jpg&w=128&q=75 2x"
-            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
-            width="50"
+            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/cgi_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -178,14 +149,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            data-nimg="1"
-            decoding="async"
-            height="50"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2Fscfj_logo.jpg&w=128&q=75"
-            srcset="/_next/image?url=%2Fimages%2Fscfj_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fscfj_logo.jpg&w=128&q=75 2x"
-            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
-            width="50"
+            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/scfj_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -223,14 +187,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            data-nimg="1"
-            decoding="async"
-            height="50"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75"
-            srcset="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75 2x"
-            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
-            width="50"
+            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/intact_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -251,14 +208,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            data-nimg="1"
-            decoding="async"
-            height="50"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75"
-            srcset="/_next/image?url=%2Fimages%2Fintact_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fintact_logo.jpg&w=128&q=75 2x"
-            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
-            width="50"
+            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/intact_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -296,14 +246,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            data-nimg="1"
-            decoding="async"
-            height="50"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2Fpixmob_logo.jpg&w=128&q=75"
-            srcset="/_next/image?url=%2Fimages%2Fpixmob_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fpixmob_logo.jpg&w=128&q=75 2x"
-            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
-            width="50"
+            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/pixmob_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -324,14 +267,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            data-nimg="1"
-            decoding="async"
-            height="50"
-            loading="lazy"
-            src="/_next/image?url=%2Fimages%2Fsherweb_logo.jpg&w=128&q=75"
-            srcset="/_next/image?url=%2Fimages%2Fsherweb_logo.jpg&w=64&q=75 1x, /_next/image?url=%2Fimages%2Fsherweb_logo.jpg&w=128&q=75 2x"
-            style="color: transparent; height: auto; margin: 0px 0px 1rem 0px;"
-            width="50"
+            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/sherweb_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -578,7 +514,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
       class="Copyright"
     >
       <div>
-        Made with ❤️ by Jean-Frederic Mainville using Next.js
+        Made with ❤️ by Jean-Frederic Mainville
       </div>
     </section>
   </main>
