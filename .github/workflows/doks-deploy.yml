@@ -2,7 +2,7 @@ name: Build Docker image and deploy to the DigitalOcean Kubernetes cluster
 on:
   push:
     branches:
-      - NUA-288-deploy-ecr # FIXME: Change to main branch when ready
+      - main
 permissions:
   id-token: write
   contents: read
