@@ -9,21 +9,22 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-24.04
-    environment: production
     steps:
       - name: Checkout the current git repository
         uses: actions/checkout@main
-      - name: Install doctl on the runner
-        uses: digitalocean/action-doctl@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@main
         with:
-          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-      - name: Log in to DigitalOcean ACR with short-lived credentials
-        run: doctl registry login --expiry-seconds 1200
-      - name: Docker build and push image to DigitalOcean ACR
+          role-to-assume: ${{ vars.AWS_GITHUB_ACTIONS_OIDC_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_PRIMARY_REGION }}
+      - name: Login to AWS ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v2
+      - name: Docker build and push image to AWS ECR
         run: |
-          docker build --build-arg NEXT_PUBLIC_AWS_BUCKET_URL="${{ vars.NEXT_PUBLIC_AWS_BUCKET_URL }}" -t ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:latest -t ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:${{ github.SHA }} .
-          docker push ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:latest
-          docker push ${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:${{ github.SHA }}
+          docker build --build-arg NEXT_PUBLIC_AWS_BUCKET_URL="${{ vars.NEXT_PUBLIC_AWS_BUCKET_URL }}" -t ${{ vars.AWS_ECR_URL }}/my-site:latest -t ${{ vars.AWS_ECR_URL }}/my-site:${{ github.SHA }} .
+          docker push ${{ vars.AWS_ECR_URL }}/my-site:latest
+          docker push ${{ vars.AWS_ECR_URL }}/my-site:${{ github.SHA }}
   deploy:
     runs-on: ubuntu-24.04
     environment: production
@@ -39,5 +40,5 @@ jobs:
       - name: Deploy the latest Docker image in the DigitalOcean Kubernetes cluster
         run: |-
           kubectl apply -k kubernetes/${{ vars.ENVIRONMENT_NAME }}/
-          kubectl set image deployment/my-site-deployment my-site-container=${{ vars.DIGITALOCEAN_ACR_URL }}/my-site:${{ github.SHA }}
+          kubectl set image deployment/my-site-deployment my-site-container=${{ vars.AWS_ECR_URL }}/my-site:${{ github.SHA }}
     needs: build
