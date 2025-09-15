@@ -85,4 +85,4 @@ spec:
             successThreshold: 1
             failureThreshold: 3
       imagePullSecrets:
-        - name: ecr-secret
+        - name: aws-ecr-secret
