@@ -40,7 +40,7 @@ spec:
                   name: my-site-secret
                   key: GMAIL_APP_PASSWORD
             - name: NEXT_PUBLIC_AWS_BUCKET_URL
-              value: https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com
+              value: https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com
             - name: DATABASE_URL
               valueFrom:
                 secretKeyRef:
