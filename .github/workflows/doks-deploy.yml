@@ -2,7 +2,7 @@ name: Build Docker image and deploy to the DigitalOcean Kubernetes cluster
 on:
   push:
     branches:
-      - PER-56-fix-docker-build-args
+      - main
 permissions:
   id-token: write
   contents: read
