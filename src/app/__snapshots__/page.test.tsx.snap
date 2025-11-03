@@ -11,7 +11,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
     >
       <img
         alt=""
-        src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/bromont.png"
+        src="https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/bromont.png"
       />
       <div
         class="Navbar"
@@ -68,14 +68,14 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         </p>
         <img
           alt=""
-          src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/profile.png"
+          src="https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/profile.png"
         />
       </div>
     </section>
     <section
       class="Experience"
       id="experience"
-      style="background-image: url(https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/roadmap.jpg); width: 100%; height: auto;"
+      style="background-image: url(https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/roadmap.jpg); width: 100%; height: auto;"
     >
       <h1
         class="TextHeading"
@@ -90,7 +90,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/cgi_logo.jpg"
+            src="https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/cgi_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -128,7 +128,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/cgi_logo.jpg"
+            src="https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/cgi_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -149,7 +149,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/scfj_logo.jpg"
+            src="https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/scfj_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -187,7 +187,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/intact_logo.jpg"
+            src="https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/intact_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -208,7 +208,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/intact_logo.jpg"
+            src="https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/intact_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -246,7 +246,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/pixmob_logo.jpg"
+            src="https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/pixmob_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
@@ -267,7 +267,7 @@ exports[`<Home/> Test Suite should render the <Home/> component unchanged 1`] = 
         >
           <img
             alt=""
-            src="https://nuagir-sbs-my-site-usea1-prod.s3.us-east-1.amazonaws.com/public/images/sherweb_logo.jpg"
+            src="https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com/public/images/sherweb_logo.jpg"
           />
           <p
             class="ExperienceSectionEntryPeriod"
