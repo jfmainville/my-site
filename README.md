@@ -20,13 +20,12 @@ The following applications need to be installed on the local computer in order t
 
 The following environment variables needs to be set to use this application:
 
-| Name                   | Description                                                         | Example                                               |
-| ---------------------- | :------------------------------------------------------------------ | :---------------------------------------------------- |
-| GMAIL_SMTP_SERVER      | Gmail SMTP server URL                                               | smtp.gmail.com                                        |
-| GMAIL_SMTP_SERVER_PORT | Gmail SMTP server port                                              | 587                                                   |
-| GMAIL_EMAIL            | Destination email address                                           | test@gmail.com                                        |
-| GMAIL_APP_PASSWORD     | Gmail App password that can be generated from the Gmail web console | abcd abcd abcd abcd                                   |
-| DATABASE_URL           | The database URL to use to connect to the backend database service  | postgresql://sqluser:Password!@localhost:5432/my_site |
+| Name                   | Description                                                         | Example             |
+| ---------------------- | :------------------------------------------------------------------ | :------------------ |
+| GMAIL_SMTP_SERVER      | Gmail SMTP server URL                                               | smtp.gmail.com      |
+| GMAIL_SMTP_SERVER_PORT | Gmail SMTP server port                                              | 587                 |
+| GMAIL_EMAIL            | Destination email address                                           | test@gmail.com      |
+| GMAIL_APP_PASSWORD     | Gmail App password that can be generated from the Gmail web console | abcd abcd abcd abcd |
 
 ### Development
 
@@ -43,9 +42,8 @@ environment by completing the following steps:
 
 3. You can now run the following command to start the development environment:
 
-   `docker-compose up --build`
+   `npm run dev`
 
-4. When the development environment is no longer required, you can execute the below command to shutdown the
-   environment:
+4. You can run the tests by executing the following command:
 
-   `docker-compose down`
+   `npm run test`
