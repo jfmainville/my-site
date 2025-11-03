@@ -5,7 +5,6 @@ ARG NEXT_PUBLIC_AWS_BUCKET_URL
 
 WORKDIR /app
 COPY . .
-RUN apk --update add postgresql-client
 RUN npm install --silent
 RUN npm run build
 RUN chmod +x entrypoint.sh
