@@ -29,7 +29,7 @@
     "@tiptap/pm": "2.8.0",
     "@tiptap/react": "2.8.0",
     "@tiptap/starter-kit": "2.8.0",
-    "next": "15.2.3",
+    "next": "15.2.6",
     "nodemailer": "6.9.15",
     "react": "18",
     "react-dom": "18",
