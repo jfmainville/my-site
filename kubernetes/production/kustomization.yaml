@@ -11,4 +11,6 @@ labels:
     pairs:
       env: production
 patches:
+  - path: certificate.yaml
   - path: deployment.yaml
+  - path: http-route.yaml

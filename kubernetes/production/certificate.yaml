@@ -1,0 +1,11 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: letsencrypt-certificate
+spec:
+  secretName: my-site-tls-secret
+  dnsNames:
+    - jfmainville.me
+  issuerRef:
+    name: letsencrypt-gateway-cluster-issuer
+    kind: ClusterIssuer
