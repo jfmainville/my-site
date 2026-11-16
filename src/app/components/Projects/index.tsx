@@ -1,19 +1,7 @@
-import { GITHUB_URL, projects, type ProjectDetail } from "../../content";
+import { GITHUB_URL, projects } from "../../content";
 import Arrow from "../Arrow";
-import Badge from "../Badge";
 import SectionHeading from "../SectionHeading";
 import styles from "./index.module.scss";
-
-const Detail = ({ detail }: { detail: ProjectDetail }) =>
-  detail.kind === "palette" ? (
-    <div className={styles.Palette} aria-label="Colorscheme palette">
-      {detail.colors.map((color) => (
-        <span key={color} style={{ background: color }} title={color} />
-      ))}
-    </div>
-  ) : (
-    <p className={styles.Code}>{detail.text}</p>
-  );
 
 const Projects = () => (
   <section id="projects" className={styles.Projects}>
@@ -40,18 +28,25 @@ const Projects = () => (
           >
             <div className={styles.CardHeader}>
               <div>
-                <div className={styles.TitleRow}>
-                  <h3 className={styles.Name}>{project.name}</h3>
-                  {project.note && <Badge>{project.note}</Badge>}
-                </div>
-                <p className={styles.Type}>{project.type}</p>
+                <h3 className={styles.Name}>{project.name}</h3>
+                <p className={styles.Language}>{project.language}</p>
               </div>
               <span className={styles.CardArrow}>
                 <Arrow direction="up-right" size="md" />
               </span>
             </div>
             <p className={styles.Description}>{project.description}</p>
-            <Detail detail={project.detail} />
+            {project.palette && (
+              <div className={styles.Palette} aria-label="Colorscheme palette">
+                {project.palette.map((color) => (
+                  <span
+                    key={color}
+                    style={{ background: color }}
+                    title={color}
+                  />
+                ))}
+              </div>
+            )}
           </a>
         </li>
       ))}

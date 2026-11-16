@@ -13,21 +13,16 @@ describe("<Projects/>", () => {
     });
   });
 
-  it("renders the note badge and the palette detail", () => {
+  it("shows each project's language and only the fluovibe palette", () => {
     render(<Projects />);
-    expect(screen.getByText("Just started")).toBeInTheDocument();
+    projects.forEach((project) => {
+      const card = screen.getByRole("link", { name: new RegExp(project.name) });
+      expect(within(card).getByText(project.language)).toBeInTheDocument();
+    });
     const palette = screen.getByLabelText("Colorscheme palette");
-    const colors = projects.find((p) => p.detail.kind === "palette")!.detail;
     expect(palette.children).toHaveLength(
-      colors.kind === "palette" ? colors.colors.length : 0,
+      projects.find((project) => project.palette)!.palette!.length,
     );
-  });
-
-  it("renders the code snippet of the project details", () => {
-    render(<Projects />);
-    const card = screen.getByRole("link", { name: /revunk/ });
-    expect(
-      within(card).getByText("$ revunk # diffs, comments, PRs"),
-    ).toBeInTheDocument();
+    expect(screen.getAllByLabelText("Colorscheme palette")).toHaveLength(1);
   });
 });

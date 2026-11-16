@@ -7,16 +7,11 @@ export type JourneyEntry = {
   branch?: string;
 };
 
-export type ProjectDetail =
-  | { kind: "code"; text: string }
-  | { kind: "palette"; colors: string[] };
-
 export type Project = {
   name: string;
   description: string;
-  type: string;
-  note?: string;
-  detail: ProjectDetail;
+  language: string;
+  palette?: string[];
   href: string;
 };
 
@@ -55,7 +50,7 @@ export const about = {
       items: ["Neovim & Lua", "Terminal UIs", "AI coding tools"],
     },
     { group: "Daily drivers", items: ["Neovim", "tmux", "Ghostty", "zsh"] },
-    { group: "Automating", items: ["Ansible", "GNU Stow", "Terraform"] },
+    { group: "Automating", items: ["Ansible", "Terraform"] },
     {
       group: "Day job",
       items: [
@@ -127,64 +122,55 @@ export const projects: Project[] = [
   {
     name: "dotfiles",
     description:
-      "Everything my workstation needs: Neovim, tmux, Ghostty, zsh and shared AI agent skills, symlinked with Stow.",
-    type: "Workstation config · Lua",
-    detail: { kind: "code", text: "$ stow nvim tmux ghostty herdr agents zsh" },
+      "Everything my workstation needs: Neovim, tmux, Ghostty, zsh and shared AI agent skills.",
+    language: "Lua",
     href: `${GITHUB_URL}/dotfiles`,
   },
   {
     name: "fluovibe.nvim",
     description:
       "A dark Neovim colorscheme with fluorescent accents on near-black navy. Cyberpunk, on purpose.",
-    type: "Neovim colorscheme · Lua",
-    detail: {
-      kind: "palette",
-      colors: [
-        "#080B1E",
-        "#5CE1FF",
-        "#1FA8FF",
-        "#00FFC2",
-        "#39FF14",
-        "#FAFF00",
-        "#FF8C1A",
-        "#FF2CDF",
-        "#B26BFF",
-        "#FF2E63",
-      ],
-    },
+    language: "Lua",
+    palette: [
+      "#080B1E",
+      "#5CE1FF",
+      "#1FA8FF",
+      "#00FFC2",
+      "#39FF14",
+      "#FAFF00",
+      "#FF8C1A",
+      "#FF2CDF",
+      "#B26BFF",
+      "#FF2E63",
+    ],
     href: `${GITHUB_URL}/fluovibe.nvim`,
   },
   {
     name: "nudge.nvim",
     description:
       "An inline AI coding assistant for Neovim. Hit a key, type what you want, and the code streams right into the buffer.",
-    type: "Neovim plugin · Lua",
-    detail: { kind: "code", text: "<leader>aa prompt · <leader>ac chat" },
+    language: "Lua",
     href: `${GITHUB_URL}/nudge.nvim`,
   },
   {
     name: "my-site",
     description:
-      "This site. A Next.js app with SCSS modules, deployed to Kubernetes with Let's Encrypt TLS.",
-    type: "Website · TypeScript",
-    detail: { kind: "code", text: "$ kubectl apply -k kubernetes/production" },
+      "This site. A statically exported Next.js app with SCSS modules, deployed to GitHub Pages.",
+    language: "TypeScript",
     href: `${GITHUB_URL}/my-site`,
   },
   {
     name: "revunk",
     description:
       "A terminal UI for reviewing AI agents' diffs and managing pull requests without leaving the keyboard.",
-    type: "Go · Bubble Tea",
-    note: "Just started",
-    detail: { kind: "code", text: "$ revunk  # diffs, comments, PRs" },
+    language: "Go",
     href: `${GITHUB_URL}/revunk`,
   },
   {
     name: "iac-playbook",
     description:
       "Public documentation on best practices for infrastructure as code tools and related topics.",
-    type: "Docusaurus · TypeScript",
-    detail: { kind: "code", text: "$ npm run build  # docs, lint, links" },
+    language: "TypeScript",
     href: "https://github.com/nuagir/iac-playbook",
   },
 ];

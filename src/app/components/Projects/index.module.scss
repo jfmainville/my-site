@@ -69,13 +69,6 @@
   gap: space(4);
 }
 
-.TitleRow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: space(2);
-}
-
 .Name {
   font-size: $text-2xl;
   font-weight: $font-weight-semibold;
@@ -87,7 +80,7 @@
   }
 }
 
-.Type {
+.Language {
   @include mono-sm;
   margin-top: space(1);
   color: $color-subtle;
@@ -112,13 +105,4 @@
   span {
     flex: 1;
   }
-}
-
-.Code {
-  @include mono-sm;
-  padding: space(2) space(3);
-  overflow-wrap: break-word;
-  border-radius: $radius-sm;
-  background-color: alpha($color-background, $opacity-strong);
-  color: $color-primary;
 }
