@@ -36,11 +36,14 @@ export const profile = {
   ],
 };
 
+export const SITE_URL = "https://jfmainville.me";
+
 export const navigation = [
-  { id: "projects", label: "Projects" },
-  { id: "about", label: "About" },
-  { id: "journey", label: "Journey" },
-  { id: "contact", label: "Contact" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#about", label: "About" },
+  { href: "/#journey", label: "Journey" },
+  { href: "/#contact", label: "Contact" },
+  { href: "/resume", label: "Resume" },
 ];
 
 export const interests = ["neovim", "tui", "automation", "security"];

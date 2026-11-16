@@ -11,15 +11,25 @@ describe("<Home/>", () => {
     expect(ids).toEqual(["top", "projects", "about", "journey", "contact"]);
   });
 
-  it("points every navigation link to an existing section", () => {
+  it("points every section link in the navigation to an existing section", () => {
     const { container } = render(<Home />);
-    navigation.forEach(({ id, label }) => {
-      expect(screen.getByRole("link", { name: label })).toHaveAttribute(
-        "href",
-        `#${id}`,
-      );
-      expect(container.querySelector(`section#${id}`)).toBeInTheDocument();
-    });
+    navigation
+      .filter(({ href }) => href.startsWith("/#"))
+      .forEach(({ href, label }) => {
+        expect(screen.getByRole("link", { name: label })).toHaveAttribute(
+          "href",
+          href,
+        );
+        expect(container.querySelector(href.slice(1))).toBeInTheDocument();
+      });
+  });
+
+  it("links to the resume page from the navigation", () => {
+    render(<Home />);
+    expect(screen.getByRole("link", { name: "Resume" })).toHaveAttribute(
+      "href",
+      "/resume",
+    );
   });
 
   it("renders a single page heading and the footer", () => {
