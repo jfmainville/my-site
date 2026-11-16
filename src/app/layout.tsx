@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { config } from "@fortawesome/fontawesome-svg-core";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import { SITE_URL, profile } from "./content";
 import "@fortawesome/fontawesome-svg-core/styles.css";
@@ -34,7 +33,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${plexSans.variable} ${plexMono.variable}`}>
       <body>{children}</body>
-      <GoogleAnalytics gaId="G-B14Q3RXS9N" />
     </html>
   );
 }
