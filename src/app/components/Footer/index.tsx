@@ -6,8 +6,7 @@ const Footer = () => (
   <footer className={styles.Footer}>
     <Prompt>exit 0</Prompt>
     <span>
-      © {new Date().getFullYear()} {profile.firstName} {profile.lastName} ·
-      built in Québec
+      © {new Date().getFullYear()} {profile.firstName} {profile.lastName}
     </span>
   </footer>
 );
