@@ -42,6 +42,13 @@ ul {
   list-style: none;
 }
 
+@include print {
+  body {
+    background-color: $color-print-background;
+    color: $color-print-text;
+  }
+}
+
 @keyframes blink {
   0%,
   49% {

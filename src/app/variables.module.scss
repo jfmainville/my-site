@@ -10,9 +10,9 @@ $color-rail: oklch(0.3883 0.0258 164);
 $color-panel: oklch(0.24 0.015 164);
 $color-subtle: oklch(0.7861 0.0179 164);
 
-$color-resume-background: #eeeeee;
-$color-resume-text: #222830;
-$color-resume-accent: #76acae;
+$color-print-background: #ffffff;
+$color-print-text: #111111;
+$color-print-muted: #555555;
 
 // Opacities
 $opacity-faint: 0.1;
@@ -41,11 +41,11 @@ $text-base: 17px;
 $text-lg: 18px;
 $text-xl: 20px;
 $text-2xl: 23px;
+$text-print: 11pt;
 $text-display-hero: clamp(3.25rem, 12vw, 9.5rem);
 $text-display-contact: clamp(3.5rem, 10vw, 8rem);
 $text-display-section: clamp(2.25rem, 4.6vw, 3.75rem);
 $text-display-email: clamp(1.5rem, 5vw, 3.25rem);
-$text-resume: 16px;
 
 $leading-display: 0.9;
 $leading-heading: 1.02;
@@ -57,8 +57,6 @@ $leading-relaxed: 1.625;
 $tracking-display: -0.045em;
 $tracking-section: -0.035em;
 $tracking-title: -0.02em;
-$tracking-resume-h1: 3px;
-$tracking-resume-h2: 2px;
 
 // Spacing
 $spacing-unit: 4px;
@@ -73,6 +71,7 @@ $width-copy: 36rem;
 $height-header: space(16);
 $width-graph: space(14);
 $width-journey-meta: 180px;
+$width-resume-aside: 18rem;
 
 $height-nav-handle: space(14);
 $height-button-lg: space(12);
@@ -103,10 +102,15 @@ $breakpoint-sm: 36rem;
 $breakpoint-md: 42rem;
 $breakpoint-lg: 48rem;
 $breakpoint-xl: 64rem;
-$breakpoint-resume: 705px;
 
 @mixin above($breakpoint) {
   @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
     @content;
   }
 }

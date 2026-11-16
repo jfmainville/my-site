@@ -1,6 +1,10 @@
 @use "../../variables.module" as *;
 
 .Footer {
+  @include print {
+    display: none;
+  }
+
   @include page-container;
   @include mono-sm;
   display: flex;

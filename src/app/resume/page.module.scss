@@ -1,146 +1,238 @@
 @use "../variables.module" as *;
 
-@media print {
-  .Navigation {
-    display: none !important;
-  }
-}
-
-.Main {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  justify-content: center;
-  background-color: $color-resume-background;
-  color: $color-resume-text;
-  min-height: 100vh;
-  width: 100vw;
-
-  h1 {
-    font-size: 2em;
-    margin-block: 0.67em;
-    line-height: $leading-tight;
-    letter-spacing: $tracking-resume-h1;
-    text-transform: uppercase;
-  }
-
-  h2 {
-    font-size: 1.5em;
-    margin-block: 0.83em;
-    line-height: $leading-tight;
-    letter-spacing: $tracking-resume-h2;
-    text-transform: uppercase;
-  }
-
-  h3 {
-    font-size: 1.17em;
-    margin-block: 1em;
-  }
-
-  ul {
-    list-style: disc;
-  }
-
-  a {
-    font-size: $text-resume;
-    line-height: $leading-tight;
-  }
-}
-
-@media (max-width: $breakpoint-resume) {
-  .Main {
-    grid-template-columns: 1fr;
-  }
-}
-
-.Sidebar {
-  background-color: $color-resume-accent;
-  color: $color-resume-background;
-  padding: space(4);
-}
-
-.Contact {
-  display: flex;
-  flex-direction: column;
-}
-
-.ContactEntry {
-  display: flex;
-  flex-direction: row;
-  margin: 0 0 space(4) 0;
-}
-
-.ContactEntryText {
-  margin-left: space(4);
-}
-
-.Skills {
-  display: flex;
-  flex-direction: column;
-}
-
-.SkillsList {
-  margin: 0 0 0 space(4);
-}
-
-.Education {
-  display: flex;
-  flex-direction: column;
-}
-
-.EducationList {
-  margin: 0 0 0 space(4);
-}
-
-.Certifications {
-  display: flex;
-  flex-direction: column;
-}
-
-.CertificationsList {
-  margin: 0 0 0 space(4);
-}
-
-.Page {
-  background-color: $color-resume-background;
-}
-
-.Navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: space(8);
-}
-
 .Resume {
-  margin: space(8);
+  @include page-container;
+  padding-block: space(24) space(16);
+
+  @include print {
+    max-width: none;
+    padding: 0;
+    color: $color-print-text;
+    font-size: $text-print;
+  }
 }
 
 .Header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: space(8);
+
+  @include above($breakpoint-lg) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.Name {
+  @include display-heading(
+    $text-display-section,
+    $leading-heading,
+    $tracking-section
+  );
+  margin-top: space(4);
+
+  @include print {
+    color: $color-print-text;
+  }
+}
+
+.Accent {
+  color: $color-primary;
+
+  @include print {
+    display: none;
+  }
+}
+
+.Title {
+  margin-top: space(2);
+  font-size: $text-xl;
+  font-weight: $font-weight-medium;
+  color: $color-primary;
+
+  @include print {
+    color: $color-print-text;
+  }
+}
+
+.Print {
+  @include print {
+    display: none;
+  }
+}
+
+.Layout {
+  display: grid;
+  gap: space(16);
+  margin-top: space(16);
+
+  @include above($breakpoint-xl) {
+    grid-template-columns: 1fr $width-resume-aside;
+    gap: space(16);
+  }
+
+  @include print {
+    grid-template-columns: 1fr;
+    gap: space(6);
+    margin-top: space(6);
+  }
+}
+
+.SectionTitle,
+.SideTitle {
+  @include mono-sm;
+  color: $color-primary;
+  text-transform: lowercase;
+
+  @include print {
+    color: $color-print-text;
+    font-weight: $font-weight-semibold;
+  }
 }
 
 .Profile {
-  margin-top: space(8);
-  text-align: justify;
+  max-width: $width-prose;
+  margin-top: space(4);
+  font-size: $text-lg;
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
+
+  @include print {
+    max-width: none;
+    font-size: inherit;
+    color: inherit;
+  }
 }
 
-.WorkExperience {
-  margin-top: space(8);
+.Experience {
+  margin-top: space(16);
+
+  @include print {
+    margin-top: space(6);
+  }
 }
 
-.WorkExperienceEntry {
+.Entry {
+  padding-block: space(8);
+  border-bottom: $border-width solid alpha($color-foreground, $opacity-faint);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  @include print {
+    padding-block: space(3);
+    border-color: $color-print-muted;
+    break-inside: avoid;
+  }
+}
+
+.RoleTitle {
+  font-size: $text-2xl;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking-title;
+
+  @include print {
+    font-size: $text-lg;
+  }
+}
+
+.RoleMeta {
+  @include mono-sm;
+  margin-top: space(1);
+  color: $color-subtle;
+
+  @include print {
+    color: $color-print-muted;
+  }
+}
+
+.RoleSummary {
+  max-width: $width-prose;
+  margin-top: space(3);
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
+
+  @include print {
+    max-width: none;
+    color: inherit;
+  }
+}
+
+.Highlights {
   display: flex;
   flex-direction: column;
-  margin-bottom: space(4);
+  gap: space(2);
+  max-width: $width-prose;
+  margin-top: space(3);
+  padding-left: space(5);
+  list-style: square;
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
+
+  li::marker {
+    color: $color-primary;
+  }
+
+  @include print {
+    gap: space(0.5);
+    max-width: none;
+    color: inherit;
+
+    li::marker {
+      color: inherit;
+    }
+  }
 }
 
-.WorkExperienceEntryRole {
-  color: $color-resume-accent;
+.Environments {
+  @include mono-sm;
+  margin-top: space(3);
+  line-height: $leading-relaxed;
+  color: $color-subtle;
+
+  @include print {
+    color: $color-print-muted;
+  }
 }
 
-.WorkExperienceEntryList {
-  margin: space(4) 0 0 space(8);
+.Aside {
+  display: flex;
+  flex-direction: column;
+  gap: space(8);
+  align-self: start;
+  padding-left: space(8);
+  border-left: $border-width-thick solid $color-primary;
+
+  @include print {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: space(4);
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+.SideList {
+  display: flex;
+  flex-direction: column;
+  gap: space(1);
+  margin-top: space(2);
+}
+
+.Link {
+  text-decoration: underline;
+  text-decoration-color: alpha($color-primary, $opacity-medium);
+  text-underline-offset: space(1);
+  overflow-wrap: anywhere;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  @include print {
+    text-decoration: none;
+  }
 }
