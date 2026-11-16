@@ -54,7 +54,7 @@ export const about = {
   stack: [
     {
       group: "Into",
-      items: ["Neovim & Lua", "Terminal UIs", "AI coding tools"],
+      items: ["Lua", "Terminal UIs", "AI coding tools"],
     },
     { group: "Daily drivers", items: ["Neovim", "tmux", "Ghostty", "zsh"] },
     { group: "Automating", items: ["Ansible", "Terraform"] },
