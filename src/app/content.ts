@@ -1,5 +1,3 @@
-export type Interest = { stage: string; tool: string };
-
 export type JourneyEntry = {
   years: string;
   title: string;
@@ -28,12 +26,7 @@ export const profile = {
   firstName: "Jean-Frederic",
   lastName: "Mainville",
   handle: "jf/mainville",
-  roles: [
-    "Neovim tinkerer",
-    "terminal tool builder",
-    "homelab operator",
-    "security nerd",
-  ],
+  roles: ["Neovim tinkerer", "terminal tool builder", "security nerd"],
   pitch:
     "Hi, I'm JF. I spend most of my time in a terminal, building small tools for the way I work. This is where I keep them.",
   email: "jfmainville@outlook.com",
@@ -48,28 +41,32 @@ export const navigation = [
   { id: "contact", label: "Contact" },
 ];
 
-export const interests: Interest[] = [
-  { stage: "neovim", tool: "Plugins & themes" },
-  { stage: "tui", tool: "Go · Bubble Tea" },
-  { stage: "homelab", tool: "Home server" },
-  { stage: "automation", tool: "Ansible · Stow" },
-  { stage: "security", tool: "Always" },
-];
+export const interests = ["neovim", "tui", "automation", "security"];
 
 export const about = {
   heading: "Mostly in a terminal.",
   paragraphs: [
-    "I'm a DevSecOps engineer from Québec. By day that means cloud security and platforms. The rest of the time I build the tools I want to use: Neovim plugins, a colorscheme, terminal apps, and the personal infrastructure running on my home server.",
+    "I'm a DevSecOps engineer from Québec. By day that means cloud security and platforms. The rest of the time I build the tools I want to use: Neovim plugins, a colorscheme and terminal apps.",
     "I like small, sharp tools, configs I can rebuild from scratch, and understanding how things work under the hood.",
   ],
   stack: [
     {
       group: "Into",
-      items: ["Neovim & Lua", "Terminal UIs", "Homelab", "AI coding tools"],
+      items: ["Neovim & Lua", "Terminal UIs", "AI coding tools"],
     },
     { group: "Daily drivers", items: ["Neovim", "tmux", "Ghostty", "zsh"] },
     { group: "Automating", items: ["Ansible", "GNU Stow", "Terraform"] },
-    { group: "Day job", items: ["Cloud security", "Kubernetes", "CI/CD"] },
+    {
+      group: "Day job",
+      items: [
+        "Cloud security",
+        "Kubernetes",
+        "CI/CD",
+        "Software development",
+        "DevOps",
+        "DevSecOps",
+      ],
+    },
   ],
 };
 
@@ -128,21 +125,12 @@ export const journey: JourneyEntry[] = [
 
 export const projects: Project[] = [
   {
-    name: "revunk",
+    name: "dotfiles",
     description:
-      "A terminal UI for reviewing AI agents' diffs and managing pull requests without leaving the keyboard.",
-    type: "Go · Bubble Tea",
-    note: "Just started",
-    detail: { kind: "code", text: "$ revunk  # diffs, comments, PRs" },
-    href: `${GITHUB_URL}/revunk`,
-  },
-  {
-    name: "nudge.nvim",
-    description:
-      "An inline AI coding assistant for Neovim. Hit a key, type what you want, and the code streams right into the buffer.",
-    type: "Neovim plugin · Lua",
-    detail: { kind: "code", text: "<leader>aa prompt · <leader>ac chat" },
-    href: `${GITHUB_URL}/nudge.nvim`,
+      "Everything my workstation needs: Neovim, tmux, Ghostty, zsh and shared AI agent skills, symlinked with Stow.",
+    type: "Workstation config · Lua",
+    detail: { kind: "code", text: "$ stow nvim tmux ghostty herdr agents zsh" },
+    href: `${GITHUB_URL}/dotfiles`,
   },
   {
     name: "fluovibe.nvim",
@@ -167,12 +155,37 @@ export const projects: Project[] = [
     href: `${GITHUB_URL}/fluovibe.nvim`,
   },
   {
-    name: "dotfiles",
+    name: "nudge.nvim",
     description:
-      "Everything my workstation needs: Neovim, tmux, Ghostty, zsh and shared AI agent skills, symlinked with Stow.",
-    type: "Workstation config · Lua",
-    detail: { kind: "code", text: "$ stow nvim tmux ghostty herdr agents zsh" },
-    href: `${GITHUB_URL}/dotfiles`,
+      "An inline AI coding assistant for Neovim. Hit a key, type what you want, and the code streams right into the buffer.",
+    type: "Neovim plugin · Lua",
+    detail: { kind: "code", text: "<leader>aa prompt · <leader>ac chat" },
+    href: `${GITHUB_URL}/nudge.nvim`,
+  },
+  {
+    name: "my-site",
+    description:
+      "This site. A Next.js app with SCSS modules, deployed to Kubernetes with Let's Encrypt TLS.",
+    type: "Website · TypeScript",
+    detail: { kind: "code", text: "$ kubectl apply -k kubernetes/production" },
+    href: `${GITHUB_URL}/my-site`,
+  },
+  {
+    name: "revunk",
+    description:
+      "A terminal UI for reviewing AI agents' diffs and managing pull requests without leaving the keyboard.",
+    type: "Go · Bubble Tea",
+    note: "Just started",
+    detail: { kind: "code", text: "$ revunk  # diffs, comments, PRs" },
+    href: `${GITHUB_URL}/revunk`,
+  },
+  {
+    name: "iac-playbook",
+    description:
+      "Public documentation on best practices for infrastructure as code tools and related topics.",
+    type: "Docusaurus · TypeScript",
+    detail: { kind: "code", text: "$ npm run build  # docs, lint, links" },
+    href: "https://github.com/nuagir/iac-playbook",
   },
 ];
 
