@@ -23,8 +23,6 @@ jobs:
           node-version: 24
           cache: npm
       - name: Build the static export
-        env:
-          NEXT_OUTPUT: export
         run: |
           npm ci
           npm run build

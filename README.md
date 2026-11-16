@@ -11,10 +11,9 @@ purposes.
 
 The following applications need to be installed on the local computer in order to run the project locally:
 
-| Application | Minimum Version |                                       Link |
-| ----------- | :-------------: | -----------------------------------------: |
-| Node.js     |     24.0 +      |     [Link](https://nodejs.org/en/download) |
-| Docker      |    18.09.2 +    | [Link](https://www.docker.com/get-started) |
+| Application | Minimum Version |                                   Link |
+| ----------- | :-------------: | -------------------------------------: |
+| Node.js     |     24.0 +      | [Link](https://nodejs.org/en/download) |
 
 ### Development
 
