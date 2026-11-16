@@ -100,7 +100,7 @@ const ResumePage = () => {
               <p>
                 As a Senior DevOps within the Platform Engineering team, I am
                 responsible for ensuring the seamless deployment, management,
-                and scalability of critical infrastructure and platforms:
+                and scalability of critical infrastructure and platforms.
               </p>
               <ul className={styles.WorkExperienceEntryList}>
                 <li>
@@ -148,7 +148,7 @@ const ResumePage = () => {
                 As the lead DevSecOps specialist within the Software team, I
                 designed and implemented the cloud infrastructure hosted on the
                 Google Cloud Platform (GCP) and established robust security
-                guidelines and infrastructure:
+                guidelines and infrastructure.
               </p>
               <ul className={styles.WorkExperienceEntryList}>
                 <li>
@@ -206,7 +206,7 @@ const ResumePage = () => {
               <p>
                 As a Technical Product Owner in the security operations team, I
                 lead my team in implementing and maintaining solutions to
-                enhance Intact&apos;s security posture:{" "}
+                enhance Intact&apos;s security posture.{" "}
               </p>
               <ul className={styles.WorkExperienceEntryList}>
                 <li>
@@ -264,7 +264,7 @@ const ResumePage = () => {
               <p>
                 As a DevOps Specialist in the identity and access management
                 (IAM) team, I contributed to enhancing the efficiency and
-                security of the IAM infrastructure:{" "}
+                security of the IAM infrastructure.{" "}
               </p>
               <ul className={styles.WorkExperienceEntryList}>
                 <li>
@@ -313,7 +313,7 @@ const ResumePage = () => {
               <p>
                 As a Full-Stack Developer, I developed an internal web
                 application to streamline the time-tracking process for
-                freelancers at SCFJ:
+                freelancers at SCFJ.
               </p>
               <ul className={styles.WorkExperienceEntryList}>
                 <li>
@@ -373,7 +373,7 @@ const ResumePage = () => {
               <p>
                 As a Security Analyst within the GTO business unit, I
                 specialized in email security and monitoring to mitigate
-                security risks:
+                security risks.
               </p>
               <ul className={styles.WorkExperienceEntryList}>
                 <li>
@@ -425,7 +425,7 @@ const ResumePage = () => {
                 As a System Administrator within the Microsoft Center of
                 Expertise (MCoE) business unit, I specialized in managing
                 Windows Server, SharePoint, SQL Server, and Microsoft Azure
-                environments to ensure optimal performance and security:{" "}
+                environments to ensure optimal performance and security.{" "}
               </p>
               <ul className={styles.WorkExperienceEntryList}>
                 <li>

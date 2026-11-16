@@ -48,7 +48,7 @@ export const interests = ["neovim", "tui", "automation", "security"];
 export const about = {
   heading: "Mostly in a terminal.",
   paragraphs: [
-    "I'm a DevSecOps engineer from Québec. By day that means cloud security and platforms. The rest of the time I build the tools I want to use: Neovim plugins, a colorscheme and terminal apps.",
+    "I'm a DevSecOps engineer from Québec. By day that means cloud security and platforms. The rest of the time I build the tools I want to use, like Neovim plugins, a colorscheme and terminal apps.",
     "I like tools, configs I can rebuild from scratch, and understanding how things work under the hood.",
   ],
   stack: [
@@ -94,7 +94,7 @@ export const journey: JourneyEntry[] = [
     years: "2022 – 2024",
     title: "DevSecOps Specialist",
     team: "Software Team",
-    text: "Led DevSecOps for the software team: designed and built the cloud infrastructure on Google Cloud Platform and set the security guidelines it runs on.",
+    text: "Led DevSecOps for the software team, designing and building the cloud infrastructure on Google Cloud Platform and setting the security guidelines it runs on.",
     tags: ["GCP", "DevSecOps", "Cloud security"],
   },
   {
@@ -139,7 +139,7 @@ export const projects: Project[] = [
   {
     name: "dotfiles",
     description:
-      "Everything my workstation needs: Neovim, tmux, herdr, Ghostty, zsh and shared AI agent skills.",
+      "Everything my workstation needs, including Neovim, tmux, herdr, Ghostty, zsh and shared AI agent skills.",
     language: "Lua",
     href: `${GITHUB_URL}/dotfiles`,
   },
