@@ -1,125 +1,238 @@
-@import "../variables.module.scss";
-
-@media print {
-  .Navigation {
-    display: none !important;
-  }
-}
-
-.Main {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  justify-content: center;
-  background-color: #eeeeee;
-  color: $background-color;
-  min-height: 100vh;
-  width: 100vw;
-}
-
-@media (max-width: $small-screen) {
-  .Main {
-    grid-template-columns: 1fr;
-  }
-}
-
-.PdfExportButton {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  font-size: 16px;
-  background-color: transparent;
-  color: $background-color;
-}
-
-.Sidebar {
-  background-color: $secondary-color;
-  color: $text-color;
-  padding: 1rem 1rem 1rem 1rem;
-}
-
-.Contact {
-  display: flex;
-  flex-direction: column;
-}
-
-.ContactEntry {
-  display: flex;
-  flex-direction: row;
-  margin: 0 0 1rem 0;
-}
-
-.ContactEntryText {
-  margin-left: 1rem;
-}
-
-.Skills {
-  display: flex;
-  flex-direction: column;
-}
-
-.SkillsList {
-  margin: 0 0 0 1rem;
-}
-
-.Education {
-  display: flex;
-  flex-direction: column;
-}
-
-.EducationList {
-  margin: 0 0 0 1rem;
-}
-
-.Certifications {
-  display: flex;
-  flex-direction: column;
-}
-
-.CertificationsList {
-  margin: 0 0 0 1rem;
-}
-
-.Page {
-  background-color: #eeeeee;
-}
-
-.Navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 2rem;
-}
+@use "../variables.module" as *;
 
 .Resume {
-  margin: 2rem;
+  @include page-container;
+  padding-block: space(24) space(16);
+
+  @include print {
+    max-width: none;
+    padding: 0;
+    color: $color-print-text;
+    font-size: $text-print;
+  }
 }
 
 .Header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  gap: space(8);
+
+  @include above($breakpoint-lg) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.Name {
+  @include display-heading(
+    $text-display-section,
+    $leading-heading,
+    $tracking-section
+  );
+  margin-top: space(4);
+
+  @include print {
+    color: $color-print-text;
+  }
+}
+
+.Accent {
+  color: $color-primary;
+
+  @include print {
+    display: none;
+  }
+}
+
+.Title {
+  margin-top: space(2);
+  font-size: $text-xl;
+  font-weight: $font-weight-medium;
+  color: $color-primary;
+
+  @include print {
+    color: $color-print-text;
+  }
+}
+
+.Print {
+  @include print {
+    display: none;
+  }
+}
+
+.Layout {
+  display: grid;
+  gap: space(16);
+  margin-top: space(16);
+
+  @include above($breakpoint-xl) {
+    grid-template-columns: 1fr $width-resume-aside;
+    gap: space(16);
+  }
+
+  @include print {
+    grid-template-columns: 1fr;
+    gap: space(6);
+    margin-top: space(6);
+  }
+}
+
+.SectionTitle,
+.SideTitle {
+  @include mono-sm;
+  color: $color-primary;
+  text-transform: lowercase;
+
+  @include print {
+    color: $color-print-text;
+    font-weight: $font-weight-semibold;
+  }
 }
 
 .Profile {
-  margin-top: 2rem;
-  text-align: justify;
+  max-width: $width-prose;
+  margin-top: space(4);
+  font-size: $text-lg;
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
+
+  @include print {
+    max-width: none;
+    font-size: inherit;
+    color: inherit;
+  }
 }
 
-.WorkExperience {
-  margin-top: 2rem;
+.Experience {
+  margin-top: space(16);
+
+  @include print {
+    margin-top: space(6);
+  }
 }
 
-.WorkExperienceEntry {
+.Entry {
+  padding-block: space(8);
+  border-bottom: $border-width solid alpha($color-foreground, $opacity-faint);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  @include print {
+    padding-block: space(3);
+    border-color: $color-print-muted;
+    break-inside: avoid;
+  }
+}
+
+.RoleTitle {
+  font-size: $text-2xl;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking-title;
+
+  @include print {
+    font-size: $text-lg;
+  }
+}
+
+.RoleMeta {
+  @include mono-sm;
+  margin-top: space(1);
+  color: $color-subtle;
+
+  @include print {
+    color: $color-print-muted;
+  }
+}
+
+.RoleSummary {
+  max-width: $width-prose;
+  margin-top: space(3);
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
+
+  @include print {
+    max-width: none;
+    color: inherit;
+  }
+}
+
+.Highlights {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  gap: space(2);
+  max-width: $width-prose;
+  margin-top: space(3);
+  padding-left: space(5);
+  list-style: square;
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
+
+  li::marker {
+    color: $color-primary;
+  }
+
+  @include print {
+    gap: space(0.5);
+    max-width: none;
+    color: inherit;
+
+    li::marker {
+      color: inherit;
+    }
+  }
 }
 
-.WorkExperienceEntryRole {
-  color: $secondary-color;
+.Environments {
+  @include mono-sm;
+  margin-top: space(3);
+  line-height: $leading-relaxed;
+  color: $color-subtle;
+
+  @include print {
+    color: $color-print-muted;
+  }
 }
 
-.WorkExperienceEntryList {
-  margin: 1rem 0 0 2rem;
+.Aside {
+  display: flex;
+  flex-direction: column;
+  gap: space(8);
+  align-self: start;
+  padding-left: space(8);
+  border-left: $border-width-thick solid $color-primary;
+
+  @include print {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: space(4);
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+.SideList {
+  display: flex;
+  flex-direction: column;
+  gap: space(1);
+  margin-top: space(2);
+}
+
+.Link {
+  text-decoration: underline;
+  text-decoration-color: alpha($color-primary, $opacity-medium);
+  text-underline-offset: space(1);
+  overflow-wrap: anywhere;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  @include print {
+    text-decoration: none;
+  }
 }

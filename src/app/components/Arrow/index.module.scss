@@ -1,0 +1,27 @@
+@use "../../variables.module" as *;
+
+.Arrow {
+  display: inline-flex;
+  flex-shrink: 0;
+  transition: transform $transition-base;
+}
+
+.sm {
+  font-size: space(4);
+}
+
+.md {
+  font-size: space(5);
+}
+
+.lg {
+  font-size: space(8);
+}
+
+:is(a, button):hover .right {
+  transform: translateX(space(1));
+}
+
+:is(a, button):hover .up-right {
+  transform: translate(space(1), -(space(1)));
+}

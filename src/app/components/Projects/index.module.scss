@@ -1,0 +1,108 @@
+@use "../../variables.module" as *;
+
+.Projects {
+  @include page-container;
+  @include section-spacing;
+  scroll-margin-top: space(28);
+}
+
+.Header {
+  display: flex;
+  flex-direction: column;
+  gap: space(4);
+
+  @include above($breakpoint-lg) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.GithubLink {
+  @include mono-sm;
+  display: inline-flex;
+  align-items: center;
+  gap: space(2);
+  width: fit-content;
+  color: $color-primary;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: space(4);
+  margin-top: space(12);
+
+  @include above($breakpoint-lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.Item {
+  min-width: 0;
+}
+
+.Card {
+  display: flex;
+  flex-direction: column;
+  gap: space(4);
+  height: 100%;
+  padding: space(6);
+  border: $border-width solid alpha($color-foreground, $opacity-faint);
+  border-radius: $radius-sm;
+  background-color: $color-panel;
+  transition: border-color $transition-base;
+
+  &:hover {
+    border-color: alpha($color-primary, $opacity-strong);
+  }
+}
+
+.CardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: space(4);
+}
+
+.Name {
+  font-size: $text-2xl;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking-title;
+  transition: color $transition-base;
+
+  .Card:hover & {
+    color: $color-primary;
+  }
+}
+
+.Language {
+  @include mono-sm;
+  margin-top: space(1);
+  color: $color-subtle;
+}
+
+.CardArrow {
+  color: $color-primary;
+}
+
+.Description {
+  flex: 1;
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
+}
+
+.Palette {
+  display: flex;
+  height: $height-swatch;
+  overflow: hidden;
+  border-radius: $radius-sm;
+
+  span {
+    flex: 1;
+  }
+}

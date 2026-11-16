@@ -1,0 +1,31 @@
+@use "../../variables.module" as *;
+
+.TerminalButton {
+  @include mono-sm;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: space(2);
+  width: fit-content;
+  border: $border-width solid alpha($color-foreground, $opacity-soft);
+  border-radius: $radius-sm;
+  color: $color-foreground;
+  transition:
+    color $transition-base,
+    border-color $transition-base;
+
+  &:hover {
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}
+
+.md {
+  height: $height-button-md;
+  padding-inline: space(4);
+}
+
+.lg {
+  height: $height-button-lg;
+  padding-inline: space(6);
+}

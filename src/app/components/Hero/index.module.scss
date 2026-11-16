@@ -1,0 +1,155 @@
+@use "../../variables.module" as *;
+
+.Hero {
+  position: relative;
+  padding-top: space(24);
+
+  @include above($breakpoint-lg) {
+    padding-top: space(32);
+  }
+}
+
+.Container {
+  @include page-container;
+}
+
+.Pointer {
+  margin-inline: space(2);
+}
+
+.Typed {
+  color: $color-foreground;
+}
+
+.Caret {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1.1em;
+  margin-left: space(1);
+  transform: translateY(0.18em);
+  background-color: $color-primary;
+  animation: blink 1.05s steps(1) infinite;
+}
+
+.Name {
+  @include display-heading(
+    $text-display-hero,
+    $leading-display,
+    $tracking-display
+  );
+  margin-top: space(6);
+}
+
+.Accent {
+  color: $color-primary;
+}
+
+.Intro {
+  display: flex;
+  flex-direction: column;
+  gap: space(8);
+  margin-top: space(12);
+
+  @include above($breakpoint-lg) {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}
+
+.Pitch {
+  max-width: $width-copy;
+  font-size: $text-xl;
+  line-height: $leading-snug;
+  color: alpha($color-foreground, $opacity-text-strong);
+}
+
+.Pipeline {
+  position: relative;
+  margin-top: space(24);
+}
+
+.Rail,
+.Progress {
+  position: absolute;
+  top: space(4);
+  left: 0;
+  height: $height-rail;
+  transform: translateY(-50%);
+}
+
+.Rail {
+  right: 0;
+  background-color: $color-rail;
+}
+
+.Progress {
+  background-color: $color-primary;
+  transition: width $transition-duration-slow ease-out;
+}
+
+.Stages {
+  position: relative;
+  display: flex;
+}
+
+.Stage {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Node {
+  position: relative;
+  z-index: $z-index-raised;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: space(8);
+  height: space(8);
+  border: $border-width-thick solid $color-rail;
+  border-radius: $radius-full;
+  background-color: $color-background;
+  transition:
+    background-color $transition-base,
+    border-color $transition-base;
+
+  [data-state="running"] > & {
+    border-color: $color-signal;
+  }
+
+  [data-state="passed"] > & {
+    border-color: $color-primary;
+    background-color: $color-primary;
+    color: $color-primary-foreground;
+  }
+}
+
+.Check {
+  font-size: space(4);
+  animation: pop 0.32s $transition-easing both;
+}
+
+.Spinner {
+  width: space(4);
+  height: space(4);
+  border: $border-width-thick solid $color-signal;
+  border-top-color: transparent;
+  border-radius: $radius-full;
+  animation: spin 0.7s linear infinite;
+}
+
+.LiveRing {
+  position: absolute;
+  inset: 0;
+  border: $border-width-thick solid $color-signal;
+  border-radius: $radius-full;
+  animation: live 2.4s $transition-easing infinite;
+}
+
+.StageName {
+  @include mono-sm;
+  margin-top: space(3);
+}

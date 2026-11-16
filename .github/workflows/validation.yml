@@ -1,41 +1,66 @@
-name: Complete the validations for the code in a Pull Request (PR)
+name: Validate the code in a Pull Request (PR)
 on:
   pull_request:
     types:
       - opened
       - synchronize
       - reopened
+permissions:
+  contents: read
 jobs:
   typescript:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout the current git repository
-        uses: actions/checkout@main
-      - name: Run the NPM tsc command
-        uses: actions/setup-node@v4
-      - run: |
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - name: Run the type check
+        run: |
           npm ci
           npm run type-check
   lint:
     runs-on: ubuntu-24.04
-    environment: production
     steps:
       - name: Checkout the current git repository
-        uses: actions/checkout@main
-      - name: Run the NPM lint command
-        uses: actions/setup-node@v4
-      - run: |
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - name: Run the linter
+        run: |
           npm ci
           npm run lint
   test:
     runs-on: ubuntu-24.04
-    environment: production
     steps:
       - name: Checkout the current git repository
-        uses: actions/checkout@main
-      - name: Run the NPM test command
-        uses: actions/setup-node@v4
-      - run: |
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - name: Run the unit tests
+        run: |
           npm ci
-          npx playwright install
-          npm run ci:test -- -u
+          npm test
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout the current git repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Node.js
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+          cache: npm
+      - name: Build the static export
+        run: |
+          npm ci
+          npm run build

@@ -1,0 +1,64 @@
+@use "../../variables.module" as *;
+
+.Header {
+  @include print {
+    display: none;
+  }
+
+  position: sticky;
+  top: 0;
+  z-index: $z-index-header;
+  border-bottom: $border-width solid alpha($color-foreground, $opacity-faint);
+  background-color: alpha($color-background, $opacity-backdrop);
+  backdrop-filter: blur(space(3));
+}
+
+.Inner {
+  @include page-container;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: space(6);
+  min-height: $height-header;
+
+  @include above($breakpoint-lg) {
+    flex-wrap: nowrap;
+  }
+}
+
+.Handle {
+  display: inline-flex;
+  align-items: center;
+  height: $height-nav-handle;
+  font-family: $font-mono;
+  font-weight: $font-weight-medium;
+}
+
+.Cursor {
+  color: $color-primary;
+}
+
+.Links {
+  display: flex;
+  align-items: center;
+  gap: space(4);
+  width: 100%;
+  padding-bottom: space(3);
+
+  @include above($breakpoint-lg) {
+    gap: space(6);
+    width: auto;
+    padding-bottom: 0;
+  }
+}
+
+.Link {
+  font-size: $text-sm;
+  color: alpha($color-foreground, $opacity-text);
+  transition: color $transition-base;
+
+  &:hover {
+    color: $color-primary;
+  }
+}

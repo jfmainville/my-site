@@ -1,13 +1,28 @@
 import type { Metadata } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { SITE_URL, profile } from "./content";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+config.autoAddCss = false;
+
+const plexSans = IBM_Plex_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-plex-sans",
+});
+
+const plexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-plex-mono",
+});
 
 export const metadata: Metadata = {
-  title: "Jean-Frederic Mainville",
-  description: "This is my personal website for the world to see",
+  metadataBase: new URL(SITE_URL),
+  title: `${profile.firstName} ${profile.lastName}`,
+  description: profile.pitch,
 };
 
 export default function RootLayout({
@@ -16,9 +31,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-      <GoogleAnalytics gaId="G-B14Q3RXS9N" />
+    <html lang="en" className={`${plexSans.variable} ${plexMono.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

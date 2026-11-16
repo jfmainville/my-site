@@ -1,103 +1,90 @@
-@import "../../variables.module.scss";
+@use "../../variables.module" as *;
 
 .Contact {
+  @include page-container;
+  @include section-spacing;
+  scroll-margin-top: space(20);
+}
+
+.Heading {
+  @include display-heading(
+    $text-display-contact,
+    $leading-display,
+    $tracking-display
+  );
+}
+
+.Text {
+  max-width: $width-copy;
+  margin-top: space(8);
+  font-size: $text-lg;
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
+}
+
+.EmailRow {
   display: flex;
   flex-direction: column;
-  background-color: $secondary-color;
-}
+  gap: space(4);
+  margin-top: space(12);
+  padding-block: space(8);
+  border-block: $border-width-thick solid $color-primary;
 
-.ContactSection {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-@media (max-width: $small-screen) {
-  .ContactSection {
-    flex-direction: column;
+  @include above($breakpoint-lg) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
-.ContactSectionHeader {
-  display: flex;
-  flex-direction: column;
+.Email {
+  display: inline-flex;
   align-items: center;
+  gap: space(3);
+  font-size: $text-display-email;
+  font-weight: $font-weight-medium;
+  letter-spacing: $tracking-title;
+  word-break: break-all;
+  color: $color-primary;
+}
+
+.Copied {
+  color: $color-primary;
+}
+
+.Details {
+  display: grid;
+  gap: space(6);
+  margin-top: space(8);
+
+  @include above($breakpoint-sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.Label {
+  @include mono-sm;
+  color: $color-subtle;
+}
+
+.Value {
+  margin-top: space(1);
+  font-size: $text-lg;
+}
+
+.Links {
+  display: flex;
   flex-wrap: wrap;
+  column-gap: space(4);
 }
 
-.ContactSocialMedia {
-  display: flex;
-  flex-direction: row;
-}
-
-.ContactSocialMediaEntry {
-  color: $text-color;
-  margin: 0 2rem 1rem 0;
-}
-
-.ContactSectionForm {
-  display: flex;
-  flex-direction: row;
-}
-
-.Input {
-  display: flex;
-  flex-direction: row;
-  outline: none;
-  color: $text-color;
-  box-shadow: none;
-  border: 1px solid;
-  height: 2rem;
-  width: 15rem;
-  margin: 0.5rem 0 0.5rem 0;
-  background-color: $secondary-color;
-}
-
-.InputLabel {
-  color: $text-color;
-}
-
-.TextArea {
-  display: flex;
-  flex-direction: row;
-  outline: none;
-  color: $text-color;
-  box-shadow: none;
-  border: 1px solid;
-  height: 10rem;
-  width: 30rem;
-  margin: 0.5rem 0 0.5rem 0;
-  background-color: $secondary-color;
-}
-
-@media (max-width: $small-screen) {
-  .TextArea {
-    width: 100%;
-  }
-}
-
-.SubmitButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 15rem;
-  margin: 2rem 0 2rem 0;
-  cursor: pointer;
-  outline: none;
-  border: 1px solid $secondary-color;
-  color: $secondary-color;
-  height: 2rem;
-  background-color: $text-color;
+.Link {
+  text-decoration: underline;
+  text-decoration-color: alpha($color-primary, $opacity-medium);
+  text-underline-offset: space(1);
+  transition: color $transition-base;
 
   &:hover {
-    background-color: transparent;
-    color: $text-color;
-    border: 1px solid $text-color;
+    color: $color-primary;
   }
-}
-
-.TextHeading {
-  color: $text-color;
-  margin: 2rem;
 }
