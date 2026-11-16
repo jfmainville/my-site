@@ -2,7 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faRotateRight } from "@fortawesome/free-solid-svg-icons";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { interests } from "../../content";
 import { useReducedMotion } from "../../hooks/useReducedMotion";
 import styles from "./index.module.scss";
@@ -13,7 +13,6 @@ const STEP_DELAY = 520;
 const Pipeline = () => {
   const reducedMotion = useReducedMotion();
   const [step, setStep] = useState(-1);
-  const [run, setRun] = useState(0);
   const [progress, setProgress] = useState(0);
   const trackRef = useRef<HTMLDivElement>(null);
   const nodeRefs = useRef<(HTMLSpanElement | null)[]>([]);
@@ -27,7 +26,7 @@ const Pipeline = () => {
       setTimeout(() => setStep(next), START_DELAY + next * STEP_DELAY),
     );
     return () => timeouts.forEach(clearTimeout);
-  }, [run, reducedMotion, total]);
+  }, [reducedMotion, total]);
 
   useLayoutEffect(() => {
     const measure = () => {
@@ -66,11 +65,7 @@ const Pipeline = () => {
                   ? "running"
                   : "pending";
             return (
-              <li
-                key={interest.stage}
-                className={styles.Stage}
-                data-state={state}
-              >
+              <li key={interest} className={styles.Stage} data-state={state}>
                 <span
                   ref={(node) => {
                     nodeRefs.current[index] = node;
@@ -85,29 +80,11 @@ const Pipeline = () => {
                     <span className={styles.LiveRing} aria-hidden="true" />
                   )}
                 </span>
-                <span className={styles.StageName}>{interest.stage}</span>
-                <span className={styles.StageTool}>{interest.tool}</span>
+                <span className={styles.StageName}>{interest}</span>
               </li>
             );
           })}
         </ol>
-      </div>
-      <div className={`${styles.Container} ${styles.Status}`}>
-        <span className={done ? styles.Done : undefined} role="status">
-          {done
-            ? `✓ ~/.config loaded · ${total} things I'm into`
-            : `loading ${Math.max(current + 1, 1)}/${total}…`}
-        </span>
-        <button
-          type="button"
-          onClick={() => {
-            setStep(-1);
-            setRun((count) => count + 1);
-          }}
-          className={styles.Rerun}
-        >
-          <FontAwesomeIcon icon={faRotateRight} /> re-run
-        </button>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import { act, fireEvent, render, screen } from "@testing-library/react";
+import { act, render, screen } from "@testing-library/react";
 import { interests, profile } from "../../content";
 import Hero from ".";
 
@@ -25,18 +25,17 @@ describe("<Hero/>", () => {
     expect(screen.getByText(profile.roles[0])).toBeInTheDocument();
   });
 
-  it("runs the pipeline to completion and restarts it on re-run", () => {
+  it("passes every pipeline stage once the run completes", () => {
     render(<Hero />);
-    const status = screen.getByRole("status");
-    expect(status).toHaveTextContent(`loading 1/${interests.length}`);
+    const stages = screen.getByRole("list", {
+      name: "What I'm into right now",
+    });
+    expect(stages.querySelectorAll('[data-state="passed"]')).toHaveLength(0);
 
     act(() => jest.advanceTimersByTime(700 + interests.length * 520));
-    expect(status).toHaveTextContent(
-      `~/.config loaded · ${interests.length} things I'm into`,
+    expect(stages.querySelectorAll('[data-state="passed"]')).toHaveLength(
+      interests.length,
     );
-
-    fireEvent.click(screen.getByRole("button", { name: /re-run/ }));
-    expect(status).toHaveTextContent(`loading 1/${interests.length}`);
   });
 
   it("lists every interest as a pipeline stage", () => {
