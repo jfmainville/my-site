@@ -1,4 +1,4 @@
-@import "../variables.module.scss";
+@use "../variables.module" as *;
 
 @media print {
   .Navigation {
@@ -10,31 +10,52 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   justify-content: center;
-  background-color: #eeeeee;
-  color: $background-color;
+  background-color: $color-resume-background;
+  color: $color-resume-text;
   min-height: 100vh;
   width: 100vw;
+
+  h1 {
+    font-size: 2em;
+    margin-block: 0.67em;
+    line-height: $leading-tight;
+    letter-spacing: $tracking-resume-h1;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    font-size: 1.5em;
+    margin-block: 0.83em;
+    line-height: $leading-tight;
+    letter-spacing: $tracking-resume-h2;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 1.17em;
+    margin-block: 1em;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  a {
+    font-size: $text-resume;
+    line-height: $leading-tight;
+  }
 }
 
-@media (max-width: $small-screen) {
+@media (max-width: $breakpoint-resume) {
   .Main {
     grid-template-columns: 1fr;
   }
 }
 
-.PdfExportButton {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  font-size: 16px;
-  background-color: transparent;
-  color: $background-color;
-}
-
 .Sidebar {
-  background-color: $secondary-color;
-  color: $text-color;
-  padding: 1rem 1rem 1rem 1rem;
+  background-color: $color-resume-accent;
+  color: $color-resume-background;
+  padding: space(4);
 }
 
 .Contact {
@@ -45,11 +66,11 @@
 .ContactEntry {
   display: flex;
   flex-direction: row;
-  margin: 0 0 1rem 0;
+  margin: 0 0 space(4) 0;
 }
 
 .ContactEntryText {
-  margin-left: 1rem;
+  margin-left: space(4);
 }
 
 .Skills {
@@ -58,7 +79,7 @@
 }
 
 .SkillsList {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 space(4);
 }
 
 .Education {
@@ -67,7 +88,7 @@
 }
 
 .EducationList {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 space(4);
 }
 
 .Certifications {
@@ -76,22 +97,22 @@
 }
 
 .CertificationsList {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 space(4);
 }
 
 .Page {
-  background-color: #eeeeee;
+  background-color: $color-resume-background;
 }
 
 .Navigation {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 2rem;
+  margin: space(8);
 }
 
 .Resume {
-  margin: 2rem;
+  margin: space(8);
 }
 
 .Header {
@@ -102,24 +123,24 @@
 }
 
 .Profile {
-  margin-top: 2rem;
+  margin-top: space(8);
   text-align: justify;
 }
 
 .WorkExperience {
-  margin-top: 2rem;
+  margin-top: space(8);
 }
 
 .WorkExperienceEntry {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: space(4);
 }
 
 .WorkExperienceEntryRole {
-  color: $secondary-color;
+  color: $color-resume-accent;
 }
 
 .WorkExperienceEntryList {
-  margin: 1rem 0 0 2rem;
+  margin: space(4) 0 0 space(8);
 }

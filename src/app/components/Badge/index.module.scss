@@ -1,0 +1,17 @@
+@use "../../variables.module" as *;
+
+.Badge {
+  @include mono-sm;
+  border-radius: $radius-sm;
+  padding: space(0.5) space(2);
+}
+
+.signal {
+  background-color: alpha($color-signal, $opacity-soft);
+  color: $color-foreground;
+}
+
+.outline {
+  border: $border-width solid alpha($color-primary, $opacity-medium);
+  color: $color-primary;
+}

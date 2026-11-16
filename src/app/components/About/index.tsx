@@ -1,30 +1,26 @@
-import { NEXT_PUBLIC_AWS_BUCKET_URL } from "@/app/utils/constants";
+import { about } from "../../content";
+import SectionHeading from "../SectionHeading";
 import styles from "./index.module.scss";
-import Image from "next/image";
 
-const About = () => {
-  return (
-    <section id={"about"} className={styles.About}>
-      <h1 className={styles.TextHeading}>About</h1>
-      <div className={styles.AboutSection}>
-        <p className={styles.AboutSectionText}>
-          I am an experienced professional with expertise in cloud security,
-          DevOps, and system administration. My career spans roles as a Cloud
-          Security Specialist, Technical Product Owner, DevOps Specialist,
-          Security Analyst, and System Administrator across diverse
-          environments. I excel in designing and implementing secure IT
-          solutions, automating processes, and optimizing performance to
-          strengthen operational resilience and meet business objectives.
-        </p>
-        <Image
-          src={`${NEXT_PUBLIC_AWS_BUCKET_URL}/public/images/profile.png`}
-          width={500}
-          height={500}
-          alt=""
-        />
+const About = () => (
+  <section id="about" className={styles.About}>
+    <div>
+      <SectionHeading title={about.heading} />
+      <div className={styles.Paragraphs}>
+        {about.paragraphs.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+    <dl className={styles.Stack}>
+      {about.stack.map(({ group, items }) => (
+        <div key={group}>
+          <dt className={styles.Group}>{group.toLowerCase()}</dt>
+          <dd className={styles.Items}>{items.join(" · ")}</dd>
+        </div>
+      ))}
+    </dl>
+  </section>
+);
 
 export default About;

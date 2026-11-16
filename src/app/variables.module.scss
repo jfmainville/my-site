@@ -1,37 +1,143 @@
-// Fonts
-$font-family: "Source Sans Pro";
+@use "sass:color";
 
 // Colors
-$background-color: #222830;
-$primary-color: #313640;
-$secondary-color: #76acae;
-$text-color: #eeeeee;
+$color-background: oklch(0.22 0.022 164);
+$color-foreground: oklch(0.985 0.005 164);
+$color-primary: oklch(0.8101 0.0935 164);
+$color-primary-foreground: oklch(0 0 0);
+$color-signal: oklch(0.8318 0.1333 70);
+$color-rail: oklch(0.3883 0.0258 164);
+$color-panel: oklch(0.24 0.015 164);
+$color-subtle: oklch(0.7861 0.0179 164);
 
-$white-color: #ffffff;
-$grey-dark-color: #333; // Dark Grey
-$grey-dusky-color: #666; // Medium Dark Grey
-$grey-news-color: #999; // Medium Grey
-$grey-light-color: #ccc; // Light Grey
-$grey-lighter-color: #e0e0e0; // Very Light Grey
-$grey-lightest-color: #f5f5f5; // Almost White Grey
+$color-resume-background: #eeeeee;
+$color-resume-text: #222830;
+$color-resume-accent: #76acae;
 
-// Shadows
+// Opacities
+$opacity-faint: 0.1;
+$opacity-soft: 0.2;
+$opacity-muted: 0.35;
+$opacity-medium: 0.4;
+$opacity-strong: 0.6;
+$opacity-text: 0.75;
+$opacity-text-strong: 0.8;
+$opacity-backdrop: 0.95;
 
-// Media Queries
-$small-screen: 705px;
+@function alpha($color, $opacity) {
+  @return color.change($color, $alpha: $opacity);
+}
 
-:export {
-  fontFamily: $font-family;
-  backgroundColor: $background-color;
-  primaryColor: $primary-color;
-  secondaryColor: $secondary-color;
-  textColor: $text-color;
-  whiteColor: $white-color;
-  greyDarkColor: $grey-dark-color;
-  greyDuskyColor: $grey-dusky-color;
-  greyNewsColor: $grey-news-color;
-  greyLightColor: $grey-light-color;
-  greyLighterColor: $grey-lighter-color;
-  greyLightestColor: $grey-lightest-color;
-  smallScreen: $small-screen;
+// Fonts
+$font-sans: var(--font-plex-sans), sans-serif;
+$font-mono: var(--font-plex-mono), monospace;
+
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+
+$text-xs: 13px;
+$text-sm: 15px;
+$text-base: 17px;
+$text-lg: 18px;
+$text-xl: 20px;
+$text-2xl: 23px;
+$text-display-hero: clamp(3.25rem, 12vw, 9.5rem);
+$text-display-contact: clamp(3.5rem, 10vw, 8rem);
+$text-display-section: clamp(2.25rem, 4.6vw, 3.75rem);
+$text-display-email: clamp(1.5rem, 5vw, 3.25rem);
+$text-resume: 16px;
+
+$leading-display: 0.9;
+$leading-heading: 1.02;
+$leading-tight: 1.2;
+$leading-snug: 1.375;
+$leading-normal: 1.5;
+$leading-relaxed: 1.625;
+
+$tracking-display: -0.045em;
+$tracking-section: -0.035em;
+$tracking-title: -0.02em;
+$tracking-resume-h1: 3px;
+$tracking-resume-h2: 2px;
+
+// Spacing
+$spacing-unit: 4px;
+
+@function space($multiplier) {
+  @return $multiplier * $spacing-unit;
+}
+
+$width-page: 72rem;
+$width-prose: 42rem;
+$width-copy: 36rem;
+$height-header: space(16);
+$width-graph: space(14);
+$width-journey-meta: 180px;
+
+$height-nav-handle: space(14);
+$height-button-lg: space(12);
+$height-button-md: space(11);
+$height-swatch: space(8);
+$height-rail: space(1.5);
+
+// Radii
+$radius-sm: 2px;
+$radius-full: 9999px;
+
+// Borders
+$border-width: 1px;
+$border-width-thick: 2px;
+
+// Z-indexes
+$z-index-raised: 10;
+$z-index-header: 50;
+
+// Transitions
+$transition-duration: 260ms;
+$transition-duration-slow: 500ms;
+$transition-easing: cubic-bezier(0.22, 1, 0.36, 1);
+$transition-base: $transition-duration $transition-easing;
+
+// Breakpoints
+$breakpoint-sm: 36rem;
+$breakpoint-md: 42rem;
+$breakpoint-lg: 48rem;
+$breakpoint-xl: 64rem;
+$breakpoint-resume: 705px;
+
+@mixin above($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin page-container {
+  margin-inline: auto;
+  max-width: $width-page;
+  padding-inline: space(6);
+
+  @include above($breakpoint-lg) {
+    padding-inline: space(12);
+  }
+}
+
+@mixin section-spacing {
+  padding-block: space(24);
+
+  @include above($breakpoint-xl) {
+    padding-block: space(32);
+  }
+}
+
+@mixin display-heading($size, $leading, $tracking) {
+  font-size: $size;
+  line-height: $leading;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking;
+  color: $color-foreground;
+}
+
+@mixin mono-sm {
+  font-family: $font-mono;
+  font-size: $text-sm;
 }

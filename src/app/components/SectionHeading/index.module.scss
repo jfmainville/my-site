@@ -1,0 +1,15 @@
+@use "../../variables.module" as *;
+
+.Title {
+  @include display-heading(
+    $text-display-section,
+    $leading-heading,
+    $tracking-section
+  );
+  max-width: $width-prose;
+  text-wrap: balance;
+}
+
+.WithPrompt {
+  margin-top: space(4);
+}

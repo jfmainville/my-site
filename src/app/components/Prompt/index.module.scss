@@ -1,0 +1,18 @@
+@use "../../variables.module" as *;
+
+.Prompt {
+  font-family: $font-mono;
+  color: $color-subtle;
+}
+
+.sm {
+  font-size: $text-sm;
+}
+
+.base {
+  font-size: $text-base;
+}
+
+.Symbol {
+  color: $color-primary;
+}

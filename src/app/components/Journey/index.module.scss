@@ -1,0 +1,133 @@
+@use "../../variables.module" as *;
+
+.Journey {
+  @include section-spacing;
+  scroll-margin-top: space(20);
+  background-color: $color-panel;
+}
+
+.Container {
+  @include page-container;
+}
+
+.Log {
+  margin-top: space(16);
+}
+
+.Entry {
+  display: flex;
+}
+
+.Graph {
+  position: relative;
+  flex-shrink: 0;
+  width: $width-graph;
+}
+
+.Line {
+  position: absolute;
+  width: $border-width-thick;
+  transform: translateX(-50%);
+  background-color: alpha($color-primary, $opacity-muted);
+}
+
+.Curve {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  path {
+    stroke: alpha($color-primary, $opacity-muted);
+    stroke-width: $border-width-thick;
+  }
+}
+
+.Commit {
+  position: absolute;
+  width: space(3.5);
+  height: space(3.5);
+  transform: translate(-50%, -50%);
+  border: $border-width-thick solid $color-primary;
+  border-radius: $radius-full;
+  background-color: $color-background;
+}
+
+.Head {
+  background-color: $color-primary;
+}
+
+.LiveRing {
+  position: absolute;
+  inset: -(space(0.5));
+  border: $border-width-thick solid $color-signal;
+  border-radius: $radius-full;
+  animation: live 2.4s $transition-easing infinite;
+}
+
+.Body {
+  display: grid;
+  flex: 1;
+  gap: space(2);
+  padding: 0 0 space(12) space(4);
+
+  @include above($breakpoint-lg) {
+    grid-template-columns: $width-journey-meta 1fr;
+    gap: space(8);
+  }
+}
+
+.Meta {
+  @include mono-sm;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: space(1) space(3);
+  padding-top: space(4);
+  color: $color-subtle;
+
+  @include above($breakpoint-lg) {
+    flex-direction: column;
+    gap: space(1);
+  }
+}
+
+.Years {
+  color: $color-foreground;
+}
+
+.Details {
+  padding-top: space(2);
+}
+
+.TitleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: space(2) space(3);
+}
+
+.Title {
+  font-size: $text-2xl;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking-title;
+}
+
+.Team {
+  margin-top: space(1);
+  font-weight: $font-weight-medium;
+  color: $color-primary;
+}
+
+.Text {
+  max-width: $width-prose;
+  margin-top: space(3);
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
+}
+
+.Tags {
+  @include mono-sm;
+  margin-top: space(3);
+  white-space: pre-wrap;
+  color: $color-subtle;
+}

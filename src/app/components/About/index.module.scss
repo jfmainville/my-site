@@ -1,38 +1,44 @@
-@import "../../variables.module.scss";
+@use "../../variables.module" as *;
 
 .About {
+  @include page-container;
+  @include section-spacing;
+  display: grid;
+  gap: space(16);
+  scroll-margin-top: space(20);
+
+  @include above($breakpoint-lg) {
+    grid-template-columns: 1.4fr 1fr;
+    gap: space(24);
+  }
+}
+
+.Paragraphs {
   display: flex;
   flex-direction: column;
-  background-color: $secondary-color;
+  gap: space(4);
+  max-width: $width-copy;
+  margin-top: space(8);
+  font-size: $text-lg;
+  line-height: $leading-relaxed;
+  color: alpha($color-foreground, $opacity-text);
 }
 
-.AboutSection {
+.Stack {
   display: flex;
-  align-items: center;
-  flex-direction: row;
+  flex-direction: column;
+  gap: space(6);
+  align-self: end;
+  padding-left: space(8);
+  border-left: $border-width-thick solid $color-primary;
 }
 
-@media (max-width: $small-screen) {
-  .AboutSection {
-    flex-direction: column;
-  }
+.Group {
+  @include mono-sm;
+  color: $color-primary;
 }
 
-.AboutSectionText {
-  display: flex;
-  text-align: end;
-  flex-direction: row;
-  color: $text-color;
-  padding: 0 0 0 2rem;
-}
-
-@media (max-width: $small-screen) {
-  .AboutSectionText {
-    text-align: center;
-  }
-}
-
-.TextHeading {
-  margin: 2rem;
-  color: $text-color;
+.Items {
+  margin-top: space(1);
+  font-size: $text-lg;
 }
