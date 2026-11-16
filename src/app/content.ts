@@ -26,7 +26,14 @@ export const profile = {
     "Hi, I'm JF. I spend most of my time in a terminal, building small tools for the way I work. This is where I keep them.",
   email: "jfmainville@outlook.com",
   location: "Québec, Canada",
-  links: [{ label: "GitHub", href: GITHUB_URL }],
+  links: [
+    { label: "GitHub", href: GITHUB_URL },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/jean-frederic-mainville-8566b485/",
+    },
+    { label: "X", href: "https://x.com/JeanMainvi" },
+  ],
 };
 
 export const navigation = [
@@ -67,7 +74,14 @@ export const about = {
 
 export const journey: JourneyEntry[] = [
   {
-    years: "2024 – now",
+    years: "2026 – now",
+    title: "Founder, Cybersecurity Specialist",
+    team: "Nuagir",
+    text: "Runs a cybersecurity consulting firm helping teams secure their cloud platforms, CI/CD and infrastructure.",
+    tags: ["Cybersecurity", "DevSecOps", "Consulting"],
+  },
+  {
+    years: "2024 – 2026",
     title: "Senior DevOps",
     team: "Platform Engineering Team",
     text: "Responsible for the seamless deployment, management and scalability of critical infrastructure and platforms.",
