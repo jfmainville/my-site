@@ -81,10 +81,10 @@ export const about = {
 export const journey: JourneyEntry[] = [
   {
     years: "2026 – now",
-    title: "Founder, Cybersecurity Specialist",
+    title: "Founder & Cybersecurity Specialist",
     team: "Nuagir",
-    text: "Runs a cybersecurity consulting firm helping teams secure their cloud platforms, CI/CD and infrastructure.",
-    tags: ["Cybersecurity", "DevSecOps", "Consulting"],
+    text: "Leads a product-first DevSecOps firm that helps SaaS and tech companies ship securely without slowing delivery, combining a compliance platform with hands-on expertise.",
+    tags: ["DevSecOps", "Compliance", "Cloud security"],
   },
   {
     years: "2024 – 2026",

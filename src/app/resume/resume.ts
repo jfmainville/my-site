@@ -5,13 +5,13 @@ export type ResumeRole = {
   dates: string;
   summary: string;
   highlights: string[];
-  environments: string[];
+  environments?: string[];
 };
 
 export const resume = {
-  title: "Senior DevOps",
+  title: "Founder & Cybersecurity Specialist",
   profile:
-    "I am an experienced professional with expertise in cloud security, DevOps, and system administration. My career spans roles as a Senior DevOps, DevSecOps Specialist, Technical Product Owner, DevOps Specialist, Security Analyst, and System Administrator across diverse environments. I excel in designing and implementing secure IT solutions, automating processes, and optimizing performance to strengthen operational resilience and meet business objectives.",
+    "I am an experienced professional with expertise in cloud security, DevOps, and system administration. My career spans roles as a Founder & Cybersecurity Specialist, Senior DevOps, DevSecOps Specialist, Technical Product Owner, DevOps Specialist, Security Analyst, and System Administrator across diverse environments. I excel in designing and implementing secure IT solutions, automating processes, and optimizing performance to strengthen operational resilience and meet business objectives.",
   skills: [
     "Information Security",
     "Cloud Infrastructure",
@@ -35,10 +35,23 @@ export const resume = {
 
 export const experience: ResumeRole[] = [
   {
+    title: "Founder & Cybersecurity Specialist",
+    company: "Nuagir",
+    location: "Brossard, Quebec, Canada (Remote)",
+    dates: "January 2026 – Now",
+    summary:
+      "As Founder of Nuagir, I lead a product-first DevSecOps firm that helps SaaS and tech companies ship securely without slowing delivery. We combine a cloud security and compliance platform with hands-on expertise to give engineering teams continuous visibility into their security posture and a clear path to SOC 2, ISO 27001, and Law 25 readiness.",
+    highlights: [
+      "Design and deliver fixed-fee DevSecOps assessments (cloud security, CI/CD pipeline audits, threat modeling, observability, and FinOps) that produce an actionable remediation roadmap",
+      "Build and scale the Nuagir compliance platform for automated evidence collection, continuous posture monitoring, and audit-ready reporting across Canadian and international frameworks",
+      "Advise engineering and security leaders at mid-market organizations on secure cloud architecture, pipeline hardening, and operational resilience",
+    ],
+  },
+  {
     title: "Senior DevOps",
     company: "Sherweb",
     location: "Sherbrooke, Quebec, Canada",
-    dates: "December 2024 – Now",
+    dates: "December 2024 – 2026",
     summary:
       "As a Senior DevOps within the Platform Engineering team, I am responsible for ensuring the seamless deployment, management, and scalability of critical infrastructure and platforms.",
     highlights: [

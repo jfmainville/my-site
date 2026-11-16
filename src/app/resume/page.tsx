@@ -66,9 +66,11 @@ const ResumePage = () => (
                       <li key={highlight}>{highlight}</li>
                     ))}
                   </ul>
-                  <p className={styles.Environments}>
-                    {role.environments.join(" · ")}
-                  </p>
+                  {role.environments && (
+                    <p className={styles.Environments}>
+                      {role.environments.join(" · ")}
+                    </p>
+                  )}
                 </li>
               ))}
             </ol>
