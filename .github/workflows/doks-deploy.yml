@@ -23,7 +23,7 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v2
       - name: Docker build and push image to AWS ECR
         run: |
-          docker build --build-arg NEXT_PUBLIC_AWS_BUCKET_URL="${{ vars.NEXT_PUBLIC_AWS_BUCKET_URL }}" -t ${{ vars.AWS_ECR_URL }}/my-site:latest -t ${{ vars.AWS_ECR_URL }}/my-site:${{ github.SHA }} .
+          docker build -t ${{ vars.AWS_ECR_URL }}/my-site:latest -t ${{ vars.AWS_ECR_URL }}/my-site:${{ github.SHA }} .
           docker push ${{ vars.AWS_ECR_URL }}/my-site:latest
           docker push ${{ vars.AWS_ECR_URL }}/my-site:${{ github.SHA }}
   deploy:

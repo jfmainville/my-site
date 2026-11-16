@@ -28,19 +28,6 @@ spec:
           env:
             - name: MY_SITE_URL
               value: https://jfmainville.me
-            - name: GMAIL_SMTP_SERVER
-              value: smtp.gmail.com
-            - name: GMAIL_SMTP_SERVER_PORT
-              value: "587"
-            - name: GMAIL_EMAIL
-              value: j.f.mainville@gmail.com
-            - name: GMAIL_APP_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: my-site-secret
-                  key: GMAIL_APP_PASSWORD
-            - name: NEXT_PUBLIC_AWS_BUCKET_URL
-              value: https://nuagir-my-site-sbs-usea1-prod.s3.us-east-1.amazonaws.com
           resources:
             limits:
               memory: 500Mi

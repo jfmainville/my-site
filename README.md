@@ -13,19 +13,8 @@ The following applications need to be installed on the local computer in order t
 
 | Application | Minimum Version |                                       Link |
 | ----------- | :-------------: | -----------------------------------------: |
-| Node.js     |    21.7.1 +     |     [Link](https://nodejs.org/en/download) |
+| Node.js     |     24.0 +      |     [Link](https://nodejs.org/en/download) |
 | Docker      |    18.09.2 +    | [Link](https://www.docker.com/get-started) |
-
-### Environment Variables
-
-The following environment variables needs to be set to use this application:
-
-| Name                   | Description                                                         | Example             |
-| ---------------------- | :------------------------------------------------------------------ | :------------------ |
-| GMAIL_SMTP_SERVER      | Gmail SMTP server URL                                               | smtp.gmail.com      |
-| GMAIL_SMTP_SERVER_PORT | Gmail SMTP server port                                              | 587                 |
-| GMAIL_EMAIL            | Destination email address                                           | test@gmail.com      |
-| GMAIL_APP_PASSWORD     | Gmail App password that can be generated from the Gmail web console | abcd abcd abcd abcd |
 
 ### Development
 
