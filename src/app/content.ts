@@ -23,7 +23,7 @@ export const profile = {
   handle: "jf/mainville",
   roles: ["Neovim tinkerer", "terminal tool builder", "security nerd"],
   pitch:
-    "Hi, I'm JF. I spend most of my time in a terminal, building small tools for the way I work. This is where I keep them.",
+    "Hi, I'm Jean-Frederic. I spend most of my time in a terminal, building small tools for the way I work. This is where I keep them.",
   email: "jfmainville@outlook.com",
   location: "Québec, Canada",
   links: [
@@ -56,7 +56,10 @@ export const about = {
       group: "Into",
       items: ["Lua", "Terminal UIs", "AI coding tools"],
     },
-    { group: "Daily drivers", items: ["Neovim", "tmux", "Ghostty", "zsh"] },
+    {
+      group: "Daily drivers",
+      items: ["Neovim", "tmux", "herdr", "Ghostty", "zsh"],
+    },
     { group: "Automating", items: ["Ansible", "Terraform"] },
     {
       group: "Day job",
@@ -136,7 +139,7 @@ export const projects: Project[] = [
   {
     name: "dotfiles",
     description:
-      "Everything my workstation needs: Neovim, tmux, Ghostty, zsh and shared AI agent skills.",
+      "Everything my workstation needs: Neovim, tmux, herdr, Ghostty, zsh and shared AI agent skills.",
     language: "Lua",
     href: `${GITHUB_URL}/dotfiles`,
   },
