@@ -23,7 +23,7 @@ export const profile = {
   handle: "jf/mainville",
   roles: ["Neovim tinkerer", "terminal tool builder", "security nerd"],
   pitch:
-    "Hi, I'm Jean-Frederic. I spend most of my time in a terminal, building small tools for the way I work. This is where I keep them.",
+    "Hi, I'm Jean-Frederic. I spend most of my time in a terminal, building tools for the way I work. This is where I keep them.",
   email: "jfmainville@outlook.com",
   location: "Québec, Canada",
   links: [
@@ -49,7 +49,7 @@ export const about = {
   heading: "Mostly in a terminal.",
   paragraphs: [
     "I'm a DevSecOps engineer from Québec. By day that means cloud security and platforms. The rest of the time I build the tools I want to use: Neovim plugins, a colorscheme and terminal apps.",
-    "I like small, sharp tools, configs I can rebuild from scratch, and understanding how things work under the hood.",
+    "I like tools, configs I can rebuild from scratch, and understanding how things work under the hood.",
   ],
   stack: [
     {
