@@ -1,10 +1,17 @@
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import Resume from "./page";
 
-describe("<Resume/> Test Suite", () => {
-  it("should render the <Resume/> page unchanged", () => {
-    const { container } = render(<Resume />);
-    expect(container).toMatchSnapshot();
+describe("<Resume/>", () => {
+  it("renders the resume header and a link back home", () => {
+    render(<Resume />);
+    expect(
+      screen.getByRole("heading", {
+        level: 1,
+        name: "Jean-Frederic Mainville",
+      }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole("link", { name: "Back to the home page" }),
+    ).toHaveAttribute("href", "/");
   });
 });
